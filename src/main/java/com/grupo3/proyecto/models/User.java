@@ -70,4 +70,10 @@ public class User {
     // Relacion uno a muchos
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<Tarea> tareas;
+
+    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+    private List<Bitacora> bitacoras;
+
+    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+    private List<UserEmocion> emociones;
 }

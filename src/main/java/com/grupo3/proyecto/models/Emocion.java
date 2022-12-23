@@ -1,6 +1,7 @@
 package com.grupo3.proyecto.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,14 +9,10 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.validation.constraints.FutureOrPresent;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -28,22 +25,17 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name="tareas")
-public class Tarea {
-
+@Table(name = "emociones")
+public class Emocion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Tarea
-    @NotBlank(message = "La tarea no puede estar en blanco")
-    @Size(max = 70, message = "La tarea no debe tener más de 70 caracteres")
-    private String task;
+    // nombre emocion
+    private String emotionName;
 
-    // Fecha limite tarea
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
-    @FutureOrPresent
-    private Date deadline;
+    // Emoji de la emocion
+    private String emoji;
 
     // Fechas base de datos
     @Column(updatable = false)
@@ -61,9 +53,6 @@ public class Tarea {
         this.updatedAt = new Date();
     }
 
-    // Relacion muchos a uno
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="user_id")
-    private User user;
+    @OneToMany(mappedBy="emocion", fetch = FetchType.LAZY)
+    private List<UserEmocion> emociones;
 }
-

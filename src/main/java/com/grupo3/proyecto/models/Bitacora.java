@@ -13,9 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.validation.constraints.FutureOrPresent;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -28,30 +25,21 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name="tareas")
-public class Tarea {
-
+@Table(name = "bitacoras")
+public class Bitacora {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String dateTime;
+    private String title;
+    private String entrada;
 
-    // Tarea
-    @NotBlank(message = "La tarea no puede estar en blanco")
-    @Size(max = 70, message = "La tarea no debe tener más de 70 caracteres")
-    private String task;
-
-    // Fecha limite tarea
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
-    @FutureOrPresent
-    private Date deadline;
-
-    // Fechas base de datos
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date updatedAt;
-    
+
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();
@@ -61,9 +49,7 @@ public class Tarea {
         this.updatedAt = new Date();
     }
 
-    // Relacion muchos a uno
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
     private User user;
 }
-
