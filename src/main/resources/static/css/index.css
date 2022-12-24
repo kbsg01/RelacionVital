@@ -1,0 +1,45 @@
+body *{
+    margin: 0;
+    padding: 0;
+    outline: 1px solid pink;
+}
+
+#topNav{
+    background-color: aqua;
+    height: 50px;
+    max-height: 50px;
+}
+
+
+#logo img{
+    width: 47px;
+    margin-left: 600px;
+}
+
+#main{
+    margin-top: 30px;
+}
+
+    #aboutUs{
+        width: 600px;
+        margin-left: 100px;
+    }
+
+        #aboutUs p{
+            margin-bottom: 30px;
+        }
+
+    #user{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    #userLogin{
+        margin-top: 30px;
+    }
+
+.alinear{
+    display: inline-block;
+    vertical-align: top;
+    
+}
