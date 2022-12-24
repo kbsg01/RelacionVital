@@ -1,4 +1,4 @@
-package com.grupo3.proyecto.Controllers;
+package com.grupo3.proyecto.controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
