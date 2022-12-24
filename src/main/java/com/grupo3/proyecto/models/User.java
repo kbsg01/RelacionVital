@@ -49,7 +49,6 @@ public class User {
     @NotBlank(message = "La confimacion de contraseña no puede estar vacia")
     private String passwordConfirmation;
 
-    @NotBlank
     private boolean profesional;
 
     @Column(updatable = false)
