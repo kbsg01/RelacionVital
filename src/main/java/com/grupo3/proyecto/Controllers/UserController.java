@@ -1,4 +1,4 @@
-package com.grupo3.proyecto.Controllers;
+package com.grupo3.proyecto.controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -26,19 +26,19 @@ public class UserController {
 
     @GetMapping("/")
     public String index(@ModelAttribute("user") User user){
-        return "User/User";
+        return "index";
     }
 
     @PostMapping("/register")
     public String register(@Valid @ModelAttribute("user") User user, BindingResult result, Model model, HttpSession session ){
         userValid.validate(user, result);
         if(result.hasErrors()){
-            return "User/User";
+            return "index";
         }
         boolean duplicated = userServ.duplicatedUser(user.getEmail());
         if(duplicated){
             model.addAttribute("error", "Email already in use! Please try again with a different email address!");
-            return "User/User";
+            return "index";
         }
         User u = userServ.registerUser(user);
         session.setAttribute("userId", u.getId());
@@ -55,7 +55,7 @@ public class UserController {
             return "redirect:/breakingBad";
         }else {
             model.addAttribute("error","Invalid Credentials. Please try again");
-            return "User/User";
+            return "index";
         }
     }
 
@@ -67,6 +67,6 @@ public class UserController {
 
     @GetMapping("/breakingBad")
     public String homePage(){
-        return "index";
+        return "home";
     }
 }
