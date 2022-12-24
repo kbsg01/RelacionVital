@@ -27,7 +27,6 @@
             <div id="aboutUs" class="alinear">
                 <h2>carrusel</h2>
                 <p>
-
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero quaerat quo, veritatis ea numquam provident nisi molestiae earum, architecto, commodi magnam. Fugit molestias recusandae soluta. Sunt minima consequatur dolor magni.
                     Nulla autem ipsum temporibus! Perspiciatis aut sapiente sed exercitationem soluta id ipsam! Cupiditate laboriosam voluptatibus blanditiis doloremque necessitatibus dolore nulla quod natus cum omnis, quidem alias officia eaque aspernatur similique!
                 </p>
@@ -71,7 +70,7 @@
                 </div>
                 <div id="userLogin">
                     <h1>Login</h1>
-                    <p><c:out value="${error}" /></p>
+                    <p><c:out value="${error}"/></p>
                     <form method="post" action="/login" >
                         <p>
                             <label for="email">Email</label>

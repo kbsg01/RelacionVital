@@ -42,7 +42,7 @@ public class UserController {
         }
         User u = userServ.registerUser(user);
         session.setAttribute("userId", u.getId());
-        return "redirect:/breakingBad";
+        return "redirect:/home";
     }
 
     @PostMapping("/login")
@@ -52,7 +52,7 @@ public class UserController {
         if (isAuthenticated){
             User u = userServ.findByEmail(email);
             session.setAttribute("userId", u.getId());
-            return "redirect:/breakingBad";
+            return "redirect:/home";
         }else {
             model.addAttribute("error","Invalid Credentials. Please try again");
             return "index";
@@ -65,7 +65,7 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping("/breakingBad")
+    @GetMapping("/home")
     public String homePage(){
         return "home";
     }
