@@ -7,4 +7,5 @@ import com.grupo3.proyecto.models.Tarea;
 @Repository
 public interface TareaRepository extends BaseRepository<Tarea>{
     
+    
 }
