@@ -31,6 +31,12 @@ public class TareaController {
         this.uService = uService;
     }
 
+    @GetMapping("/home/{id}/tarea")
+    public String tarea(@PathVariable("id")Long id, Model model){
+        model.addAttribute("tarea", tService.findById(id));
+        return "";
+    }
+
     @GetMapping("/tareas")
     public String tarea(@ModelAttribute("tarea")Tarea tarea, Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
