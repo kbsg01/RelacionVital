@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.grupo3.proyecto.models.Tarea;
@@ -23,7 +24,8 @@ public class TareaController {
     private final TareaService tareaServ;
 
     @GetMapping("/home/{id}/tarea")
-    public String tarea(@ModelAttribute("tarea")Tarea tarea, Model model){
+    public String tarea(@PathVariable("id")Long id, Model model){
+        model.addAttribute("tarea", tareaServ.findById(id));
         return "";
     }
     @PostMapping("/home/{id}/tarea")
