@@ -8,8 +8,8 @@ import com.grupo3.proyecto.repositories.TareaRepository;
 @Service
 public class TareaService extends BaseService<Tarea>{
 
-    public TareaService(TareaRepository TareaRepo) {
-        super(TareaRepo);
+    public TareaService(TareaRepository tRepo) {
+        super(tRepo);
     }
     
     

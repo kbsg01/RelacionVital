@@ -73,6 +73,8 @@ public class User {
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<Bitacora> bitacoras;
 
+    private List<Tarea> completeTareas;
+
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<UserEmocion> emociones;
 }
