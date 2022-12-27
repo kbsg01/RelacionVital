@@ -43,7 +43,7 @@
                             </li>
                         </li>
                         <li class="nav-item">
-                            <a href="/">
+                            <a href="/home">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
                         </li>
