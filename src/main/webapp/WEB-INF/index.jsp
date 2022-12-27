@@ -106,7 +106,7 @@
         <!-- User Registro/Inicio sesion -->
         <div id="user" class="alinear">
             <div id="userRegister">
-                <h1>Register!</h1>
+                <h1>Registro</h1>
                 <form:form method="post" action="/register" modelAttribute="user">
                     <p>
                         <form:label path="name">Nombre:</form:label>
@@ -132,18 +132,18 @@
                 </form:form>
             </div>
             <div id="userLogin">
-                <h1>Login</h1>
+                <h1>Ingresar</h1>
                 <p class="text-danger"><c:out value="${error}"/></p>
                 <form method="post" action="/login" >
                     <p>
-                        <label for="email">Email</label>
+                        <label for="email">Email:</label>
                         <input class="form-control" type="text" id="email" name="email"/>
                     </p>
                     <p>
-                        <label for="password">Password</label>
+                        <label for="password">Contraseña:</label>
                         <input class="form-control"type="password" id="password" name="password"/>
                     </p>
-                    <input type="submit" value="Login!"/>
+                    <input type="submit" value="Ingresar"/>
                 </form>
             </div>
         </div>
