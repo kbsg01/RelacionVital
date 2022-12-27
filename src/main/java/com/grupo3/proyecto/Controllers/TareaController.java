@@ -38,6 +38,7 @@ public class TareaController {
     //     return "";
     // }
 
+    // Home de tarea
     @GetMapping("/tareas")
     public String tarea(@ModelAttribute("tarea")Tarea tarea, Model model, HttpSession session){
         // Falta comparacion para validacion de usuario
@@ -62,6 +63,7 @@ public class TareaController {
     //     return "Tarea/TareaHome";
     // }
 
+    // Crear tarea
     @PostMapping("/tareas/new")
     public String createTarea(@Valid @ModelAttribute("tarea")Tarea tarea, BindingResult result, Model model, HttpSession session){
         if(result.hasErrors()){
@@ -75,6 +77,7 @@ public class TareaController {
         
     }
 
+    // Editar tarea
     @PostMapping("/tareas/{id}/edit")
     public String editTarea(@Valid @ModelAttribute("tarea")Tarea tarea, BindingResult result, Model model, HttpSession session){
         if (result.hasErrors()) {
@@ -92,6 +95,7 @@ public class TareaController {
         return "redirect:/tareas";
     }  
 
+    // Borrar tarea
     @GetMapping("/tareas/{id}/delete")
     public String deleteTarea(@PathVariable("id")Long id, HttpSession session, Tarea t, Model model){
         Long uId = (Long) session.getAttribute("userId");
