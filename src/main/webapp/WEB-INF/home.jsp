@@ -20,24 +20,50 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
+                        <!-- Menu -->
+                    <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
+                                <!-- Agregar pagina -->
+
+                                <!-- Listos (27-12-22) -->
+                                <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
+                                <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
+                                <!-- Listos (27-12-22) -->
+
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
+                                <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
+                                <!-- Agregar pagina -->
+                            </ul>
+                        </li>
+                    </li>
+                    <!-- Menu -->
                         <li class="nav-item">
+                            <a href="/home">
                             <a href="/home">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"    role="button" data-bs-toggle="dropdown"    aria-expanded="false">
-                                    Sobre Nosotros
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
-                                    <li><a class="dropdown-item" href="#">Terminos y Condiciones de Uso</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
+                            <ul class="dropdown-menu">
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
+                                <!-- Agregar pagina -->
+
+                                <!-- Listos (27-12-22) -->
+                                <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
+                                <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
+                                <!-- Listos (27-12-22) -->
+
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
+                                <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
+                                <!-- Agregar pagina -->
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <li class="nav-item dropdown">
@@ -45,9 +71,8 @@
                                     *inserte algo para el perfil*
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <!-- Agregar perfil de usuario (no urgente) -->
                                     <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                    <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
+                                    <li><a class="dropdown-item" href="/logout">Cerrar Sesion</a></li>
                                 </ul>
                             </li>
                         </li>
@@ -55,73 +80,59 @@
                 </div>
             </div>
         </nav>
-        
-        <main>
-            <div id="aboutUs" class="alinear">
-                <!-- Carrousel -->
-                <div id="carouselExampleCaptions" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/id/52/600/300" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/id/38/600/300" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/id/44/600/300" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <!-- Carrousel -->
+        <!-- navbar -->
 
-                <div>
-                    <!-- Tareas Pendientes -->
-                    <div>
-                        <!-- hay que arreglarlo -->
-                        <h3>Tareas Pendientes</h3>
-                        <c:forEach items="${tareas}" var="tarea">
-                            <p><c:out value="${tarea.task}"/></p>
-                        </c:forEach>
-                    </div>
-                    <!-- Tareas Pendientes -->
-                    
-                    <!-- Numero de emergencia -->
-                    <div>
-                        <h3>Numero de Emergencia</h3>
-                        <h4>Salud Responde:</h4>
-                        <p> 600 360 7777</p>
+        <!-- Publicidad -->
+        <div>
+            
+        </div>
+        <!-- Publicidad -->
 
-                        <h4>Línea especial de atención psicológica y contención emocional:</h4>
-                        <p> +569 3710 0023</p>
-                    </div>
-                    <!-- Numero de emergencia -->
-                </div>
+        <!-- carousel -->
+        <div>
+
+        </div>
+        <!-- carousel -->
+
+        <div >
+            <!-- Tareas Pendientes -->
+            <div class="p-4">
+                <h3>Tareas Pendientes</h3>
+                <c:forEach items="${tareas}" var="tarea">
+                    <p><c:out value="${tarea.task}"/></p>
+                </c:forEach>
             </div>
-        </main>
+            <!-- Tareas Pendientes -->
+
+            <!-- Numero de emergencia -->
+            <div>
+                <h3>Numero de Emergencia</h3>
+                <h4>Salud Responde:</h4>
+                <p> 600 360 7777</p>
+
+                <h4>Línea especial de atención psicológica y contención emocional:</h4>
+                <p> +569 3710 0023</p>
+            </div>
+            <!-- Numero de emergencia -->
+            <!-- Tareas Pendientes -->
+            <div>
+                <h3>Tareas Pendientes</h3>
+                <c:forEach items="${tareas}" var="tarea">
+                    <p><c:out value="${tarea.task}"/></p>
+                </c:forEach>
+            </div>
+            <!-- Tareas Pendientes -->
+
+            <!-- Numero de emergencia -->
+            <div>
+                <h3>Numero de Emergencia</h3>
+                <h4>Salud Responde:</h4>
+                <p> 600 360 7777</p>
+
+                <h4>Línea especial de atención psicológica y contención emocional:</h4>
+                <p> +569 3710 0023</p>
+            </div>
+            <!-- Numero de emergencia -->
+        </div>
     </body>
 </html>
