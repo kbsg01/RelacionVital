@@ -20,35 +20,37 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                        <!-- Menu -->
-                        <li class="nav-item">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    Menu
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Agregar pagina -->
-                                    <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
-                                    <!-- Agregar pagina -->
+                    <!-- Menu -->
+                    <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
+                                <!-- Agregar pagina -->
 
-                                    <!-- Listos (27-12-22) -->
-                                    <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
-                                    <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
-                                    <!-- Listos (27-12-22) -->
+                                <!-- Listos (27-12-22) -->
+                                <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
+                                <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
+                                <!-- Listos (27-12-22) -->
 
-                                    <!-- Agregar pagina -->
-                                    <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
-                                    <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
-                                    <!-- Agregar pagina -->
-                                </ul>
-                            </li>
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
+                                <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
+                                <!-- Agregar pagina -->
+                            </ul>
                         </li>
-                        <!-- Menu -->
+                    </li>
+                    <!-- Menu -->
                         <li class="nav-item">
+                            
                             <a href="/home">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
                         </li>
+                        <!-- User -->
                         <li class="nav-item">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
@@ -83,24 +85,19 @@
         <!-- carousel -->
 
         <div >
+            <!-- Tareas Pendientes -->
+            
             <div>
-                <div>
-                    <!-- Tareas Pendientes -->
-                    <div>
-                        <!-- hay que arreglarlo -->
-                        <h3>Tareas Pendientes</h3>
-                        <c:forEach items="${tareas}" var="tarea">
-                            <p><c:out value="${tarea.task}"/></p>
-                        </c:forEach>
-                    </div>
-                    <!-- Tareas Pendientes -->
-                    
-                    <!-- Numero de emergencia -->
-                    <div>
-                        
-                    </div>
-                    <!-- Numero de emergencia -->
-                </div>
+                <h3>Tareas Pendientes</h3>
+                <c:forEach items="${tareas}" var="tarea">
+                    <p><c:out value="${tarea.task}"/></p>
+                </c:forEach>
+            </div>
+            <!-- Tareas Pendientes -->
+
+            <!-- Numero de emergencia -->
+            <div>
+                
             </div>
             <!-- Numero de emergencia -->
         </div>
