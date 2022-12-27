@@ -21,22 +21,20 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/home">
+                            <a href="/">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
                         </li>
                         <li class="nav-item">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    Sobre Nosotros
+                                    
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
-                                    <li><a class="dropdown-item" href="#">Terminos y Condiciones de Uso</a></li>
+                                    <!-- Agregar perfil de usuario (no urgente) -->
+                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
                             </li>
                         </li>
                     </ul>
@@ -87,29 +85,20 @@
                 </div>
                 <!-- Carrousel -->
 
-                <div class="d-flex">
-                    <!-- Tareas Pendientes -->
-                    <div class="p-4">
-                        <h3>Tareas Pendientes</h3>
-                        <c:forEach items="${tareas}" var="tarea">
-                            <p><c:out value="${tarea.task}"/></p>
-                        </c:forEach>
-                    </div>
-                    <!-- Tareas Pendientes -->
-                    
-                    <!-- Numero de emergencia -->
-                    <div class="p-4">
-                        <h3>Numero de Emergencia</h3>
-                        <h4>Salud Responde:</h4>
-                        <p> 600 360 7777</p>
+        <!-- carousel -->
+        <div>
 
-                        <h4>Línea especial de atención psicológica y contención emocional:</h4>
-                        <p> +569 3710 0023</p>
-                    </div>
-                    <!-- Numero de emergencia -->
-                </div>
-            </div>
-        </main>
-        
+        </div>
+        <!-- carousel -->
+        <!-- Tareas Pendientes (mas recientes) -->
+        <div>
+
+        </div>
+        <!-- Tareas Pendientes (mas recientes) -->
+        <!-- Numero de emergencia -->
+        <div>
+            
+        </div>
+        <!-- Numero de emergencia -->
     </body>
 </html>
