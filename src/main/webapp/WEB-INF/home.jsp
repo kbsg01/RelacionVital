@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
+        <!-- navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -42,6 +43,28 @@
                 </div>
             </div>
         </nav>
-        
+        <!-- navbar -->
+
+        <!-- Publicidad -->
+        <div>
+            
+        </div>
+        <!-- Publicidad -->
+
+        <!-- carousel -->
+        <div>
+
+        </div>
+        <!-- carousel -->
+        <!-- Tareas Pendientes (mas recientes) -->
+        <div>
+
+        </div>
+        <!-- Tareas Pendientes (mas recientes) -->
+        <!-- Numero de emergencia -->
+        <div>
+            
+        </div>
+        <!-- Numero de emergencia -->
     </body>
 </html>
