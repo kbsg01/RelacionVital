@@ -21,14 +21,14 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/">
+                            <a href="/home">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
                         </li>
                         <li class="nav-item">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    
+                                    Sobre Nosotros
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
@@ -43,28 +43,6 @@
                 </div>
             </div>
         </nav>
-        <!-- navbar -->
-
-        <!-- Publicidad -->
-        <div>
-            
-        </div>
-        <!-- Publicidad -->
-
-        <!-- carousel -->
-        <div>
-
-        </div>
-        <!-- carousel -->
-        <!-- Tareas Pendientes (mas recientes) -->
-        <div>
-
-        </div>
-        <!-- Tareas Pendientes (mas recientes) -->
-        <!-- Numero de emergencia -->
-        <div>
-            
-        </div>
-        <!-- Numero de emergencia -->
+        
     </body>
 </html>
