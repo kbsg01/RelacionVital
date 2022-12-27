@@ -34,7 +34,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "El Nombre no puede estar vacio")
+    @NotBlank(message = "El nombre no puede estar vacio")
     @Size(min = 5, message = "Nombre demasiado corto, 5 caracteres minimo")
     private String name;
 
@@ -42,7 +42,7 @@ public class User {
     @Email(message = "El email debe ser valido, ej. 'usuario@example.com'")
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "No dedbe estar vacio")
     @Size(min = 8, message = "La contraseña debe tener mínimo 8 caracteres")
     private String password;
     @Transient
@@ -72,8 +72,6 @@ public class User {
 
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<Bitacora> bitacoras;
-
-    private List<Tarea> completeTareas;
 
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<UserEmocion> emociones;

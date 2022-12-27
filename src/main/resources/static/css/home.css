@@ -1,0 +1,25 @@
+body *{
+    margin: 0;
+    padding: 0;
+    outline: 1px solid pink;
+}
+nav.navbar{
+    background-color: rgba(4, 0, 255, 0.438);
+    width: auto;
+    height: auto;
+}
+    .dropdown-menu{
+        background-color: rgba(45, 43, 168, 0.658);
+    }
+    .dropdown-item{
+        font-weight: bold;
+    }
+    .logo{
+        width: 50px;
+    }
+    .nav-item{
+        display: flex;
+        vertical-align: middle;
+        margin: 5px;
+        font-weight: bold;
+    }
