@@ -27,7 +27,7 @@
                         <li class="nav-item">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    Sobre Nosotros
+                                    
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>

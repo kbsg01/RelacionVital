@@ -42,7 +42,7 @@ public class User {
     @Email(message = "El email debe ser valido, ej. 'usuario@example.com'")
     private String email;
 
-    @NotBlank(message = "No dedbe estar vacio")
+    @NotBlank(message = "La contraseña no puede estar vacia")
     @Size(min = 8, message = "La contraseña debe tener mínimo 8 caracteres")
     private String password;
     @Transient
