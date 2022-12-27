@@ -1,5 +1,7 @@
 package com.grupo3.proyecto.controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.grupo3.proyecto.models.Tarea;
 import com.grupo3.proyecto.models.User;
 import com.grupo3.proyecto.services.UserService;
 import com.grupo3.proyecto.validator.UserValidator;
@@ -66,7 +69,12 @@ public class UserController {
     }
 
     @GetMapping("/home")
-    public String homePage(){
+    public String homePage(Model model, HttpSession session){
+        Long uid = (Long) session.getAttribute("userId");
+        User u = userServ.findById(uid);
+        List<Tarea> tareas = u.getTareas();
+        model.addAttribute("user", u);
+        model.addAttribute("tareas", tareas);
         return "home";
     }
 }

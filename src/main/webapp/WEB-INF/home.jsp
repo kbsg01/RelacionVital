@@ -21,22 +21,42 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
+                                    Menu
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- Agregar -->
+                                    <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
+                                    <!-- Agregar  -->
+
+                                    <!-- Listos -->
+                                    <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
+                                    <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
+                                    <!-- Listos -->
+
+                                    <!-- Agregar  -->
+                                    <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
+                                    <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
+                                    <!-- Agregar  -->
+                                </ul>
+                            </li>
+                        </li>
+                        <li class="nav-item">
                             <a href="/">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
                         </li>
                         <li class="nav-item">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
+                                    <c:out value="${user.name}"/>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
-                                    <li><a class="dropdown-item" href="#">Terminos y Condiciones de Uso</a></li>
+                                    <!-- Agregar perfil de usuario (no urgente) -->
+                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
                             </li>
                         </li>
                     </ul>
@@ -56,14 +76,16 @@
 
         </div>
         <!-- carousel -->
+
         <!-- Tareas Pendientes (mas recientes) -->
         <div>
 
         </div>
         <!-- Tareas Pendientes (mas recientes) -->
+
         <!-- Numero de emergencia -->
         <div>
-            
+
         </div>
         <!-- Numero de emergencia -->
     </body>
