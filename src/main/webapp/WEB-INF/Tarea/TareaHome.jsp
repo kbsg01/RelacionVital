@@ -87,7 +87,7 @@
 
     <!-- Crear/Editar -->
     <div class="crearEditar">
-        <form:form action="" method="post">
+        <form:form action="" method="post" modelAttribute="">
 
         </form:form>
     </div>

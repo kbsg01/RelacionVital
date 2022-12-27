@@ -21,14 +21,28 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/">
+                            <a href="/home">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
                         </li>
                         <li class="nav-item">
                             <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#"    role="button" data-bs-toggle="dropdown"    aria-expanded="false">
+                                    Sobre Nosotros
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Nuestro Equipo</a></li>
+                                    <li><a class="dropdown-item" href="#">Terminos y Condiciones de Uso</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </li>
+                        <li class="nav-item">
+                            <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    
+                                    *inserte algo para el perfil*
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- Agregar perfil de usuario (no urgente) -->
@@ -45,7 +59,7 @@
         <main>
             <div id="aboutUs" class="alinear">
                 <!-- Carrousel -->
-                <div id="carouselExampleCaptions" class="carousel slide w-75">
+                <div id="carouselExampleCaptions" class="carousel slide">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -85,20 +99,29 @@
                 </div>
                 <!-- Carrousel -->
 
-        <!-- carousel -->
-        <div>
+                <div>
+                    <!-- Tareas Pendientes -->
+                    <div>
+                        <!-- hay que arreglarlo -->
+                        <h3>Tareas Pendientes</h3>
+                        <c:forEach items="${tareas}" var="tarea">
+                            <p><c:out value="${tarea.task}"/></p>
+                        </c:forEach>
+                    </div>
+                    <!-- Tareas Pendientes -->
+                    
+                    <!-- Numero de emergencia -->
+                    <div>
+                        <h3>Numero de Emergencia</h3>
+                        <h4>Salud Responde:</h4>
+                        <p> 600 360 7777</p>
 
-        </div>
-        <!-- carousel -->
-        <!-- Tareas Pendientes (mas recientes) -->
-        <div>
-
-        </div>
-        <!-- Tareas Pendientes (mas recientes) -->
-        <!-- Numero de emergencia -->
-        <div>
-            
-        </div>
-        <!-- Numero de emergencia -->
+                        <h4>Línea especial de atención psicológica y contención emocional:</h4>
+                        <p> +569 3710 0023</p>
+                    </div>
+                    <!-- Numero de emergencia -->
+                </div>
+            </div>
+        </main>
     </body>
 </html>
