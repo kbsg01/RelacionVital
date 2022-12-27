@@ -45,37 +45,27 @@
                     </li>
                     <!-- Menu -->
                         <li class="nav-item">
-                            <a href="/home">
+                            
                             <a href="/home">
                                 <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
                             </a>
-                            <ul class="dropdown-menu">
-                                <!-- Agregar pagina -->
-                                <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
-                                <!-- Agregar pagina -->
-
-                                <!-- Listos (27-12-22) -->
-                                <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
-                                <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
-                                <!-- Listos (27-12-22) -->
-
-                                <!-- Agregar pagina -->
-                                <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
-                                <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
-                                <!-- Agregar pagina -->
-                            </ul>
                         </li>
+                        <!-- User -->
                         <li class="nav-item">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    *inserte algo para el perfil*
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
+                                    <c:out value="${user.name}"/>
                                 </a>
+                                <!-- desplegable -->
                                 <ul class="dropdown-menu">
+                                    <!-- Agregar perfil de usuario (no urgente) -->
                                     <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                    <li><a class="dropdown-item" href="/logout">Cerrar Sesion</a></li>
+                                    <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
                                 </ul>
+                                <!-- desplegable -->
                             </li>
                         </li>
+                        <!-- User -->
                     </ul>
                 </div>
             </div>
@@ -96,25 +86,7 @@
 
         <div >
             <!-- Tareas Pendientes -->
-            <div class="p-4">
-                <h3>Tareas Pendientes</h3>
-                <c:forEach items="${tareas}" var="tarea">
-                    <p><c:out value="${tarea.task}"/></p>
-                </c:forEach>
-            </div>
-            <!-- Tareas Pendientes -->
-
-            <!-- Numero de emergencia -->
-            <div>
-                <h3>Numero de Emergencia</h3>
-                <h4>Salud Responde:</h4>
-                <p> 600 360 7777</p>
-
-                <h4>Línea especial de atención psicológica y contención emocional:</h4>
-                <p> +569 3710 0023</p>
-            </div>
-            <!-- Numero de emergencia -->
-            <!-- Tareas Pendientes -->
+            
             <div>
                 <h3>Tareas Pendientes</h3>
                 <c:forEach items="${tareas}" var="tarea">
@@ -125,12 +97,7 @@
 
             <!-- Numero de emergencia -->
             <div>
-                <h3>Numero de Emergencia</h3>
-                <h4>Salud Responde:</h4>
-                <p> 600 360 7777</p>
-
-                <h4>Línea especial de atención psicológica y contención emocional:</h4>
-                <p> +569 3710 0023</p>
+                
             </div>
             <!-- Numero de emergencia -->
         </div>

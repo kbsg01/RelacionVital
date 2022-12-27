@@ -8,6 +8,9 @@ nav.navbar{
     width: auto;
     height: auto;
 }
+.navbar-nav{
+    display: flex;
+}
     .dropdown-menu{
         background-color: rgba(45, 43, 168, 0.658);
     }
@@ -22,6 +25,13 @@ nav.navbar{
         vertical-align: middle;
         margin: 5px;
         font-weight: bold;
+    }
+    
+    .btn{
+        background-color: rgba(85, 84, 139, 0.527);
+        margin: 15px;
+        display: flex;
+        justify-content: center;
     }
 
 main{

@@ -41,7 +41,6 @@ public class Tarea {
     private String task;
 
     // Fecha limite tarea
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
     @FutureOrPresent
     private Date deadline;
 

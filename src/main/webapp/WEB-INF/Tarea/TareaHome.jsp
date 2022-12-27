@@ -67,6 +67,7 @@
                                 <li><a class="dropdown-item" href="#">Perfil</a></li>
                                 <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
                             </ul>
+                            <!-- desplegable -->
                         </li>
                     </li>
                     <!-- User -->
@@ -78,17 +79,57 @@
 
     <!-- Tablas -->
     <div class="pending">
-        
+        <h2>Tareas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>-</th>
+                    <th>fecha limite</th>
+                    <th>Tarea</th>
+                    <th>fecha creacion</th>
+                    <th>-</th>
+                    <th>editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${tareas}" var="tarea">
+                    <tr>
+                        <td>-</td>
+                        <td><c:out value="${tarea.deadline}"/></td>
+                        <td><c:out value="${tarea.task}"/></td>
+                        <td><c:out value="${tarea.createdAt}"/></td>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                        <td>
+                            <a href=""></a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </div>
     <div class="complete">
-        
+        <h2>Tareas</h2>
+
     </div>
     <!-- Tablas -->
 
     <!-- Crear/Editar -->
     <div class="crearEditar">
-        <form:form action="" method="post" modelAttribute="">
-            
+        <form:form action="/tareas/new" method="post" modelAttribute="tarea">
+            <p>
+                <form:label path="deadline">Fecha Limite:</form:label>
+                <form:errors path="deadline"/>
+                <form:input type="date" path="deadline"/>
+            </p>
+            <p>
+                <form:label path="task">Tarea:</form:label>
+                <form:errors path="task"/>
+                <textarea name="task" id="task" cols="30" rows="5"> Escribe algo!</textarea>
+            </p>
+
+            <input type="submit" value="+">
         </form:form>
     </div>
     <!-- Crear/Editar -->
