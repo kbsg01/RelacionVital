@@ -43,7 +43,10 @@ public class BitacoraController {
 
     }
     @GetMapping("/bitacora/new")
-    public String newBitacora(@ModelAttribute("bitacora") Bitacora bitacora) {
+    public String newBitacora(@ModelAttribute("bitacora") Bitacora bitacora, Model model,HttpSession session) {
+        Long uId = (Long) session.getAttribute("userId");
+        User u = uService.findById(uId);
+        model.addAttribute("user", u);
         return "Bitacora/CreateBitacora";
     }
 
@@ -69,8 +72,11 @@ public class BitacoraController {
     }
 
     @GetMapping("/bitacora/{id}/edit")
-    public String BitacoraEdit(@PathVariable("id") Long id, Model model) {
+    public String BitacoraEdit(@PathVariable("id") Long id, Model model, HttpSession session) {
+        Long uId = (Long) session.getAttribute("userId");
+        User u = uService.findById(uId);
         Bitacora bitacora = bitacoraServ.findById(id);
+        model.addAttribute("user", u);
         model.addAttribute("bitacora", bitacora);
         return "Bitacora/CreateBitacora";
     }
