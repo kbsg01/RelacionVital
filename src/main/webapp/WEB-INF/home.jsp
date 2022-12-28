@@ -144,15 +144,16 @@
                 <div clas="row alinear">
                     <div class="col-6 tareas ">
                         <h3>Tareas Pendientes</h3>
+                        <div>
                         <c:forEach items="${tareas}" var="tarea">
-                            <p>
+                            <p class ="separacion">
                                 <c:out value="${tarea.task}" />
                             </p>
                         </c:forEach>
+                        </div>
                     </div>
                     <!-- Tareas Pendientes -->
                     <!-- Numero de emergencia -->
-                    <div class="caja">
                         <div class=" box alinear ">
                             <div class="numeros">
                                 <div class="card">
@@ -180,7 +181,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                     <!-- Numero de emergencia -->
                 </div>
         </body>
