@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isErrorPage="true" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,12 +23,13 @@
         <tbody>
             <c:forEach items="${bitacoras}" var="bitacora">
                 <tr>
-                    <td><c:out value="${bitacora.dateTime}"/></td>
+                    <td><fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${bitacora.dateTime}" /></td>
                     <td><c:out value="${bitacora.title}"/></td>
-                    <td>button</td>
+                    <td><a href="/bitacora/${bitacora.id}">*inserte un boton*</a></td>
                 </tr>
             </c:forEach>
         </tbody>
     </table>
+    <a href="/bitacora/new">Crear</a>
 </body>
 </html>
