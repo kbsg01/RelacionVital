@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.grupo3.proyecto.models.Tarea;
 import com.grupo3.proyecto.models.User;
+import com.grupo3.proyecto.services.TareaService;
 import com.grupo3.proyecto.services.UserService;
 import com.grupo3.proyecto.validator.UserValidator;
 
@@ -24,6 +25,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserController {
     
+    private final TareaService tService;
     private final UserService userServ;
     private final UserValidator userValid;
 
@@ -72,7 +74,7 @@ public class UserController {
     public String homePage(Model model, HttpSession session){
         Long uid = (Long) session.getAttribute("userId");
         User u = userServ.findById(uid);
-        List<Tarea> tareas = u.getTareas();
+        List<Tarea> tareas = tService.findTop5();
         model.addAttribute("user", u);
         model.addAttribute("tareas", tareas);
         return "home";

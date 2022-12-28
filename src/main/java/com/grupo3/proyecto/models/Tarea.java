@@ -40,7 +40,10 @@ public class Tarea {
     @Size(max = 70, message = "La tarea no debe tener más de 70 caracteres")
     private String task;
 
+    private boolean complete=false;
+
     // Fecha limite tarea
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @FutureOrPresent
     private Date deadline;
 

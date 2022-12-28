@@ -31,12 +31,6 @@ public class TareaController {
         this.uService = uService;
     }
 
-    // @GetMapping("/home/{id}/tarea")
-    // no recuerdo para que era este home< se va comentao
-    // public String tarea(@PathVariable("id")Long id, Model model){
-    //     model.addAttribute("tarea", tService.findById(id));
-    //     return "";
-    // }
 
     // Home de tarea
     @GetMapping("/tareas")
@@ -45,10 +39,9 @@ public class TareaController {
         Long id = (Long)session.getAttribute("userId");
         User user = uService.findById(id);
         List<Tarea> tareas = user.getTareas();
-        
         model.addAttribute("user", user);
         model.addAttribute("tareas", tareas);
-        // Buscar la forma de mover las tareas a otra lista al ser completadas marcando el checkBox(Boolean)
+        // Buscar la forma de mover las tareas a otra lista al ser completadas marcando el checkBox(boolean)
         return "Tarea/TareaHome";
     }
     
@@ -58,16 +51,24 @@ public class TareaController {
     //     Tarea tarea = tService.findById(id);
     //     Long uId = (Long) session.getAttribute("userid");
     //     User user = uService.findById(uId);
-    //     user.getTareas().remove(tarea);
-    //     user.getTareasCompletadas().add(tarea);
+    //     
     //     return "Tarea/TareaHome";
     // }
 
+    // Get crear
+    @GetMapping("/tareas/new")
+    public String createTarea(@ModelAttribute("tarea")Tarea tarea, Model model, HttpSession session) {
+        Long id = (Long)session.getAttribute("userId");
+        User user = uService.findById(id);
+        model.addAttribute("user", user);
+        return "Tarea/TareaCreateEdit";
+    }
+
     // Crear tarea
     @PostMapping("/tareas/new")
-    public String createTarea(@Valid @ModelAttribute("tarea")Tarea tarea, BindingResult result, Model model, HttpSession session){
+    public String createTarea(@Valid @ModelAttribute("tarea")Tarea tarea, BindingResult result, HttpSession session){
         if(result.hasErrors()){
-            return "Tarea/TareaHome";
+            return "Tarea/TareaCreateEdit";
         }
             Long id = (Long) session.getAttribute("userId");
             User u = uService.findById(id);
@@ -77,19 +78,25 @@ public class TareaController {
         
     }
 
+    // Get Eeditar
+    @GetMapping("/tareas/{id}/edit")
+    public String editTarea(@PathVariable("id")Long id, Model model, HttpSession session){
+        Long uId = (Long)session.getAttribute("userId");
+        User user = uService.findById(uId);
+        model.addAttribute("user", user);
+        Tarea tarea = tService.findById(id);
+        model.addAttribute("tarea", tarea);
+        return "Tarea/TareaCreateEdit";
+    }
+
     // Editar tarea
     @PostMapping("/tareas/{id}/edit")
     public String editTarea(@Valid @ModelAttribute("tarea")Tarea tarea, BindingResult result, Model model, HttpSession session){
         if (result.hasErrors()) {
-            return "Tarea/TareaHome";
+            return "Tarea/TareaCreateEdit";
         }
         Long id = (Long) session.getAttribute("userId");
         User u = uService.findById(id);
-        Long idTUser = tarea.getUser().getId();
-        if (idTUser != id) {
-            model.addAttribute("uError", "No puede editar esta tarea");
-            return "Tarea/TareaHome";
-        }
         tarea.setUser(u);
         tService.save(tarea);
         return "redirect:/tareas";
@@ -98,12 +105,6 @@ public class TareaController {
     // Borrar tarea
     @GetMapping("/tareas/{id}/delete")
     public String deleteTarea(@PathVariable("id")Long id, HttpSession session, Tarea t, Model model){
-        Long uId = (Long) session.getAttribute("userId");
-        Long idTUser = t.getUser().getId();
-        if (uId != idTUser) {
-            model.addAttribute("uError", "No puede eliminar esta tarea");
-            return "Tarea/TareaHome";
-        }
         tService.delete(id);
         return "redirect:/tareas";
     }

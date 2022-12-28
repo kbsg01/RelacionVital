@@ -2,7 +2,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isErrorPage="true" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,75 +76,24 @@
     </nav>
     <!-- Navbar -->
 
-    <!-- Tablas -->
-    <div class="pending">
-        <h2>Tareas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>completar</th>
-                    <th>fecha limite</th>
-                    <th>tarea</th>
-                    <th>fecha creacion</th>
-                    <th>editar</th>
-                    <th>eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:if test = "${tarea.complete == false}">
-                    <c:forEach items="${tareas}" var="tarea">
-                        <tr>
-                            <td>
-                                
-                            </td>
-                            
-                            <td><fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}" /></td>
-                            <td><c:out value="${tarea.task}"/></td>
-                            <td><fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}" /></td>
-                            <td>
-                                <a href="/tareas/${tarea.id}/edit"> Editar </a>
-                            </td>
-                            <td>
-
-                                <a href="/tareas/${tarea.id}/delete" onclick="return confirm('¿Quiere eliminar esta tarea?')"> X </a>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                </c:if>
-            </tbody>
-        </table>
-    </div>
-    <div class="complete">
-        <h2>Completadas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>fecha limite</th>
-                    <th>Tarea</th>
-                    <th>fecha creacion</th>
-                    <th>-</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:if test = "${tarea.complete == true}">
-                        <c:forEach items="${tareas}" var="tarea">
-                            <tr>
-                                <td><c:out value="${tarea.deadline}"/></td>
-                                <td><c:out value="${tarea.task}"/></td>
-                                <td><c:out value="${tarea.createdAt}"/></td>
-                                <td>
-                                    <a href="/tareas/${tarea.id}/delete"> X </a>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                </c:if>
-            </tbody>
-        </table>
-    </div>
-    <!-- Tablas -->
 
     <!-- Crear/Editar -->
-    <a href="/tareas/new">Añadir Tarea</a>
+    <div class="crearEditar">
+        <h3>Panel de Tarea</h3>
+        <form:form action="" method="post" modelAttribute="tarea">
+            <p>
+                <form:label path="deadline">Fecha Limite:</form:label>
+                <form:errors path="deadline"/>
+                <form:input type="date" path="deadline"/>
+            </p>
+            <p>
+                <form:label path="task">Tarea:</form:label>
+                <form:errors path="task"/>
+                <textarea name="task" id="task" cols="30" rows="5"></textarea>
+            </p>
+            <input type="submit" value="+">
+        </form:form>
+    </div>
     <!-- Crear/Editar -->
 </body>
 </html>

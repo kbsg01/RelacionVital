@@ -10,7 +10,7 @@ nav.navbar{
 }
 
     .dropdown-menu{
-        background-color: rgba(45, 43, 168, 0.658);
+        background-color: rgb(255, 255, 255);
     }
     .dropdown-item{
         font-weight: bold;
@@ -24,7 +24,7 @@ nav.navbar{
         font-weight: bold;
     }
     .btn{
-        background-color: rgba(85, 84, 139, 0.527);
+        background-color: rgba(190, 212, 223, 0.527);
         margin: 15px;
         display: flex;
         justify-content: center;
