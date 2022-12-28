@@ -1,32 +1,36 @@
 body *{
     margin: 0;
     padding: 0;
-    outline: 1px solid pink;
+    /* outline: 1px solid pink; */
 }
 nav.navbar{
-    background-color: rgba(4, 0, 255, 0.438);
+    background-color: #6a9eda;
     width: auto;
     height: auto;
+    box-shadow: 3px 3px 3px #e9e9e9;
 }
 .navbar-nav{
     display: flex;
 }
     .dropdown-menu{
-        background-color: rgba(45, 43, 168, 0.658);
+        background-color: #5086c1;
     }
+
     .dropdown-item{
         font-weight: bold;
     }
+
     .logo{
         width: 50px;
     }
+
     .nav-item{
         display: flex;
         vertical-align: middle;
         margin: 5px;
         font-weight: bold;
     }
-    
+
     .btn{
         background-color: rgba(85, 84, 139, 0.527);
         margin: 15px;
@@ -35,32 +39,41 @@ nav.navbar{
     }
 
 main{
-    margin-top: 30px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-evenly;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(243,255,255,1) 25%, rgba(235,250,250,1) 50%, rgba(234,255,255,1) 75%, rgba(217,255,255,1) 100%);
 }
 
 
     #aboutUs{
-        width: 600px;
+        width: 820px;
+        padding: 20px;
     }
-        .carousel{
-            margin-bottom: 15px;
-        }
+    .carousel-item img{
+        border-radius: 10px;
+    }
 
-        #mision{
-            background-color:  rgba(223, 223, 223, 0.5);
-            border-radius: 10px;
-            padding: 15px;
-        }
+    .carousel{
+        margin-bottom: 15px;
+        box-shadow: 3px 3px 3px #888888;
+        border-radius: 10px;
+    }
 
-        #vision{
-            margin: 15px 0 15px 0;
-            background-color:  rgba(223, 223, 223, 0.5);
-            border-radius: 10px;
-            padding: 15px;
-        }
+    #mision{
+        background-color:  rgba(223, 223, 223, 0.5);
+        box-shadow: 3px 3px 3px #888888;
+        border-radius: 10px;
+        padding: 15px;
+    }
 
+    #vision{
+        margin: 15px 0 15px 0;
+        background-color:  rgba(223, 223, 223, 0.5);
+        box-shadow: 3px 3px 3px #888888;
+        border-radius: 10px;
+        padding: 15px;
+    }
 
     #userRegister{
         width: 400px;
@@ -68,6 +81,7 @@ main{
         margin-left: 10px;
         margin-right: 10px;
         background-color: rgba(223, 223, 223, 0.5);
+        box-shadow: 3px 3px 3px #888888;
         border-radius: 10px;
     }
     #userRegister p{
@@ -75,6 +89,7 @@ main{
     }
     #userLogin{
         background-color: rgba(223, 223, 223, 0.5);
+        box-shadow: 3px 3px 3px #888888;
         border-radius: 10px;
         margin-left: 10px;
         margin-right: 10px;
@@ -88,5 +103,4 @@ main{
 .alinear{
     display: inline-block;
     vertical-align: top;
-    
 }
