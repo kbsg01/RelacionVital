@@ -2,7 +2,6 @@ body * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid pink;
 }
 
 #content {
@@ -14,11 +13,10 @@ nav.navbar {
     width: auto;
     height: auto;
     box-shadow: 3px 3px 3px #888888;
-
 }
 
 .dropdown-menu {
-    background-color: rgba(45, 43, 168, 0.658);
+    background-color: #5086c1;
 }
 
 .dropdown-item {
@@ -49,6 +47,11 @@ nav.navbar {
 .carousel {
     margin-bottom: 15px;
 }
+
+    .d-block{
+        text-align: center;
+        margin-top: 120px;
+    }
 
 main {
     display: flex;
