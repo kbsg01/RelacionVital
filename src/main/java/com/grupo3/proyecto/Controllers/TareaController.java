@@ -45,6 +45,15 @@ public class TareaController {
         return "Tarea/TareaHome";
     }
     
+
+    @GetMapping("/tareas/{id}/complete")
+    public String completeTarea(@PathVariable("id")Long id, HttpSession session, Model model){
+        Tarea tarea = tService.findById(id);
+        model.addAttribute("tarea", tarea);
+        tarea.setComplete(true);
+        tService.save(tarea);
+        return "redirect:/tareas";
+    }
     // @GetMapping("/tareas/{id}/complete")
     // public String completeTarea(@PathVariable("id")Long id, HttpSession session){
     //     // Falta agregar comparacion id para validacion de ususario
