@@ -2,7 +2,6 @@ package com.grupo3.proyecto.controllers;
 
 import java.util.List;
 
-import javax.persistence.Entity;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
