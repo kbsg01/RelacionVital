@@ -19,7 +19,7 @@
                 crossorigin="anonymous"></script>
             <!-- Bootstrap -->
             <title>Proyecto Salud Mental Home</title>
-            <link rel="stylesheet" type="text/css" href="css/style.css">
+            <link rel="stylesheet" type="text/css" href="/css/bitacora.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         </head>
         <body>
@@ -57,7 +57,7 @@
                             <li class="nav-item">
 
                                 <a href="/home">
-                                    <img class="logo" src="logo.png"
+                                    <img class="logo" src="/img/logo.png"
                                         alt="Dibujo del logo del proyecto, contiene un zorrito">
                                 </a>
                             </li>
