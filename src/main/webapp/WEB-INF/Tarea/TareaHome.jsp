@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="/css/tarea.css">
 </head>
 <body>
-    
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -27,7 +26,7 @@
                     <!-- Menu -->
                     <li class="nav-item">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
+                            <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
                                 Menu
                             </a>
                             <ul class="dropdown-menu">
@@ -49,15 +48,14 @@
                     </li>
                     <!-- Menu -->
                     <li class="nav-item">
-                        
-                        <a href="/home">
-                            <img class="logo" src="/img/logo.png" alt="Dibujo del logo del proyecto, contiene un zorrito">
-                        </a>
+                        <div id="logo">
+                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
+                        </div>
                     </li>
                     <!-- User -->
                     <li class="nav-item">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
                                 <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                                 <c:out value="${user.name}"/>
                             </a>
