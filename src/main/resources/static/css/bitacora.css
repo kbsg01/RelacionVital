@@ -1,31 +1,85 @@
-body *{
+body * {
     margin: 0;
     padding: 0;
-    outline: 1px solid pink;
-}
-nav.navbar{
-    background-color: rgba(4, 0, 255, 0.438);
-    width: auto;
-    height: auto;
+    box-sizing: border-box;
 }
 
-    .dropdown-menu{
-        background-color: rgb(255, 255, 255);
-    }
-    .dropdown-item{
-        font-weight: bold;
-    }
-    .logo{
-        width: 50px;
-    }
-    .nav-item{
-        vertical-align: middle;
-        margin: 5px;
-        font-weight: bold;
-    }
-    .btn{
-        background-color: rgba(190, 212, 223, 0.527);
-        margin: 15px;
-        display: flex;
-        justify-content: center;
-    }
+#content {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
+}
+
+nav.navbar {
+    background-color: #6a9eda;
+    width: auto;
+    height: auto;
+    box-shadow: 0px 3px 3px  #7496ac;
+}
+
+.dropdown-menu {
+    background-color: #5086c1;
+}
+
+.dropdown-item {
+    font-weight: bold;
+}
+
+.logo {
+    width: 50px;
+}
+
+.nav-item {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: rgba(85, 84, 139, 0.527);
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(243,255,255,1) 25%, rgba(235,250,250,1) 50%, rgba(234,255,255,1) 75%, rgba(217,255,255,1) 100%);
+}
+
+.title {
+    width: 300px;
+    margin: 70px auto;
+    padding: 10px;
+    background: #6ba7e7;
+    border-radius: 10px;
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.fondo {
+    width: 90%;
+    margin: 70px auto;
+    padding: 10px;
+    background: #84afdd;
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+}
+
+th {
+    width: 10%;
+}
+
+td {
+    width: 100%;
+}
+
+td a {
+    width: 28px;
+    text-decoration: none;
+    color: black;
+    background: #5086c1;
+    border-radius: 100%;
+}
