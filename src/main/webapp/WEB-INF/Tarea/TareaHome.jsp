@@ -14,6 +14,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <title>Tareas</title>
     <link rel="stylesheet" href="/css/tarea.css">
 </head>
@@ -75,93 +77,103 @@
     </nav>
     <!-- Navbar -->
 
-    <!-- Tablas -->
-    <div>
-        <h2>Tareas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Completar</th>
-                    <th>Fecha Limite</th>
-                    <th>Tarea</th>
-                    <th>Fecha Creacion</th>
-                    <th>Editar</th>
-                    <th>Eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach items="${tareas}" var="tarea">
-                    <c:if test="${tarea.complete == false}">
-                        <tr>
-                            <td>
-                                <a href="/tareas/${tarea.id}/complete">
-                                    Complete
-                                </a>
-                            </td>
-                            <td>
-                                <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}"/>
-                            </td>
-                            <td>
-                                <c:out value="${tarea.task}"/>
-                            </td>
-                            <td>
-                                <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}"/>
-                            </td>
-                            <td>
-                                <a href="/tareas/${tarea.id}/edit">Editar</a>
-                            </td>
-                            <td>
-                                <a href="/tareas/${tarea.id}/delete" onclick="return confirm('¿Quiereeliminar esta tarea?')"> X </a>
-                            </td>
-                        </tr>
-                    </c:if>
-                </c:forEach>
-            </tbody>
-        </table>
+    <!-- Crear/Editar -->
+    <div id="nuevo">
+        <a href="/tareas/new">+ Añadir Tarea</a>
     </div>
-    <div>
-        <h2>Completadas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Quitar</th>
-                    <th>Fecha Limite</th>
-                    <th>Tarea</th>
-                    <th>Fecha Creacion</th>
-                    <th>-</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach items="${tareas}" var="tarea">
-                    <c:if test="${tarea.complete == true}">
-                        <tr>
-                            <td>
-                                <a href="/tareas/${tarea.id}/incomplete">
-                                    Quitar
-                                </a>
-                            </td>
-                            <td>
-                                <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.updatedAt}"/>
-                            </td>
-                            <td>
-                                <c:out value="${tarea.task}"/>
-                            </td>
-                            <td>
-                                <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.createdAt}"/>
-                            </td>
-                            <td>
-                                <a href="/tareas/${tarea.id}/delete"> X </a>
-                            </td>
-                        </tr>
-                    </c:if>
-                </c:forEach>
-            </tbody>
-        </table>
-    </div>
-    <!-- Tablas -->
+    <!-- Crear/Editar -->
 
-    <!-- Crear/Editar -->
-    <a href="/tareas/new">Añadir Tarea</a>
-    <!-- Crear/Editar -->
+    <!-- Tablas -->
+    <div id="mainContent">
+        <div id="tareas">
+            <h2>Tareas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Completar</th>
+                        <th>Fecha Limite</th>
+                        <th>Tarea</th>
+                        <th>Fecha Creacion</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <c:forEach items="${tareas}" var="tarea">
+                        <c:if test="${tarea.complete == false}">
+                            <tr>
+                                <td>
+                                    <a href="/tareas/${tarea.id}/complete">
+                                        <i class="link-success fa-solid fa-circle-check"> </i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}"/>
+                                </td>
+                                <td>
+                                    <c:out value="${tarea.task}"/>
+                                </td>
+                                <td>
+                                    <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}"/>
+                                </td>
+                                <td>
+                                    <a href="/tareas/${tarea.id}/edit"> <i class="link-info fa-solid fa-pen-to-square"></i> </a>
+                                </td>
+                                <td>
+                                    <a href="/tareas/${tarea.id}/delete" onclick="return confirm('¿Está seguro de que quiere eliminar esta tarea?')"> <i class="link-danger fa-solid fa-trash"></i> </a>
+                                </td>
+                            </tr>
+                        </c:if>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
+        <div id="completadas">
+            <h2>Completadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Quitar</th>
+                        <th>Fecha Limite</th>
+                        <th>Tarea</th>
+                        <th>Fecha Creacion</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <c:forEach items="${tareas}" var="tarea">
+                        <c:if test="${tarea.complete == true}">
+                            <tr>
+                                <td>
+                                    <a href="/tareas/${tarea.id}/incomplete">
+                                        <i class="link-warning fa-solid fa-circle-xmark"></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.updatedAt}"/>
+                                </td>
+                                <td>
+                                    <c:out value="${tarea.task}"/>
+                                </td>
+                                <td>
+                                    <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.createdAt}"/>
+                                </td>
+                                <td>
+                                    <a href="/tareas/${tarea.id}/delete"> <i class="link-danger fa-solid fa-trash"></i> </a>
+                                </td>
+                            </tr>
+                        </c:if>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
+        <!-- Tablas -->
+    
+    </div>
+
+    
+    <div class="publicidad">
+        publicidad
+    </div>
 </body>
 </html>
