@@ -78,12 +78,11 @@ public class TareaController {
         if(result.hasErrors()){
             return "Tarea/TareaCreateEdit";
         }
-            Long id = (Long) session.getAttribute("userId");
-            User u = uService.findById(id);
-            tarea.setUser(u);
-            tService.save(tarea);
-            return "redirect:/tareas";
-        
+        Long id = (Long) session.getAttribute("userId");
+        User u = uService.findById(id);
+        tarea.setUser(u);
+        tService.save(tarea);
+        return "redirect:/tareas";
     }
 
     // Get Eeditar
