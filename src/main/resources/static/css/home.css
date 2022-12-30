@@ -2,6 +2,7 @@ body * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: solid 1px pink; */
 }
 
 #content {
@@ -15,6 +16,15 @@ nav.navbar {
     box-shadow: 3px 3px 3px #888888;
 }
 
+#menu{
+    margin-right: 788px;
+    height: 50px;
+}
+
+#perfil{
+    margin-left: 690px;
+}
+
 .dropdown-menu {
     background-color: #5086c1;
 }
@@ -23,8 +33,9 @@ nav.navbar {
     font-weight: bold;
 }
 
-.logo {
-    width: 50px;
+#logo img{
+    max-width: 50px;
+    border-radius: 50%;
 }
 
 .nav-item {
