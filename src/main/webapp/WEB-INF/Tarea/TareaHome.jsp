@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page isErrorPage="true" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri ="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,112 +78,85 @@
     <!-- Navbar -->
 
     <!-- Tablas -->
-    <div class="pending">
+    <div>
         <h2>Tareas</h2>
         <table>
             <thead>
                 <tr>
-                    <th>completar</th>
-                    <th>fecha limite</th>
-                    <th>tarea</th>
-                    <th>fecha creacion</th>
-                    <th>editar</th>
-                    <th>eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:choose>
-                    <c:when test="${tarea.complete == '0'}">
-                        <c:forEach items="${tareas}" var="tarea">
-                            <tr>
-                                <td>
-                                    <a href="/tareas/${tarea.id}/complete" onclick="return confirm('¿Quiere     completar esta tarea?')"> Completar </a>
-                                </td>
-
-                                <td>
-                                    <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}" />
-                                </td>
-                                <td>
-                                    <c:out value="${tarea.task}"/>
-                                </td>
-                                <td>
-                                    <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}" />
-                                </td>
-                                <td>
-                                    <a href="/tareas/${tarea.id}/edit"> Editar </a>
-                                </td>
-                                <td>
-
-                                    <a href="/tareas/${tarea.id}/delete" onclick="return confirm('¿Quiere eliminar  esta tarea?')"> X </a>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </c:when>
-                    <c:otherwise>
-                        <p>No hay tareas por completar</p>
-                    </c:otherwise>
-                </c:choose>
-            </tbody>
-        </table>
-    </div>
-    <div class="complete">
-        <h2>Completadas</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>fecha limite</th>
+                    <th>Completar</th>
+                    <th>Fecha Limite</th>
                     <th>Tarea</th>
-                    <th>fecha creacion</th>
-                    <th>-</th>
+                    <th>Fecha Creacion</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Forma 1 -->
-                <!-- Muestra todas las tareas sin importar si estan completas o no -->
-                <!-- <c:choose>
-                    <c:when test="${tarea.complete == '1'}">
-                        <c:forEach items="${tareas}" var="tarea">
-                            <tr>
-                                <td>
-                                    <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}" />
-                                </td>
-                                <td>
-                                    <c:out value="${tarea.task}"/>
-                                </td>
-                                <td>
-                                    <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}" />
-                                </td>
-                                <td>
-                                    <a href="/tareas/${tarea.id}/delete"> X </a>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </c:when>
-                    <c:otherwise>
-                        <p>No hay tareas completadas</p>
-                    </c:otherwise>
-                </c:choose> -->
-
-                <!-- Forma 2 -->
-                <!-- No muestra tareas completadas -->
-                <!-- <c:if test = "${tarea.complete == true}">
-                    <c:forEach items="${tareas}" var="tarea">
+                <c:forEach items="${tareas}" var="tarea">
+                    <c:if test="${tarea.complete == false}">
                         <tr>
                             <td>
-                                <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}" />
+                                <a href="/tareas/${tarea.id}/complete">
+                                    Complete
+                                </a>
+                            </td>
+                            <td>
+                                <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}"/>
                             </td>
                             <td>
                                 <c:out value="${tarea.task}"/>
                             </td>
                             <td>
-                                <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}" />
+                                <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}"/>
+                            </td>
+                            <td>
+                                <a href="/tareas/${tarea.id}/edit">Editar</a>
+                            </td>
+                            <td>
+                                <a href="/tareas/${tarea.id}/delete" onclick="return confirm('¿Quiereeliminar esta tarea?')"> X </a>
+                            </td>
+                        </tr>
+                    </c:if>
+                </c:forEach>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Completadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Quitar</th>
+                    <th>Fecha Limite</th>
+                    <th>Tarea</th>
+                    <th>Fecha Creacion</th>
+                    <th>-</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${tareas}" var="tarea">
+                    <c:if test="${tarea.complete == true}">
+                        <tr>
+                            <td>
+                                <a href="/tareas/${tarea.id}/incomplete">
+                                    Quitar
+                                </a>
+                            </td>
+                            <td>
+                                <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.updatedAt}"/>
+                            </td>
+                            <td>
+                                <c:out value="${tarea.task}"/>
+                            </td>
+                            <td>
+                                <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.createdAt}"/>
                             </td>
                             <td>
                                 <a href="/tareas/${tarea.id}/delete"> X </a>
                             </td>
                         </tr>
-                    </c:forEach>
-                </c:if> -->
+                    </c:if>
+                </c:forEach>
             </tbody>
         </table>
     </div>

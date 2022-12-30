@@ -2,6 +2,7 @@ package com.grupo3.proyecto.controllers;
 
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -41,28 +42,28 @@ public class TareaController {
         List<Tarea> tareas = user.getTareas();
         model.addAttribute("user", user);
         model.addAttribute("tareas", tareas);
+        model.addAttribute("tarea", tarea);
         // Buscar la forma de mover las tareas a otra lista al ser completadas marcando el checkBox(boolean)
         return "Tarea/TareaHome";
     }
     
 
+    // Controlador de tarea completada
     @GetMapping("/tareas/{id}/complete")
     public String completeTarea(@PathVariable("id")Long id, HttpSession session, Model model){
         Tarea tarea = tService.findById(id);
-        model.addAttribute("tarea", tarea);
         tarea.setComplete(true);
         tService.save(tarea);
         return "redirect:/tareas";
     }
-    // @GetMapping("/tareas/{id}/complete")
-    // public String completeTarea(@PathVariable("id")Long id, HttpSession session){
-    //     // Falta agregar comparacion id para validacion de ususario
-    //     Tarea tarea = tService.findById(id);
-    //     Long uId = (Long) session.getAttribute("userid");
-    //     User user = uService.findById(uId);
-    //     
-    //     return "Tarea/TareaHome";
-    // }
+
+    @GetMapping("/tareas/{id}/incomplete")
+    public String incompleteTarea(@PathVariable("id")Long id, HttpSession session, Model model){
+        Tarea tarea = tService.findById(id);
+        tarea.setComplete(false);
+        tService.save(tarea);
+        return "redirect:/tareas";
+    }
 
     // Get crear
     @GetMapping("/tareas/new")

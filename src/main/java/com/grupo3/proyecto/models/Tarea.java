@@ -40,6 +40,7 @@ public class Tarea {
     @Size(max = 70, message = "La tarea no debe tener más de 70 caracteres")
     private String task;
 
+    // false(0) = incompleto | true(1)= completo
     private boolean complete=false;
 
     // Fecha limite tarea
