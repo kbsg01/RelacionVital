@@ -21,65 +21,62 @@
         </head>
 
         <body>
-            <!-- navbar -->
-            <nav class="navbar navbar-expand-lg d-flex justify-content-between">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <!-- Menu -->
-                            <li class="nav-item">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Menu
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Agregar pagina -->
-                                    <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
-                                    <!-- Agregar pagina -->
-
-                                    <!-- Listos (27-12-22) -->
-                                    <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
-                                    <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
-                                    <!-- Listos (27-12-22) -->
-
-                                    <!-- Agregar pagina -->
-                                    <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
-                                    <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
-                                    <!-- Agregar pagina -->
-                                </ul>
-                            </li>
-                            </li>
-                            <!-- Menu -->
-                            <li class="nav-item">
-
-                                <a href="/home">
-                                    <img class="logo" src="/img/logo.png"
-                                        alt="Dibujo del logo del proyecto, contiene un zorrito">
-                                </a>
-                            </li>
-                            <!-- User -->
-                            <li class="nav-item">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <c:out value="${user.name}" />
-                                </a>
-                                <!-- desplegable -->
-                                <ul class="dropdown-menu">
-                                    <!-- Agregar perfil de usuario (no urgente) -->
-                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                    <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
-                                </ul>
-                                <!-- desplegable -->
-                            </li>
-                            </li>
-                            <!-- User -->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- navbar -->
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- Menu -->
+                    <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
+                                Menu
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
+                                <!-- Agregar pagina -->
+                            
+                                <!-- Listos (27-12-22) -->
+                                <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
+                                <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
+                                <!-- Listos (27-12-22) -->
+                            
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
+                                <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
+                                <!-- Agregar pagina -->
+                            </ul>
+                        </li>
+                    </li>
+                    <!-- Menu -->
+                    <li class="nav-item">
+                        <div id="logo">
+                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
+                        </div>
+                    </li>
+                    <!-- User -->
+                    <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
+                                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                                <c:out value="${user.name}"/>
+                            </a>
+                            <!-- desplegable -->
+                            <ul class="dropdown-menu">
+                                <!-- Agregar perfil de usuario (no urgente) -->
+                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
+                            </ul>
+                            <!-- desplegable -->
+                        </li>
+                    </li>
+                    <!-- User -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
             <!-- Publicidad -->
             <div id="content">
                 <div class="container text-center">
@@ -94,7 +91,7 @@
                     <!-- carousel -->
                     <div id="tips">
                         <!-- Carrousel -->
-                        <div id="carouselExampleCaptions" class="carousel slide">
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                                     class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -107,32 +104,24 @@
                                 <div class="carousel-item active">
                                     <div class="d-block w-100">   <h2> Hola que tal </h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>First slide label</h5>
-                                        <p>Some representative placeholder content for the first slide.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item ">
                                     <div class="d-block w-100">   <h2> Bien y tú? </h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>Some representative placeholder content for the second slide.</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="d-block w-100">   <h2> Bien gracias </h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
                                     </div>
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon sig" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                                 <span class="carousel-control-next-icon sig" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
