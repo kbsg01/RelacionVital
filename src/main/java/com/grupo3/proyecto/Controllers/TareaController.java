@@ -20,7 +20,6 @@ import com.grupo3.proyecto.services.UserService;
 
 
 @Controller
-
 public class TareaController {
     
     private final TareaService tService;
