@@ -83,28 +83,30 @@
 
     <div>
         <!-- informacion de la cuenta -->
+        <h1>informacion de la cuenta</h1>
         <div>
             <form:form method="post" action="" modelAttribute="user">
                 <p>
-                    <form:label path="name">Name</form:label>
-                    <form:errors path="name"/>
-                    <form:input path="name"/>
+                    <form:label path="name">Nombre:</form:label>
+                    <form:errors class="text-danger" path="name"/>
+                    <form:input placeholder="Name" path="name"/>
                 </p>
                 <p>
-                    <form:label path="email">Email</form:label>
-                    <form:errors path="email"/>
-                    <form:input path="email"/>
+                    <form:label path="email">Email:</form:label>
+                    <form:errors class="text-danger" path="email"/>
+                    <form:input placeholder="Email" type="email" path="email"/>
                 </p>
                 <p>
-                    <form:label path="password">password</form:label>
-                    <form:errors path="password"/>
-                    <form:input path="password"/>
+                    <form:label path="password">Contraseña:</form:label>
+                    <form:errors class="text-danger" path="password"/>
+                    <form:password placeholder="Password" path="password"/>
                 </p>
                 <p>
-                    <form:label path="passwordConfirmation">passwordConfirmation</form:label>
-                    <form:errors path="passwordConfirmation"/>
-                    <form:input path="passwordConfirmation"/>
+                    <form:label path="passwordConfirmation">Confirmación de Contraseña:</form:label>
+                    <form:errors class="text-danger" path="passwordConfirmation"/>
+                    <form:password placeholder="PasswordConfirmation" path="passwordConfirmation"/>
                 </p>
+                <input type="submit" value="Actualizar"/>
             </form:form>
         </div>
         <!-- informacion de la cuenta -->

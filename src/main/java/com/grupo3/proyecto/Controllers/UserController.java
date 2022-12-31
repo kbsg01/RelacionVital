@@ -81,11 +81,22 @@ public class UserController {
         return "home";
     }
 
-    @GetMapping("/home/perfil")
+    @GetMapping("/account/perfil")
     public String perfil(@ModelAttribute("user")User user, Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
         User users = userServ.findById(id);
         model.addAttribute("users", users);
         return "User/UserHome";
-        }
+    }
+
+    @PostMapping("/account/perfil")
+    public String userEdit(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+            if(result.hasErrors()){
+                return "User/UserHome";
+            }
+            Long id = (Long) session.getAttribute("userId");
+            User u = userServ.findById(id);
+            userServ.save(u);
+            return "redirect:/account/perfil";
+}
 }
