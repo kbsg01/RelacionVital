@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -79,4 +80,12 @@ public class UserController {
         model.addAttribute("tareas", tareas);
         return "home";
     }
+
+    @GetMapping("/home/perfil")
+    public String perfil(@ModelAttribute("user")User user, Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        User users = userServ.findById(id);
+        model.addAttribute("users", users);
+        return "User/UserHome";
+        }
 }
