@@ -15,6 +15,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -22,22 +23,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Setter
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "emociones")
-public class Emocion {
+@Table(name = "medicamentos" )
+public class Medicamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // nombre emocion
-    private String emotionName;
-
-    // Emoji de la emocion
-    private String emoji;
+    @NotBlank(message="El nombre no puede estar vacio")
+    private String nombre;
 
     // Fechas base de datos
     @Column(updatable = false)
@@ -55,11 +52,12 @@ public class Emocion {
         this.updatedAt = new Date();
     }
 
+        // Relaciones muchos a muchos 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "emociones_users",
+        name = "medicamentos_users",
         joinColumns = @JoinColumn(name="user_id"),
-        inverseJoinColumns = @JoinColumn(name="emocion_id")
+        inverseJoinColumns = @JoinColumn(name="medicamento_id")
     )
     private List<User> users;
 }

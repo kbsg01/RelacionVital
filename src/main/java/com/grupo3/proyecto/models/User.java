@@ -9,6 +9,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
@@ -73,6 +76,21 @@ public class User {
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<Bitacora> bitacoras;
 
-    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-    private List<UserEmocion> emociones;
+
+    // Relaciones muchos a muchos 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "medicamentos_users",
+        joinColumns = @JoinColumn(name = "medicamento_id"),
+        inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<Medicamento> medicamentos;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name="emociones_users",
+        joinColumns = @JoinColumn(name="emocion_id"),
+        inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<Emocion> emocionesUser;
 }
