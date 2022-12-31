@@ -9,8 +9,7 @@ import com.grupo3.proyecto.repositories.EmocionRepository;
 public class EmocionService extends BaseService<Emocion>{
     
     private final EmocionRepository eRepo;
-
-    public EmocionService(EmocionRepository eRepo) {
+    public EmocionService(EmocionRepository eRepo){
         super(eRepo);
         this.eRepo = eRepo;
     }
