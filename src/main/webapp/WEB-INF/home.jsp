@@ -23,14 +23,14 @@
         <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+        <div class="">
+            <div class="" id="navbarNavDropdown">
+                <div class="">
                     <!-- Menu -->
-                    <li class="nav-item">
-                        <li class="nav-item dropdown">
+                    <div class="nav-item">
+                        <div class="nav-item dropdown">
                             <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                Menu
+                                Menú
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- Agregar pagina -->
@@ -47,32 +47,32 @@
                                 <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
                                 <!-- Agregar pagina -->
                             </ul>
-                        </li>
-                    </li>
+                        </div>
+                    </div>
                     <!-- Menu -->
-                    <li class="nav-item">
+                    <div class="nav-item">
                         <div id="logo">
                             <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
                         </div>
-                    </li>
+                    </div>
                     <!-- User -->
-                    <li class="nav-item">
-                        <li class="nav-item dropdown">
+                    <div class="nav-item">
+                        <div class="nav-item dropdown usuario">
                             <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                                <img src="https://github.com/mdo.png" alt="mdo" width="55" height="55" class="rounded-circle">
                                 <c:out value="${user.name}"/>
                             </a>
                             <!-- desplegable -->
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu sombra">
                                 <!-- Agregar perfil de usuario (no urgente) -->
                                 <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
+                                <li><a class="btn btn-light" href="/logout">Cerrar Sesión</a></li>
                             </ul>
                             <!-- desplegable -->
-                        </li>
-                    </li>
+                        </div>
+                    </div>
                     <!-- User -->
-                </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -102,17 +102,17 @@
                             </div>
                             <div class="carousel-inner tips">
                                 <div class="carousel-item active">
-                                    <div class="d-block w-100">   <h2> Hola que tal </h2> </div>
+                                    <div class="d-block w-100">   <h2> Hola, ¿que tal? </h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
                                 <div class="carousel-item ">
-                                    <div class="d-block w-100">   <h2> Bien y tú? </h2> </div>
+                                    <div class="d-block w-100">   <h2> Bien, ¿y tú? </h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="d-block w-100">   <h2> Bien gracias </h2> </div>
+                                    <div class="d-block w-100">   <h2> Bien, gracias. </h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
                     </div>
                 </main>
                 <!-- Tareas Pendientes -->
-                <div clas="row alinear">
+                <div class="row alinear">
                     <div class="col-6 tareas ">
                         <h3>Tareas Pendientes</h3>
                         <div>
@@ -141,10 +141,10 @@
                         </c:forEach>
                         </div>
                     </div>
-                    <!-- Tareas Pendientes -->
+                    <!-- /Tareas Pendientes -->
                     <!-- Numero de emergencia -->
                         <div class=" box alinear ">
-                            <div class="numeros">
+                            <div class="numeros uno">
                                 <div class="card">
                                     <div class="card-body">
                                         <p class="bold">Salud Responde:
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="numeros">
+                            <div class="numeros dos">
                                 <div class="card">
                                     <div class="card-body">
                                         <p class="bold">Fundación de las Familias y Primera Dama.
@@ -164,7 +164,7 @@
                                             <br>
                                             +569 3710 0023
                                             <br>
-                                        <p>Atención en línea de sicólogos a través de whatsapp.</p>
+                                        <p>Atención en línea de psicólogos a través de whatsapp.</p>
                                         </p>
                                     </div>
                                 </div>
