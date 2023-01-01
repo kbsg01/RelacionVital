@@ -65,7 +65,7 @@
                             <!-- desplegable -->
                             <ul class="dropdown-menu sombra">
                                 <!-- Agregar perfil de usuario (no urgente) -->
-                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
                                 <li><a class="btn btn-light" href="/logout">Cerrar Sesión</a></li>
                             </ul>
                             <!-- desplegable -->

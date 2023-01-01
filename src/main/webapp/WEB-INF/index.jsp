@@ -111,22 +111,22 @@
                     <p>
                         <form:label path="name">Nombre:</form:label>
                         <form:errors class="text-danger" path="name"/>
-                        <form:input class="form-control" path="name"/>
+                        <form:input placeholder="Name" class="form-control" path="name"/>
                     </p>
                     <p>
                         <form:label path="email">Email:</form:label>
                         <form:errors class="text-danger" path="email"/>
-                        <form:input class="form-control" type="email" path="email"/>
+                        <form:input placeholder="Email" class="form-control" type="email" path="email"/>
                     </p>
                     <p>
                         <form:label path="password">Contraseña:</form:label>
                         <form:errors class="text-danger" path="password"/>
-                        <form:password class="form-control" path="password"/>
+                        <form:password placeholder="Password" class="form-control" path="password"/>
                     </p>
                     <p>
                         <form:label path="passwordConfirmation">Confirmación de Contraseña:</form:label>
                         <form:errors class="text-danger" path="passwordConfirmation"/>
-                        <form:password class="form-control" path="passwordConfirmation"/>
+                        <form:password placeholder="PasswordConfirmation" class="form-control" path="passwordConfirmation"/>
                     </p>
                     <input type="submit" value="Register!"/>
                 </form:form>
@@ -137,11 +137,11 @@
                 <form method="post" action="/login" >
                     <p>
                         <label for="email">Email:</label>
-                        <input class="form-control" type="text" id="email" name="email"/>
+                        <input placeholder="Email" class="form-control" type="text" id="email" name="email"/>
                     </p>
                     <p>
                         <label for="password">Contraseña:</label>
-                        <input class="form-control"type="password" id="password" name="password"/>
+                        <input placeholder="Password" class="form-control"type="password" id="password" name="password"/>
                     </p>
                     <input type="submit" value="Ingresar"/>
                 </form>

@@ -1,0 +1,52 @@
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: solid 1px pink; */
+}
+
+#content {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
+}
+
+nav.navbar {
+    background-color: #6a9eda;
+    width: auto;
+    height: auto;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+#menu{
+    margin-right: 788px;
+    height: 50px;
+}
+
+#perfil{
+    margin-left: 690px;
+}
+
+.dropdown-menu {
+    background-color: #5086c1;
+}
+
+.dropdown-item {
+    font-weight: bold;
+}
+
+#logo img{
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+.nav-item {
+    vertical-align: middle;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: rgba(85, 84, 139, 0.527);
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
