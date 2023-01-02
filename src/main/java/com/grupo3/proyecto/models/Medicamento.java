@@ -34,8 +34,6 @@ public class Medicamento {
     @NotBlank(message = "El nombre no puede estar vacio")
     private String nombre;
 
-    private String icono;
-
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createdAt;

@@ -17,9 +17,7 @@ public class UserMedicamentoService extends BaseService<UserMedicamento>{
         this.umRepo = umRepo;
     }
 
-    public List<UserMedicamento> orderByFechaVencimineto(){
-        return umRepo.findByFechaRecetaByOrderDesc();
-    }
+
 
     @Override
     public void delete(Long id) {

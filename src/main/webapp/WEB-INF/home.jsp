@@ -42,10 +42,10 @@
                                 <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
                                 <!-- Listos (27-12-22) -->
                             
-                                <!-- Agregar pagina -->
+                                <!-- Probando funcionalidad -->
                                 <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
                                 <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
-                                <!-- Agregar pagina -->
+                                <!-- Probando funcionalidad -->
                             </ul>
                         </div>
                     </div>

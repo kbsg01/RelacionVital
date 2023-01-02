@@ -16,7 +16,6 @@ import com.grupo3.proyecto.models.Medicamento;
 import com.grupo3.proyecto.models.User;
 import com.grupo3.proyecto.models.UserMedicamento;
 import com.grupo3.proyecto.services.MedicamentoService;
-import com.grupo3.proyecto.services.UserMedicamentoService;
 import com.grupo3.proyecto.services.UserService;
 
 @Controller
@@ -32,8 +31,8 @@ public class MedicamentoController {
     }
 
     // Home medicamentos
-    @GetMapping("medicamentos/home")
-    public String medsHome(@ModelAttribute("medicamento")Medicamento med, Model model, HttpSession session){
+    @GetMapping("/meds")
+    public String medsHome(Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
         User user =  uService.findById(id);
         List<UserMedicamento> meds = user.getMedicamentos();
@@ -43,22 +42,57 @@ public class MedicamentoController {
     }
 
     // Crear Medicamento
-    @PostMapping("/medicamentos/new")
-    public String createMed(@Valid @ModelAttribute("uMed")UserMedicamento uMed, BindingResult result, HttpSession session, Medicamento medicamento){
-        if (result.hasErrors()) {
-            return "Meds/CrearEditarMed";
-        }
-        Long id = (Long)session.getAttribute("userId");
-        User u = uService.findById(id);
-<<<<<<< Updated upstream
-        // uMService.setUser(u);
-        // uMService.save(uMed);
-        return "redirect:/medicamentos/home";
-=======
-        mService.save(medicamento);
-        uMService.setMedicamento(medicamento);
-
-        uMService.save(uMed);
->>>>>>> Stashed changes
+    @GetMapping("/meds/new")
+    public String crearMed(@ModelAttribute("medicamento")Medicamento medicamento,HttpSession session, Model model){
+        Long id = (Long) session.getAttribute("userId");
+        User user = uService.findById(id);
+        model.addAttribute("user", user);
+        return "Meds/AgregarMed";
     }
+
+    @PostMapping("/meds/new")
+    public String crearMed(@Valid @ModelAttribute("medicamento")Medicamento medicamento, BindingResult result, HttpSession session, Model model){
+        Long id = (Long) session.getAttribute("userId");
+        User user = uService.findById(id);
+        model.addAttribute("user", user);
+        if (result.hasErrors()) {
+            return "Meds/AgregarMed";
+        }
+        mService.save(medicamento);
+        return "redirect:/meds";
+    } 
+
+
+
+    // Agregar receta
+    @GetMapping("/meds/receta/add")
+    public String addReceta(@ModelAttribute("receta")UserMedicamento receta, HttpSession session, Model model){
+        return "";
+    }
+
+    @PostMapping("/meds/receta/add")
+    public String addReceta(){
+
+        return "";
+    }
+    // @GetMapping("/meds/new")
+    // public String createEditMed(@ModelAttribute("uMed")UserMedicamento uMed,Model model, HttpSession session){
+    //     Long id = (Long) session.getAttribute("userId");
+    //     User u = uService.findById(id);
+    //     model.addAttribute("user", u);
+    //     return "Meds/CrearEditarMed";
+    // }
+
+    // @PostMapping("/meds/new")
+    // public String createEditMed(@Valid @ModelAttribute("uMed")UserMedicamento uMed, BindingResult result, HttpSession session, Medicamento medicamento){
+    //     if (result.hasErrors()) {
+    //         return "Meds/CrearEditarMed";
+    //     }
+    //     Long id = (Long)session.getAttribute("userId");
+    //     User u = uService.findById(id);
+    //     uMed.setUser(u);
+    //     u.getMedicamentos().add(uMed);
+
+    //     return "redirect:/medicamentos/home";
+    // }
 }

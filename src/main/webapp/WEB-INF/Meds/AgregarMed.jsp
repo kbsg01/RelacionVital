@@ -78,28 +78,32 @@
     <!-- Crear/Editar -->
     <div class="crearEditar">
         <h3>Panel de Medicamento</h3>
-        <form:form action="" method="post" modelAttribute="uMed">
+        <form:form action="" method="post" modelAttribute="medicamento">
             <p>
-                <form:label path="medicamneto">Typical Gender:</form:label>
-                <select path="medicamento" name="medicamneto">
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Neutral</option>
+                <form:label path="nombre">Nombre:</form:label>
+                <select name="nombre">
+                    <option value="Citalopram">Citalopram</option>
+                    <option value="Escitalopram">Escitalopram</option>
+                    <option value="Paroxetina">Paroxetina</option>
+                    <option value="Buspirona">Buspirona</option>
+                    <option value="Sertralina">Sertralina</option>
+                    <option value="Fluoxetina">Fluoxetina</option>
+                    <option value="Duloxetina">Duloxetina</option>
+                    <option value="Venlafaxina">Venlafaxina</option>
+                    <option value="Alprazolam">Alprazolam</option>
+                    <option value="Loracepam">Loracepam</option>
+                    <option value="Diacepam">Diacepam</option>
+                    <option value="Cloracepam">Cloracepam</option>
                 </select>
             </p>
-            <p>
-                <form:label path="dosis">Dosis:</form:label>
-                <form:errors path="dosis"/>
-                <form:input path="dosis"/>
-            </p>
-            <p>
-                <form:label path="fechaReceta">Vencimiento:</form:label>
-                <form:errors path="fechaReceta"/>
-                <form:input type="date" path="fechaReceta"/>
-            </p>
-            <input type="submit" value="agregar Medicamento">
+            
+            <input type="submit" value="Agregar">
         </form:form>
     </div>
     <!-- Crear/Editar -->
+    <a href="#">
+        <p>¿Nos falta alguno?, por favor escribenos para agregarlo</p>
+    </a>
+    
 </body>
 </html>
