@@ -16,18 +16,19 @@ import com.grupo3.proyecto.models.Medicamento;
 import com.grupo3.proyecto.models.User;
 import com.grupo3.proyecto.models.UserMedicamento;
 import com.grupo3.proyecto.services.MedicamentoService;
+import com.grupo3.proyecto.services.UserMedicamentoService;
 import com.grupo3.proyecto.services.UserService;
 
 @Controller
 public class MedicamentoController {
     private final MedicamentoService mService;
-    private final UserMedicamento uMService;
+    // private final UserMedicamentoService uMService;
     private final UserService uService;
 
-    public MedicamentoController(MedicamentoService mService, UserService uService, UserMedicamento uMService){
+    public MedicamentoController(MedicamentoService mService, UserService uService){//, UserMedicamentoService uMService){
         this.mService = mService;
         this.uService = uService;
-        this.uMService = uMService;
+        // this.uMService = uMService;
     }
 
     // Home medicamentos
@@ -49,8 +50,8 @@ public class MedicamentoController {
         }
         Long id = (Long)session.getAttribute("userId");
         User u = uService.findById(id);
-        uMService.setUser(u);
-        uMService.save
-        
+        // uMService.setUser(u);
+        // uMService.save(uMed);
+        return "redirect:/medicamentos/home";
     }
 }

@@ -88,8 +88,8 @@ public class UserController {
         return "User/UserHome";
     }
 
-    @PostMapping("/account/perfil")
-    public String userEdit(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+    @PostMapping("/account/perfil/name")
+    public String editName(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
             if(result.hasErrors()){
                 return "User/UserHome";
             }
@@ -97,5 +97,27 @@ public class UserController {
             User u = userServ.findById(id);
             userServ.save(u);
             return "redirect:/account/perfil";
-}
+    }
+
+    @PostMapping("/account/perfil/email")
+    public String editEmail(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+            if(result.hasErrors()){
+                return "User/UserHome";
+            }
+            Long id = (Long) session.getAttribute("userId");
+            User u = userServ.findById(id);
+            userServ.save(u);
+            return "redirect:/account/perfil";
+    }
+
+    @PostMapping("/account/perfil/password")
+    public String editPassword(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+            if(result.hasErrors()){
+                return "User/UserHome";
+            }
+            Long id = (Long) session.getAttribute("userId");
+            User u = userServ.findById(id);
+            userServ.save(u);
+            return "redirect:/account/perfil";
+    }
 }

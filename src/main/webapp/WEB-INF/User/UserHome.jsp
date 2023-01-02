@@ -76,7 +76,9 @@
 
     <!-- foto perfil -->
     <div>
-
+        <form action="" method="post">
+            <input type="file">
+        </form>
     </div>
     <!-- foto perfil -->
 
@@ -85,17 +87,27 @@
         <!-- informacion de la cuenta -->
         <h1>informacion de la cuenta</h1>
         <div>
-            <form:form method="post" action="" modelAttribute="user">
+            <form:form method="post" action="/account/perfil/name" modelAttribute="user">
                 <p>
                     <form:label path="name">Nombre:</form:label>
                     <form:errors class="text-danger" path="name"/>
                     <form:input placeholder="Name" path="name"/>
                 </p>
+                <input type="submit" value="Nombre"/>
+            </form:form>
+        </div>
+        <div>
+            <form:form method="post" action="/account/perfil/email" modelAttribute="user">
                 <p>
                     <form:label path="email">Email:</form:label>
                     <form:errors class="text-danger" path="email"/>
                     <form:input placeholder="Email" type="email" path="email"/>
                 </p>
+                <input type="submit" value="Email"/>
+            </form:form>
+        </div>
+        <div>
+            <form:form method="post" action="/account/perfil/password" modelAttribute="user">
                 <p>
                     <form:label path="password">Contraseña:</form:label>
                     <form:errors class="text-danger" path="password"/>
@@ -106,7 +118,7 @@
                     <form:errors class="text-danger" path="passwordConfirmation"/>
                     <form:password placeholder="PasswordConfirmation" path="passwordConfirmation"/>
                 </p>
-                <input type="submit" value="Actualizar"/>
+                <input type="submit" value="Contraseña"/>
             </form:form>
         </div>
         <!-- informacion de la cuenta -->
