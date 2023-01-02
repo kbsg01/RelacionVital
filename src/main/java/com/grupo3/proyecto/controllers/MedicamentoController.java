@@ -50,8 +50,15 @@ public class MedicamentoController {
         }
         Long id = (Long)session.getAttribute("userId");
         User u = uService.findById(id);
+<<<<<<< Updated upstream
         // uMService.setUser(u);
         // uMService.save(uMed);
         return "redirect:/medicamentos/home";
+=======
+        mService.save(medicamento);
+        uMService.setMedicamento(medicamento);
+
+        uMService.save(uMed);
+>>>>>>> Stashed changes
     }
 }
