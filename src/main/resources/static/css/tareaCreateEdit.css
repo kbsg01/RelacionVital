@@ -1,4 +1,13 @@
+body * {
+    margin: 0;
+    padding: 0;
+    /*outline: 1px solid pink;*/
+}
+
 #content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
 }
 
@@ -9,12 +18,12 @@ nav.navbar {
     box-shadow: 3px 3px 3px #888888;
 }
 
-#menu{
+#menu {
     margin-right: 788px;
     height: 50px;
 }
 
-#perfil{
+#perfil {
     margin-left: 690px;
 }
 
@@ -26,7 +35,7 @@ nav.navbar {
     font-weight: bold;
 }
 
-#logo img{
+#logo img {
     max-width: 50px;
     border-radius: 50%;
 }
@@ -35,4 +44,211 @@ nav.navbar {
     vertical-align: middle;
     margin: 5px;
     font-weight: bold;
+}
+
+.crearEditar {
+    justify-content: center;
+    display: flex;
+}
+
+.titulo {
+    margin-top: 150px;
+    margin-bottom: 80px;
+    width: 600px;
+    padding: 20px;
+    border-radius: 200px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
+    margin-left: 100px;
+}
+
+h1 {
+    -webkit-text-fill-color: rgb(198, 239, 255);
+    -webkit-text-stroke: 1px rgb(154, 198, 255);
+    background: #ccc;
+    text-align: center;
+    font-size: 3rem;
+    background: radial-gradient(rgb(198, 221, 255)60%,rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.cajon {
+    width: 800px;
+    background: linear-gradient(0deg, rgb(235, 250, 250, 1) 10%, rgb(223, 248, 248) 24%, rgb(185, 222, 253) 60%, rgb(88, 166, 226) 80%, #6a9eda 100%);
+}
+
+/*/////////////////////////////////////////////////////////////////////*/
+.tarea {
+    width: 400px;
+    margin: 20px;
+    margin-bottom: 50px;
+    margin-left: 38%;
+    display: block;
+
+}
+.fecha {
+    margin-bottom: 10px;
+    font-size: 27px;
+    margin-left: 25%;
+    width: 170px;
+}
+.font{
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-left: 30%;
+    
+}
+.font1{
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-left: -30px;
+}
+
+.task {
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: 80px;
+    font-weight: bold;
+
+}
+.publicidad{
+
+        height: 77px;
+        text-align: center;
+        padding-left: 50px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
+        font-size: large;
+}
+.col{
+    background-color: rgb(247, 247, 247);
+    height: 67px;
+    border: 1px solid rgb(202, 202, 202);
+}
+.form-outline{
+    width: 90%;
+    margin-right: 20px;
+}
+.form-control{
+    margin-left: -30px;
+
+}
+
+/* burbujas */
+
+.burbuja{
+    border-radius: 50%;
+    background: rgb(165, 217, 238);
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+    
+    animation: burbujas 3s linear infinite ;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-duration: 7s
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 14%;
+    animation-duration: 9s
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 1%;
+    animation-duration: 6s;
+}
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 20%;
+    animation-duration: 6s
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 5%;
+    animation-duration: 5s
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 86%;
+    animation-duration: 4s
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 75%;
+    animation-duration: 8s
+}
+
+.burbuja:nth-child(8){
+    width: 100px;
+    height: 100px;
+    left: 90%;
+    animation-duration: 9s
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 6%;
+    animation-duration: 11s
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 70%;
+    animation-duration: 5s
+    
+}
+
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
