@@ -75,7 +75,7 @@
     <!-- Navbar -->
 
 
-    <!-- Crear/Editar -->
+    <!-- Crear-->
     <div class="crearEditar">
         <h3>Panel de Medicamento</h3>
         <form:form action="" method="post" modelAttribute="receta">
@@ -102,6 +102,6 @@
             <input type="submit" value="agregar Medicamento">
         </form:form>
     </div>
-    <!-- Crear/Editar -->
+    <!-- Crear-->
 </body>
 </html>
