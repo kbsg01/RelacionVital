@@ -48,8 +48,8 @@ public class User {
     @NotBlank(message = "La contraseña no puede estar vacia")
     @Size(min = 8, message = "La contraseña debe tener mínimo 8 caracteres")
     private String password;
+    
     @Transient
-    @NotBlank(message = "La confimacion de contraseña no puede estar vacia")
     private String passwordConfirmation;
 
     private boolean profesional;

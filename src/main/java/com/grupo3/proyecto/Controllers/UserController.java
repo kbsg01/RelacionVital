@@ -89,35 +89,33 @@ public class UserController {
     }
 
     @PostMapping("/account/perfil/name")
-    public String editName(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
-            if(result.hasErrors()){
-                return "User/UserHome";
-            }
-            Long id = (Long) session.getAttribute("userId");
-            User u = userServ.findById(id);
-            userServ.save(u);
-            return "redirect:/account/perfil";
+    public String editName(@ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+        Long id = (Long) session.getAttribute("userId");
+        User u = userServ.findById(id);
+        u.setName(user.getName());
+        userServ.save(u);
+        return "redirect:/account/perfil";
     }
 
     @PostMapping("/account/perfil/email")
-    public String editEmail(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
-            if(result.hasErrors()){
-                return "User/UserHome";
-            }
-            Long id = (Long) session.getAttribute("userId");
-            User u = userServ.findById(id);
-            userServ.save(u);
-            return "redirect:/account/perfil";
+    public String editEmail( @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+        Long id = (Long) session.getAttribute("userId");
+        User u = userServ.findById(id);
+        boolean duplicated = userServ.duplicatedUser(user.getEmail());
+        if(duplicated){
+            model.addAttribute("error", "Email already in use! Please try again with a different email address!");
+            return "index";
+        }
+        u.setEmail(user.getEmail());
+        userServ.save(u);
+        return "redirect:/account/perfil";
     }
-
     @PostMapping("/account/perfil/password")
-    public String editPassword(@Valid @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
-            if(result.hasErrors()){
-                return "User/UserHome";
-            }
-            Long id = (Long) session.getAttribute("userId");
-            User u = userServ.findById(id);
-            userServ.save(u);
-            return "redirect:/account/perfil";
+    public String editPassword(@ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+        Long id = (Long) session.getAttribute("userId");
+        User u = userServ.findById(id);
+        u.setPassword(user.getPassword());
+        userServ.registerUser(u);
+        return "redirect:/account/perfil";
     }
 }

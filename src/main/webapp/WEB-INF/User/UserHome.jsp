@@ -90,35 +90,31 @@
             <form:form method="post" action="/account/perfil/name" modelAttribute="user">
                 <p>
                     <form:label path="name">Nombre:</form:label>
-                    <form:errors class="text-danger" path="name"/>
                     <form:input placeholder="Name" path="name"/>
                 </p>
-                <input type="submit" value="Nombre"/>
+                <input type="submit" value="Guardar"/>
             </form:form>
         </div>
         <div>
             <form:form method="post" action="/account/perfil/email" modelAttribute="user">
                 <p>
                     <form:label path="email">Email:</form:label>
-                    <form:errors class="text-danger" path="email"/>
                     <form:input placeholder="Email" type="email" path="email"/>
                 </p>
-                <input type="submit" value="Email"/>
+                <input type="submit" value="Guardar"/>
             </form:form>
         </div>
         <div>
             <form:form method="post" action="/account/perfil/password" modelAttribute="user">
                 <p>
                     <form:label path="password">Contraseña:</form:label>
-                    <form:errors class="text-danger" path="password"/>
                     <form:password placeholder="Password" path="password"/>
                 </p>
                 <p>
                     <form:label path="passwordConfirmation">Confirmación de Contraseña:</form:label>
-                    <form:errors class="text-danger" path="passwordConfirmation"/>
                     <form:password placeholder="PasswordConfirmation" path="passwordConfirmation"/>
                 </p>
-                <input type="submit" value="Contraseña"/>
+                <input type="submit" value="Guardar"/>
             </form:form>
         </div>
         <!-- informacion de la cuenta -->
