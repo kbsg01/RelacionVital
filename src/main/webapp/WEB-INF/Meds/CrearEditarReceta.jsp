@@ -80,14 +80,15 @@
         <h3>Panel de Medicamento</h3>
         <form:form action="" method="post" modelAttribute="receta">
             <p>
-                <!-- No aparecen medicamentos -->
                 <form:select path="medicamento">
                     <c:forEach items="${medicamentos}" var="medicamento">
-                        <option value="${medicamento.id}"><c:out value="${medicamento.getNombre()}"/>
+                        <form:option value="${medicamento.id}">
+                            <c:out value="${medicamento.nombre}"/>
+                        </form:option>
                     </c:forEach>
                 </form:select>
+                
             </p>
-            <!-- Guarda con normalidad todos los datos -->
             <p>
                 <form:label path="dosis">Dosis:</form:label>
                 <form:errors path="dosis"/>

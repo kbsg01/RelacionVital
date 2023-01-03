@@ -82,7 +82,7 @@
         <div id="nuevo">
             <!-- no probado -->
             <a href="/meds/new">Agregar Medicamento</a>
-            <a href="/meds/receta/add">Agregar Recetas</a>
+            <a href="/receta/add">Agregar Recetas</a>
         </div> 
         <!-- Crear/Editar -->
             
@@ -100,16 +100,16 @@
                 <c:forEach items="${meds}" var="med">
                     <tr>
                         <td>
-                            <c:out value="${med.medicamento}"/>
+                            <c:out value="${med.medicamento.nombre}"/>
                         </td>
                         <td>
                             <c:out value="${med.dosis}"/>
                         </td>
                         <td>
-                            <c:out value="${med.fechaReceta}"/>
+                            <fmt:formatDate pattern="dd-MMMM-yyyy" value="${med.fechaReceta}"/>
                         </td>
                         <td>
-                            <a href=""></a>
+                            <a href="/meds/${med.id}/delete">Eliminar</a>
                         </td>
                     </tr>
                 </c:forEach>

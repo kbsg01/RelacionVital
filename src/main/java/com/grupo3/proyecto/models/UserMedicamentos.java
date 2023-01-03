@@ -14,6 +14,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -38,6 +39,7 @@ public class UserMedicamentos {
 
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @NotNull
     private Date fechaReceta;
 
     @Column(updatable = false)
@@ -52,6 +54,7 @@ public class UserMedicamentos {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="medicamento_id")
+    @NotNull
     private Medicamento medicamento;
 
     @PrePersist

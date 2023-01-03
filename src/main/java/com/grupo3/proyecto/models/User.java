@@ -86,4 +86,8 @@ public class User {
         inverseJoinColumns = @JoinColumn(name="medicamento_id")
     )
     private List<Medicamento> medicamentos;
+
+    @OneToMany(mappedBy = "user", fetch= FetchType.LAZY)
+    private List<UserMedicamentos> uMedicamentos;
+
 }
