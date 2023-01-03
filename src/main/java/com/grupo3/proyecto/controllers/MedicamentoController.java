@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.grupo3.proyecto.models.Medicamento;
 import com.grupo3.proyecto.models.User;
-import com.grupo3.proyecto.models.UserMedicamento;
+import com.grupo3.proyecto.models.UserMedicamentos;
 import com.grupo3.proyecto.services.MedicamentoService;
 import com.grupo3.proyecto.services.UserMedicamentoService;
 import com.grupo3.proyecto.services.UserService;
@@ -36,8 +36,6 @@ public class MedicamentoController {
     public String medsHome(Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
         User user =  uService.findById(id);
-        List<UserMedicamento> meds = user.getMedicamentos();
-        model.addAttribute("medicamentos", meds);
         model.addAttribute("user", user);
         return "Meds/MedsHome";
     }
@@ -67,21 +65,26 @@ public class MedicamentoController {
 
     // Agregar receta
     @GetMapping("/meds/receta/add")
-    public String addReceta(@ModelAttribute("receta")UserMedicamento receta, HttpSession session, Model model){
+    public String addReceta(@ModelAttribute("receta")UserMedicamentos receta, HttpSession session, Model model){
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
+        // Lista de medicamentos(No funciona)
+        List<Medicamento> medicamentos = user.getMedicamentos();
+        model.addAttribute("medicamento", medicamentos);
         return "Meds/CrearEditarReceta";
     }
 
     @PostMapping("/meds/receta/add")
-    public String addReceta(@Valid @ModelAttribute("receta")UserMedicamento receta, BindingResult result, HttpSession session, Model model){
+    public String addReceta(@Valid @ModelAttribute("receta")UserMedicamentos receta, BindingResult result, HttpSession session, Model model){
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
         if (result.hasErrors()) {
             return "Meds/CrearEditarReceta";
         }
+        // setear medicamento
+        receta.setUser(user);
         uMService.save(receta);
         return "redirect:/meds";
     }

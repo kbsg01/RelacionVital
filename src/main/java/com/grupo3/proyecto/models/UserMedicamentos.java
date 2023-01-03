@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -24,8 +26,8 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "users_medicamentos")
-public class UserMedicamento {
+@Table(name = "user_medicamentos")
+public class UserMedicamentos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,6 +37,7 @@ public class UserMedicamento {
     private String dosis;
 
     @Column(updatable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaReceta;
 
     @Column(updatable = false)
@@ -50,4 +53,13 @@ public class UserMedicamento {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="medicamento_id")
     private Medicamento medicamento;
+
+    @PrePersist
+    protected void onCreate(){
+        this.createdAt = new Date();
+    }
+    @PreUpdate
+    protected void onUpdate(){
+        this.updatedAt = new Date();
+    }
 }

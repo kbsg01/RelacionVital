@@ -100,7 +100,7 @@
             <input type="submit" value="Agregar">
         </form:form>
     </div>
-    <!-- Crear/Editar -->
+    <!-- Crear -->
     <a href="#">
         <p>¿Nos falta alguno?, por favor escribenos para agregarlo</p>
     </a>
