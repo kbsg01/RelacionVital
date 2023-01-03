@@ -2,15 +2,16 @@ body * {
     margin: 0;
     padding: 0;
     /* outline: solid 1px pink; */
+    margin-left: 0;
 }
 
 div.row{
     margin-right: 0px;
- }
- 
- div.container-fluid{
+}
+
+div.container-fluid{
     padding-right: 0px;
- }
+}
 
 #content {
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
@@ -87,13 +88,18 @@ nav.navbar {
 }
 
 @media only screen and (max-width: 991px) {
+
     .container-fluid {
-      width: 33%;
-      text-align: center;
+    width: 33%;
+    text-align: center;
     }    
 
+    #logo {
+        width: 42%;
+    }
+
     .nav-item {
-        width: 32.5%;
+        width: 29%;
     }
 
     .dropdown-menu.show {
@@ -104,9 +110,10 @@ nav.navbar {
 
     .dropdown-menu.sombra.show {
         margin-top: -1px;
-        margin-left: -70px;
+        margin-left: -40px;
         box-shadow: -36px -14px 5px -32px rgba(79,77,147,1);
     }
+    
 }
 
 .btn {
@@ -160,18 +167,19 @@ h2{
     box-shadow: 5px 5px 5px #888888;
     background-color:  rgb(247, 247, 247);
     font-size: large;
+    margin-left: 10px;
 }
 
 .tareas {
     width: 47%;
-    padding: 20px;
+    padding-top: 15px;
     margin-left: 3%;
     border: 1px solid rgb(56, 54, 54);
-    margin-top: 68px;
+    margin-top: 40px;
     box-shadow: 5px 5px 5px #a3a3a3;
     background-color:  rgb(247, 247, 247) ;
     vertical-align: top;
-    height: 130px;
+    height: 10%;
 }  
 
 .box {
@@ -196,6 +204,14 @@ h2{
     border: 1px solid rgb(224, 224, 224);
     border-radius: 10px;
 }
+
+p.separacion {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 97%;
+}
+
 h3{
     text-align: center;
 }
@@ -203,8 +219,9 @@ h3{
 @media only screen and (max-width: 838px) {
 
     .tareas {
-        width: 100%;
-        margin: auto;        
+        width: 90%;
+        margin: auto;
+        margin-right: 4%;
     }
 
     .box {
