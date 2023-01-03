@@ -78,13 +78,15 @@
     <!-- Crear/Editar -->
     <div class="crearEditar">
         <h3>Panel de Medicamento</h3>
-        <form:form action="" method="post" modelAttribute="uMed">
+        <form:form action="" method="post" modelAttribute="receta">
             <p>
-                <form:label path="medicamneto">Typical Gender:</form:label>
-                <select path="medicamento" name="medicamneto">
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Neutral</option>
+                <form:label path="medicamneto"></form:label>
+                <select name="medicamneto">
+                    <c:forEach items="medicamentos" var="medicamentos">
+                        <option value="nombre">
+                            <c:out value="${medicamento.id}" />
+                        </option>
+                    </c:forEach>
                 </select>
             </p>
             <p>
