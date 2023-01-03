@@ -87,6 +87,7 @@
         <!-- informacion de la cuenta -->
         <h1>informacion de la cuenta</h1>
         <div>
+            <h2>Cambiar Nombre</h2>
             <form:form method="post" action="/account/perfil/name" modelAttribute="user">
                 <p>
                     <form:label path="name">Nombre:</form:label>
@@ -96,6 +97,7 @@
             </form:form>
         </div>
         <div>
+            <h2>Cambiar Email</h2>
             <form:form method="post" action="/account/perfil/email" modelAttribute="user">
                 <p>
                     <form:label path="email">Email:</form:label>
@@ -105,6 +107,7 @@
             </form:form>
         </div>
         <div>
+            <h2>Cambiar Password</h2>
             <form:form method="post" action="/account/perfil/password" modelAttribute="user">
                 <p>
                     <form:label path="password">Contraseña:</form:label>
@@ -118,6 +121,7 @@
             </form:form>
         </div>
         <!-- informacion de la cuenta -->
+        <a class="btn btn-outline-danger" href="/account/perfil/${users.id}/delete">Delete</a>
     </div>
     
     

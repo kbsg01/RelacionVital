@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -118,4 +119,11 @@ public class UserController {
         userServ.registerUser(u);
         return "redirect:/account/perfil";
     }
+
+    @GetMapping("/account/perfil/{id}/delete")
+    public String deleteUser(@PathVariable("id")Long id){
+        userServ.delete(id);
+        return "redirect:/";
+    }
+
 }
