@@ -16,6 +16,7 @@
     <!-- Bootstrap -->
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
+
     <title>Tareas</title>
     <link rel="stylesheet" href="/css/tarea.css">
 </head>
