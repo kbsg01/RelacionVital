@@ -1,0 +1,112 @@
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
+}
+
+/*--------------navegador-------------------*/
+nav.navbar {
+    background-color: #6a9eda;
+    width: auto;
+    height: auto;
+    box-shadow: 0px 3px 3px #7496ac;
+}
+
+.dropdown-menu {
+    background-color: #5086c1;
+}
+
+.dropdown-item {
+    font-weight: bold;
+}
+
+.logo {
+    width: 50px;
+}
+
+.nav-item {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: rgba(85, 84, 139, 0.527);
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/*----------------------------------------------------------------*/
+
+#content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
+}
+
+.cajon {
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(234, 255, 255, 1) 10%, rgb(243, 243, 243) 24%, rgb(231, 231, 231) 60%, rgb(235, 234, 234) 70%, rgb(230, 229, 229) 100%);
+    padding-top: 4%;
+    border-radius: 90px;
+}
+
+h1 {
+    -webkit-text-fill-color: rgb(198, 239, 255);
+    -webkit-text-stroke: 1px rgb(154, 198, 255);
+    background: #ccc;
+    text-align: center;
+    font-size: 4rem;
+    background: radial-gradient(rgb(198, 221, 255)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/*////////////////////////////////////////////////*/
+.seccion {
+    vertical-align: top;
+    text-align: center;
+
+}
+.titulo{
+    background-color: #feffff;
+    text-align: center;
+    width: 50%;
+    height: 40px;
+    margin-top: 3%;
+
+}
+.fondo{
+    background-color: rgb(231, 231, 231);
+    width: 80%;
+    padding-bottom: 10px;
+    border-radius: 20%;
+}
+.texto{
+    margin-top: 10%;
+    width: 80%;
+    padding: 2%;
+    height: 500px;
+    margin-right: 1%;
+    background-color: rgb(252, 252, 252);
+    margin-top: 20px;
+}
+.fecha{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 42%;
+    width: 15%;
+    padding-left: 2%;
+}
+.botones{
+    display: block;
+}
+.b1{
+    width: 10%;
+}
