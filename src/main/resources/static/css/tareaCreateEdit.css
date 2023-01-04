@@ -1,51 +1,97 @@
 body * {
     margin: 0;
     padding: 0;
-    /*outline: 1px solid pink;*/
+    /* outline: solid 1px pink; */
 }
 
+div.row{
+    margin-right: 0px;
+}
+
+div.container-fluid{
+    padding-right: 0px;
+}
+
+#content {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
+}
+
+.navbar {
+    display: inline-block;
+}
+
+nav.navbar {
+    display: block;
+    background-color: #80b4f0;
+    box-shadow: 0 1px 10px 4px #4f4d93;
+}
+
+#menu {
+    width: 85px;
+    padding: 10px 0;
+    background-color: #c0dbee;  
+    border-radius: 7px;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    background-color: #80b4f0;
+    padding: 10px;
+    margin-block: 0 0 0 17px;
+    border: none;
+    box-shadow: 63px -37px 5px -60px rgba(79,77,147,1);}
+
+.dropdown-item {
+    font-weight: bold;
+    background: #c0dbee;
+    border-radius: 7px;
+    margin: 5px 0;
+}
+
+#logo img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+#logo {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.rounded-circle {
+    border: 2px solid #4f4d93;
+}
+
+#perfil {
+    width: 5px;
+}
+
+.nav-item {
+    display: inline-block;
+    font-weight: bold;
+    width: 32.8%;
+    text-align: center;
+}
+
+.nav-item.dropdown {
+    margin-left: -35px;
+}
+
+.nav-item.dropdown.usuario {
+    width: 40px;
+}
+
+.sombra {
+    box-shadow: -35px -17px 5px -32px rgba(79,77,147,1);
+}
+/*////////////////////////*/
 #content {
     height: 100%;
     display: flex;
     justify-content: center;
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
 }
-
-nav.navbar {
-    background-color: #6a9eda;
-    width: auto;
-    height: auto;
-    box-shadow: 3px 3px 3px #888888;
-}
-
-#menu {
-    margin-right: 788px;
-    height: 50px;
-}
-
-#perfil {
-    margin-left: 690px;
-}
-
-.dropdown-menu {
-    background-color: #5086c1;
-}
-
-.dropdown-item {
-    font-weight: bold;
-}
-
-#logo img {
-    max-width: 50px;
-    border-radius: 50%;
-}
-
-.nav-item {
-    vertical-align: middle;
-    margin: 5px;
-    font-weight: bold;
-}
-
 .crearEditar {
     justify-content: center;
     display: flex;
@@ -76,7 +122,7 @@ h1 {
 .cajon {
     margin-left: 20px;
     width: 800px;
-    background: linear-gradient(0deg, rgb(235, 250, 250, 1) 10%, rgb(223, 248, 248) 24%, rgb(185, 222, 253) 60%, rgb(88, 166, 226) 80%, #6a9eda 100%);
+    background: linear-gradient(0deg, rgb(235, 250, 250, 1) 10%, rgb(223, 248, 248) 24%, rgb(190, 225, 253) 60%, #92c5ff 80%, #80b4f0 100%);
 }
 
 /*/////////////////////////////////////////////////////////////////////*/
@@ -84,7 +130,7 @@ h1 {
     width: 400px;
     margin: 20px;
     margin-bottom: 50px;
-    margin-left: 38%;
+    margin-left: 35%;
     display: block;
 
 }
@@ -97,13 +143,26 @@ h1 {
 .font{
     margin-bottom: 10px;
     font-size: 30px;
-    margin-left: 30%;
+    margin-left: 28%;
+    -webkit-text-fill-color: rgb(198, 239, 255);
+    -webkit-text-stroke: 1px rgb(154, 198, 255);
+    background: #ccc;
+    text-align: center;
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     
 }
 .font1{
     margin-bottom: 10px;
-    font-size: 30px;
-    margin-left: -30px;
+    margin-left: -33px;
+    -webkit-text-fill-color: rgb(198, 239, 255);
+    -webkit-text-stroke: 1px rgb(154, 198, 255);
+    background: #ccc;
+    text-align: center;
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .task {
@@ -117,15 +176,9 @@ h1 {
     border-radius: 30px;
     margin-left: 80px;
     font-weight: bold;
+    background-color: #80b4f0;
+    border-color: #80b4f0;
 
-}
-.publicidad{
-
-        height: 77px;
-        text-align: center;
-        padding-left: 50px;
-        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
-        font-size: large;
 }
 .col{
     background-color: rgb(247, 247, 247);
