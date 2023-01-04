@@ -30,9 +30,13 @@ public class Bitacora {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateTime;
+    
     private String title;
+
+    @Column(columnDefinition = "text")
     private String entrada;
 
     @Column(updatable = false)
