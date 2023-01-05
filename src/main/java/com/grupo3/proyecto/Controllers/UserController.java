@@ -90,7 +90,7 @@ public class UserController {
     public String perfil(@ModelAttribute("user")User user, Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
         User users = userServ.findById(id);
-        model.addAttribute("users", users);
+        model.addAttribute("user", users);
         return "User/UserHome";
     }
 
