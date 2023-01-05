@@ -77,12 +77,11 @@
     <!-- foto perfil -->
     <div>
         <form:form method="post" action="/account/perfil/photo" modelAttribute="user" enctype="multipart/form-data">
-            
             <input type="file" name="photoProfile">
+            <img class="mx-4" src="${user.imgRoute}" style="width: 200px; height: 200px;" alt="${users.imgRoute}">
             <button class="btn btn-outline-secondary">Save</button>
         </form:form>
 
-        <img class="mx-4" src="${user.imgRoute}" style="width: 200px; height: 200px;" alt="${users.imgRoute}">
     </div>
     <!-- foto perfil -->
 
