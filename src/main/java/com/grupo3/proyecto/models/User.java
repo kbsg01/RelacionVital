@@ -52,7 +52,7 @@ public class User {
     @Transient
     private String passwordConfirmation;
 
-    private boolean profesional;
+    private String imgRoute;
 
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")

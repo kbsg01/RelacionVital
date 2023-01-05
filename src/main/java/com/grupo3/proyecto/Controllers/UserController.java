@@ -1,5 +1,9 @@
 package com.grupo3.proyecto.controllers;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -13,6 +17,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.grupo3.proyecto.models.Tarea;
 import com.grupo3.proyecto.models.User;
@@ -87,6 +92,42 @@ public class UserController {
         User users = userServ.findById(id);
         model.addAttribute("users", users);
         return "User/UserHome";
+    }
+
+    @PostMapping("/account/perfil/photo")
+    public String photo(@ModelAttribute("user")User user, Model model, @RequestParam("photoProfile")MultipartFile photoProFile, HttpSession session){
+        Long userId = (Long) session.getAttribute("userId");
+        if(userId != null){
+            User u = userServ.findById(userId);
+            if(u != null){
+                if(photoProFile.isEmpty() == false){
+                    String fileName = "fotitoperfil";
+                    String imgRoute = "/image/" + userId;
+                    File directory = new File("src/main/resources/static" + imgRoute);
+                    if(directory.exists() == false){
+                        directory.mkdirs();
+                    }
+                    try {
+                        byte[] bytes = photoProFile.getBytes();
+                        BufferedOutputStream outputStream = new BufferedOutputStream(
+                            new FileOutputStream(
+                                new File(directory.getAbsolutePath() + "/" + fileName)
+                            )
+                        );
+                        outputStream.write(bytes);
+                        outputStream.flush();
+                        outputStream.close();
+                        System.out.println("El archivo se ha cargado con exito");
+                        u.setImgRoute(imgRoute + "/" + fileName);
+                        userServ.save(u);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        System.out.println("ocurrio un error al cargar la imagen." + e);
+                    }
+                }
+            }
+        }
+        return "redirect:/account/perfil";
     }
 
     @PostMapping("/account/perfil/name")

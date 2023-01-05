@@ -55,13 +55,13 @@
                     <li class="nav-item">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                                <img src="${user.imgRoute}" alt="mdo" width="32" height="32" class="rounded-circle">
                                 <c:out value="${user.name}"/>
                             </a>
                             <!-- desplegable -->
                             <ul class="dropdown-menu">
                                 <!-- Agregar perfil de usuario (no urgente) -->
-                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
                                 <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
                             </ul>
                             <!-- desplegable -->

@@ -55,13 +55,13 @@
                     <li class="nav-item">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                                <c:out value="${user.name}"/>
+                                <img src="${users.imgRoute}" alt="mdo" width="32" height="32" class="rounded-circle">
+                                <c:out value="${users.name}"/>
                             </a>
                             <!-- desplegable -->
                             <ul class="dropdown-menu">
                                 <!-- Agregar perfil de usuario (no urgente) -->
-                                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
                                 <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
                             </ul>
                             <!-- desplegable -->
@@ -76,11 +76,16 @@
 
     <!-- foto perfil -->
     <div>
-        <form action="" method="post">
-            <input type="file">
-        </form>
+        <form:form method="post" action="/account/perfil/photo" modelAttribute="user" enctype="multipart/form-data">
+            
+            <input type="file" name="photoProfile">
+            <button class="btn btn-outline-secondary">Save</button>
+        </form:form>
+
+        <img class="mx-4" src="${users.imgRoute}" style="width: 200px; height: 200px;" alt="${users.imgRoute}">
     </div>
     <!-- foto perfil -->
+
 
 
     <div>

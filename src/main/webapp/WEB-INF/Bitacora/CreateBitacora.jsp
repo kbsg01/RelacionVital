@@ -61,7 +61,7 @@
                 <div class="nav-item">
                     <div class="nav-item dropdown usuario">
                         <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="mdo" width="55" height="55" class="rounded-circle">
+                            <img src="${user.imgRoute}" alt="mdo" width="55" height="55" class="rounded-circle">
                             <c:out value="${user.name}"/>
                         </a>
                         <!-- desplegable -->
@@ -87,7 +87,7 @@
                                     <p>
                                         <form:label path="title"></form:label>
                                         <form:errors path="title" />
-                                        <form:input class="titulo" path="title" value="Titulo" />
+                                        <form:input class="titulo" path="title" placeholder="Titulo" />
                                     </p>
                                     <p class="fecha">
                                         <form:label path="dateTime"></form:label>
