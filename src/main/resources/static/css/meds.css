@@ -115,30 +115,6 @@ nav.navbar {
     font-weight: bold;
 }
 
-.carousel {
-    margin-bottom: 15px;
-}
-
-.d-block{
-    text-align: center;
-    margin-top: 120px;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 70px;
-}
-
-.sig{
-    background-color: #6a9eda
-}
-h2{
-    text-align: center;
-    margin-top: 128px;
-}
-
 .title {
     width: 300px;
     margin: 70px auto;
@@ -184,24 +160,6 @@ h2{
     width: 1650px;
 
 }
-    #tareas{
-        margin-top: 30px;
-        background-color:  rgba(223, 223, 223, 0.5);
-        box-shadow: 3px 3px 3px #888888;
-        border-radius: 10px;
-        padding-bottom: 30px;
-        margin-bottom: 50px;
-    }
-
-    #completadas{
-        margin-top: 30px;
-        background-color:  rgba(223, 223, 223, 0.5);
-        box-shadow: 3px 3px 3px #888888;
-        border-radius: 10px;
-        padding-bottom: 30px;
-        margin-bottom: 50px;
-    }
-
     .fondo {
         width: 90%;
         margin: 70px auto;
@@ -243,16 +201,17 @@ h2{
     }
     
     td {
-        width: 100%;
+        width: auto;
         vertical-align: middle;
     }
 
     .achicar {
-        width: 2%;
+        width: 5%;
     }
     
     td a {
-        padding: 5px;
+        margin-left: 12%;
+        padding: 12px 10px 7px 10px;
         text-decoration: none;
         color: black;
         background: #5086c1;

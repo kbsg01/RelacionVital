@@ -18,10 +18,11 @@
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <title>Tareas</title>
     <link rel="stylesheet" href="/css/meds.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div id="content">
-    <!-- navbar -->
+      <!-- navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="">
         <div class="" id="navbarNavDropdown">
@@ -59,7 +60,7 @@
                 <div class="nav-item">
                     <div class="nav-item dropdown usuario">
                         <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                            <img src="${user.imgRoute}" alt="mdo" width="55" height="55" class="rounded-circle">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="55" height="55" class="rounded-circle">
                             <c:out value="${user.name}"/>
                         </a>
                         <!-- desplegable -->
@@ -77,9 +78,7 @@
     </div>
     </nav>
     <!-- Navbar -->
-
     <div class="title"><h1>Medicamentos</h1></div>
-
         <!-- Crear/Editar -->
         <div id="nuevo">
             <!-- no probado -->
@@ -112,20 +111,20 @@
                             <fmt:formatDate pattern="dd-MMMM-yyyy" value="${med.fechaReceta}"/>
                         </td>
                         <td> <!-- A probar ícono-->
-                            <span class="material-symbols-outlined">
-                                <a href="/meds/${med.id}/delete">Eliminar</a>
-                            </span>
+                            <a href="/meds/${med.id}/delete">
+                            <span class="material-symbols-outlined">                              
+                                delete
+                                </span>
+                            </a>                                                     
                         </td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
     </div>
-
         <!-- Tablas -->
-
         
-        <!-- Publicidad -->
+         <!-- Publicidad -->
             <div class="container text-center">
                 <div class="row align-items-center">
                     <div class="col publicidad">
