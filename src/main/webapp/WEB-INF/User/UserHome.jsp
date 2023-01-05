@@ -55,8 +55,8 @@
                     <li class="nav-item">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                                <img src="${users.imgRoute}" alt="mdo" width="32" height="32" class="rounded-circle">
-                                <c:out value="${users.name}"/>
+                                <img src="${user.imgRoute}" alt="mdo" width="32" height="32" class="rounded-circle">
+                                <c:out value="${user.name}"/>
                             </a>
                             <!-- desplegable -->
                             <ul class="dropdown-menu">
@@ -82,7 +82,7 @@
             <button class="btn btn-outline-secondary">Save</button>
         </form:form>
 
-        <img class="mx-4" src="${users.imgRoute}" style="width: 200px; height: 200px;" alt="${users.imgRoute}">
+        <img class="mx-4" src="${user.imgRoute}" style="width: 200px; height: 200px;" alt="${users.imgRoute}">
     </div>
     <!-- foto perfil -->
 
