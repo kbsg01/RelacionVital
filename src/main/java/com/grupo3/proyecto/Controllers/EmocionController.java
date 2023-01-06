@@ -69,7 +69,7 @@ public class EmocionController {
         }
         emocion.setUser(user);
         uEService.save(emocion);
-        return "redirect:/emocion";
+        return "redirect:/emociones";
     }
 
     // Editar Emocion
