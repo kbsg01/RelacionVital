@@ -22,62 +22,62 @@
 </head>
 <body>
     <div id="content">
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <!-- Menu -->
-                        <li class="nav-item">
-                            <li class="nav-item dropdown">
-                                <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                    Menu
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- Agregar pagina -->
-                                    <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
-                                    <!-- Agregar pagina -->
-                                
-                                    <!-- Listos (27-12-22) -->
-                                    <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
-                                    <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
-                                    <!-- Listos (27-12-22) -->
-                                
-                                    <!-- Agregar pagina -->
-                                    <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
-                                    <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
-                                    <!-- Agregar pagina -->
-                                </ul>
-                            </li>
-                        </li>
-                        <!-- Menu -->
-                        <li class="nav-item">
-                            <div id="logo">
-                                <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
-                            </div>
-                        </li>
-                        <!-- User -->
-                        <li class="nav-item">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                                    <img src="${user.imgRoute}" alt="mdo" width="32" height="32" class="rounded-circle">
-                                    <c:out value="${user.name}"/>
-                                </a>
-                                <!-- desplegable -->
-                                <ul class="dropdown-menu">
-                                    <!-- Agregar perfil de usuario (no urgente) -->
-                                    <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
-                                    <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
-                                </ul>
-                                <!-- desplegable -->
-                            </li>
-                        </li>
-                        <!-- User -->
-                    </ul>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="">
+            <div class="" id="navbarNavDropdown">
+                <div class="">
+                    <!-- Menu -->
+                    <div class="nav-item">
+                        <div class="nav-item dropdown">
+                            <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- Agregar pagina -->
+                                <li><a class="dropdown-item" href="/emociones">Mis Emociones</a></li>
+                                <!-- Agregar pagina -->
+                            
+                                <!-- Listos (27-12-22) -->
+                                <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
+                                <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
+                                <!-- Listos (27-12-22) -->
+                            
+                                <!-- Probando funcionalidad -->
+                                <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
+                                <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
+                                <!-- Probando funcionalidad -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Menu -->
+                    <div class="nav-item">
+                        <div id="logo">
+                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
+                        </div>
+                    </div>
+                    <!-- User -->
+                    <div class="nav-item">
+                        <div class="nav-item dropdown usuario">
+                            <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
+                                <img src="${user.imgRoute}" alt="mdo" width="55" height="55" class="rounded-circle">
+                                <c:out value="${user.name}"/>
+                            </a>
+                            <!-- desplegable -->
+                            <ul class="dropdown-menu sombra">
+                                <!-- Agregar perfil de usuario (no urgente) -->
+                                <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
+                                <li><a class="btn btn-light" href="/logout">Cerrar Sesión</a></li>
+                            </ul>
+                            <!-- desplegable -->
+                        </div>
+                    </div>
+                    <!-- User -->
                 </div>
             </div>
-        </nav>
-        <!-- Navbar -->
+        </div>
+    </nav>
+    <!-- Navbar -->
 
         <!-- formulario -->
 
