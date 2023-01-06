@@ -36,7 +36,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <!-- Agregar pagina -->
-                            <li><a class="dropdown-item" href="/calendario">Mi Calendario</a></li>
+                            <li><a class="dropdown-item" href="/emociones">Mis Emociones</a></li>
                             <!-- Agregar pagina -->
                         
                             <!-- Listos (27-12-22) -->
