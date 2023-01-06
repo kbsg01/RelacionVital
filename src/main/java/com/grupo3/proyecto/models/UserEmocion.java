@@ -45,6 +45,15 @@ public class UserEmocion {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date updatedAt;
     
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id")
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="emocion_id")
+    @NotNull
+    private Emocion emocion;
+
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();
@@ -54,12 +63,5 @@ public class UserEmocion {
         this.updatedAt = new Date();
     }
     
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="user_id")
-    private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="emocion_id")
-    @NotNull
-    private Emocion emocion;
 }
