@@ -81,8 +81,6 @@
     <div class="title"><h1>Medicamentos</h1></div>
         <!-- Crear/Editar -->
         <div id="nuevo">
-            <!-- no probado -->
-            <a href="/meds/new">Agregar Medicamento</a>
             <a href="/receta/add">Agregar Recetas</a>
         </div> 
         <!-- Crear/Editar -->

@@ -3,16 +3,11 @@ package com.grupo3.proyecto.controllers;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 
-import com.grupo3.proyecto.models.Medicamento;
 import com.grupo3.proyecto.models.User;
 import com.grupo3.proyecto.models.UserMedicamento;
 import com.grupo3.proyecto.services.MedicamentoService;
@@ -38,26 +33,4 @@ public class MedicamentoController {
         model.addAttribute("meds", meds);
         return "Meds/MedsHome";
     }
-
-    // Crear Medicamento
-    @GetMapping("/meds/new")
-    public String crearMed(@ModelAttribute("medicamento")Medicamento medicamento,HttpSession session, Model model){
-        Long id = (Long) session.getAttribute("userId");
-        User user = uService.findById(id);
-        model.addAttribute("user", user);
-        return "Meds/AgregarMed";
-    }
-
-    @PostMapping("/meds/new")
-    public String crearMed(@Valid @ModelAttribute("medicamento")Medicamento medicamento, BindingResult result, HttpSession session, Model model){
-        Long id = (Long) session.getAttribute("userId");
-        User user = uService.findById(id);
-        model.addAttribute("user", user);
-        if (result.hasErrors()) {
-            return "Meds/AgregarMed";
-        }
-        mService.save(medicamento);
-        return "redirect:/meds";
-    } 
-
 }
