@@ -27,9 +27,7 @@ public class EmocionController {
         this.uService = uService;
         this.uEService = uEService;
     }
-
-
-
+    
     @GetMapping("/calendario")
     public String cEmocionesHome(Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
@@ -40,5 +38,5 @@ public class EmocionController {
         return "Emociones/EmocionesHome";
     }
 
-    
+
 }

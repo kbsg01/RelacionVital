@@ -30,13 +30,12 @@ import lombok.Setter;
 @Entity
 @Table(name = "user_emociones")
 public class UserEmocion {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank(message = "Las notas no pueden estar vacias")
-    @Size(min = 3, max = 60, message = "Las notas no deben ser de mas de 60 caracteres")
+    @Size(min = 3, max = 250, message = "Las notas no deben ser de mas de 250 caracteres")
     private String notas;
 
     @Column(updatable = false)
@@ -62,6 +61,4 @@ public class UserEmocion {
     protected void onUpdate(){
         this.updatedAt = new Date();
     }
-    
-
 }
