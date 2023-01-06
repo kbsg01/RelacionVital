@@ -46,7 +46,7 @@ public class EmocionController {
     }
 
     // Agregar Emocion
-    @GetMapping("/emocion/add")
+    @GetMapping("/emociones/add")
     public String agregarEmocion(@ModelAttribute("emocion")UserEmocion emocion, HttpSession session, Model model){
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
@@ -56,7 +56,7 @@ public class EmocionController {
         return "Emociones/CrearEditarEmocion";
     }
 
-    @PostMapping("/emocion/add")
+    @PostMapping("/emociones/add")
     public String agregarEmocion(@Valid @ModelAttribute("emocion")UserEmocion emocion,BindingResult result, HttpSession session, Model model){
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
@@ -79,6 +79,8 @@ public class EmocionController {
         User user = uService.findById(uId);
         model.addAttribute("user", user);
         UserEmocion emocion = uEService.findById(id);
+        List<Emocion> emociones = eService.findAll();
+        model.addAttribute("emociones", emociones);
         model.addAttribute("emocion", emocion);
         return "Emociones/CrearEditarEmocion";
     }
