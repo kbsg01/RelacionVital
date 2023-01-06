@@ -76,9 +76,6 @@ public class User {
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<Bitacora> bitacoras;
 
-    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-    private List<UserEmocion> emociones;
-
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
         name = "user_medicamentos",
@@ -88,6 +85,18 @@ public class User {
     private List<Medicamento> medicamentos;
 
     @OneToMany(mappedBy = "user", fetch= FetchType.LAZY)
-    private List<UserMedicamentos> uMedicamentos;
+    private List<UserMedicamento> uMedicamentos;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+        name = "user_emociones",
+        joinColumns = @JoinColumn(name="user_id"),
+        inverseJoinColumns = @JoinColumn(name="emocion_id")
+    )
+    private List<Emocion> emociones;
+
+    @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
+    private List<UserEmocion> uEmociones;
+
 
 }

@@ -14,6 +14,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -27,7 +28,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "emocionesu")
+@Table(name = "user_emociones")
 public class UserEmocion {
 
     @Id
@@ -59,5 +60,6 @@ public class UserEmocion {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="emocion_id")
+    @NotNull
     private Emocion emocion;
 }

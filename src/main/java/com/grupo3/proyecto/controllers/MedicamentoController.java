@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.grupo3.proyecto.models.Medicamento;
 import com.grupo3.proyecto.models.User;
-import com.grupo3.proyecto.models.UserMedicamentos;
+import com.grupo3.proyecto.models.UserMedicamento;
 import com.grupo3.proyecto.services.MedicamentoService;
 import com.grupo3.proyecto.services.UserService;
 
@@ -33,7 +33,7 @@ public class MedicamentoController {
     public String medsHome(Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
         User user =  uService.findById(id);
-        List<UserMedicamentos> meds = user.getUMedicamentos();
+        List<UserMedicamento> meds = user.getUMedicamentos();
         model.addAttribute("user", user);
         model.addAttribute("meds", meds);
         return "Meds/MedsHome";

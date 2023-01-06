@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.grupo3.proyecto.models.Medicamento;
 import com.grupo3.proyecto.models.User;
-import com.grupo3.proyecto.models.UserMedicamentos;
+import com.grupo3.proyecto.models.UserMedicamento;
 import com.grupo3.proyecto.services.MedicamentoService;
 import com.grupo3.proyecto.services.UserMedicamentoService;
 import com.grupo3.proyecto.services.UserService;
@@ -36,18 +36,17 @@ public class UserMedicamentosController {
 
     // Agregar receta
     @GetMapping("/receta/add")
-    public String addReceta(@ModelAttribute("receta")UserMedicamentos receta, HttpSession session, Model model){
+    public String addReceta(@ModelAttribute("receta")UserMedicamento receta, HttpSession session, Model model){
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
-        
         List<Medicamento> medicamentos = mService.findAll();
         model.addAttribute("medicamentos", medicamentos);
         return "Meds/CrearEditarReceta";
     }
 
     @PostMapping("/receta/add")
-    public String addReceta(@Valid @ModelAttribute("receta")UserMedicamentos receta, BindingResult result, HttpSession session, Model model){
+    public String addReceta(@Valid @ModelAttribute("receta")UserMedicamento receta, BindingResult result, HttpSession session, Model model){
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
