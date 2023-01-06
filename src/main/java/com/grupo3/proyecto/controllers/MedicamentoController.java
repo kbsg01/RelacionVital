@@ -15,11 +15,9 @@ import com.grupo3.proyecto.services.UserService;
 
 @Controller
 public class MedicamentoController {
-    private final MedicamentoService mService;
     private final UserService uService;
 
     public MedicamentoController(MedicamentoService mService, UserService uService){
-        this.mService = mService;
         this.uService = uService;
     }
 
