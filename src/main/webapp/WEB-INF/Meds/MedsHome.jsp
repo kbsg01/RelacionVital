@@ -16,13 +16,13 @@
     <!-- Bootstrap -->
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
-    <title>Tareas</title>
+    <title>Panel Medicamentos</title>
     <link rel="stylesheet" href="/css/meds.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
     <div id="content">
-      <!-- navbar -->
+    <!-- navbar -->
 <nav class="navbar navbar-expand-lg">
     <div class="">
         <div class="" id="navbarNavDropdown">
@@ -122,7 +122,7 @@
     </div>
         <!-- Tablas -->
         
-         <!-- Publicidad -->
+        <!-- Publicidad -->
             <div class="container text-center">
                 <div class="row align-items-center">
                     <div class="col publicidad">

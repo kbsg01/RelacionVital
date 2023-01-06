@@ -17,7 +17,7 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <!-- font awesome -->
-    <title>Proyecto Salud Mental Home</title>
+    <title>Bitacora</title>
     <!-- CSS Bootstrap Table -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
     <!-- CSS Bootstrap Table -->

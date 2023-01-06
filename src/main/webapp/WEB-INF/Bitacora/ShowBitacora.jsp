@@ -19,7 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/showBitacora.css">
     <!-- CSS -->
-    <title>*Inserte nombre de proyecto acá* bitácoras</title>
+    <title><c:out value="${bitacora.title}"/></title>
 </head>
 <body>
     <!-- navbar -->
