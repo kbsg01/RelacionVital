@@ -1,0 +1,123 @@
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: solid 1px pink; */
+}
+
+body{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(243,255,255,1) 25%, rgba(235,250,250,1) 50%, rgba(234,255,255,1) 75%, rgba(217,255,255,1) 100%);
+}
+div.row{
+    margin-right: 0px;
+}
+
+div.container-fluid{
+    padding-right: 0px;
+}
+
+
+.navbar {
+    display: inline-block;
+}
+
+nav.navbar {
+    display: block;
+    background-color: #80b4f0;
+    box-shadow: 0 1px 10px 4px #4f4d93;
+}
+
+#menu {
+    width: 85px;
+    padding: 10px 0;
+    background-color: #c0dbee;  
+    border-radius: 7px;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    background-color: #80b4f0;
+    padding: 10px;
+    margin-block: 0 0 0 17px;
+    border: none;
+    box-shadow: 63px -37px 5px -60px rgba(79,77,147,1);}
+
+.dropdown-item {
+    font-weight: bold;
+    background: #c0dbee;
+    border-radius: 7px;
+    margin: 5px 0;
+}
+
+#logo img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+#logo {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.rounded-circle {
+    border: 2px solid #4f4d93;
+}
+
+#perfil {
+    width: 5px;
+}
+
+.nav-item {
+    display: inline-block;
+    font-weight: bold;
+    width: 32.8%;
+    text-align: center;
+}
+
+.nav-item.dropdown {
+    margin-left: -35px;
+}
+
+.nav-item.dropdown.usuario {
+    width: 40px;
+}
+
+.sombra {
+    box-shadow: -35px -17px 5px -32px rgba(79,77,147,1);
+}
+
+@media only screen and (max-width: 991px) {
+
+    .container-fluid {
+    width: 33%;
+    text-align: center;
+    }    
+
+    #logo {
+        width: 42%;
+    }
+
+    .nav-item {
+        width: 29%;
+    }
+
+    .dropdown-menu.show {
+        margin-left: -10px;
+        box-shadow: 63px -55px 5px -60px rgba(79,77,147,1);
+        margin-top: 20px;
+    }   
+
+    .dropdown-menu.sombra.show {
+        margin-top: -1px;
+        margin-left: -40px;
+        box-shadow: -36px -14px 5px -32px rgba(79,77,147,1);
+    }
+    
+}
+    .btn{
+        background-color: rgba(190, 212, 223, 0.527);
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+    }

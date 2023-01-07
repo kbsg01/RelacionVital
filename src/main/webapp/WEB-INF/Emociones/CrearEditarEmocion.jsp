@@ -17,72 +17,74 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
 
-    <title>Tareas</title>
-    <link rel="stylesheet" href="/css/emocion.css">
+    <title>Crear o editar emoción</title>
+    <link rel="stylesheet" href="/css/createEmocion.css">
+    <!-- <link rel="stylesheet" href="/css/createBitacora.css"> -->
+
 </head>
 <body>
     <div id="content">
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="">
-            <div class="" id="navbarNavDropdown">
-                <div class="">
-                    <!-- Menu -->
-                    <div class="nav-item">
-                        <div class="nav-item dropdown">
-                            <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                Menú
-                            </a>
-                            <ul class="dropdown-menu">
-                                <!-- Agregar pagina -->
-                                <li><a class="dropdown-item" href="/emociones">Mis Emociones</a></li>
-                                <!-- Agregar pagina -->
-                            
-                                <!-- Listos (27-12-22) -->
-                                <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
-                                <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
-                                <!-- Listos (27-12-22) -->
-                            
-                                <!-- Probando funcionalidad -->
-                                <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
-                                <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
-                                <!-- Probando funcionalidad -->
-                            </ul>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="">
+                <div class="" id="navbarNavDropdown">
+                    <div class="">
+                        <!-- Menu -->
+                        <div class="nav-item">
+                            <div class="nav-item dropdown">
+                                <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
+                                    Menú
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- Agregar pagina -->
+                                    <li><a class="dropdown-item" href="/emociones">Mis Emociones</a></li>
+                                    <!-- Agregar pagina -->
+                                
+                                    <!-- Listos (27-12-22) -->
+                                    <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a></li>
+                                    <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
+                                    <!-- Listos (27-12-22) -->
+                                
+                                    <!-- Probando funcionalidad -->
+                                    <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
+                                    <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
+                                    <!-- Probando funcionalidad -->
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Menu -->
-                    <div class="nav-item">
-                        <div id="logo">
-                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
+                        <!-- Menu -->
+                        <div class="nav-item">
+                            <div id="logo">
+                                <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- User -->
-                    <div class="nav-item">
-                        <div class="nav-item dropdown usuario">
-                            <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                                <img src="${user.imgRoute}" alt="mdo" width="55" height="55" class="rounded-circle">
-                                <c:out value="${user.name}"/>
-                            </a>
-                            <!-- desplegable -->
-                            <ul class="dropdown-menu sombra">
-                                <!-- Agregar perfil de usuario (no urgente) -->
-                                <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
-                                <li><a class="btn btn-light" href="/logout">Cerrar Sesión</a></li>
-                            </ul>
-                            <!-- desplegable -->
+                        <!-- User -->
+                        <div class="nav-item">
+                            <div class="nav-item dropdown usuario">
+                                <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
+                                    <img src="${user.imgRoute}" alt="mdo" width="55" height="55" class="rounded-circle">
+                                    <c:out value="${user.name}"/>
+                                </a>
+                                <!-- desplegable -->
+                                <ul class="dropdown-menu sombra">
+                                    <!-- Agregar perfil de usuario (no urgente) -->
+                                    <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
+                                    <li><a class="btn btn-light" href="/logout">Cerrar Sesión</a></li>
+                                </ul>
+                                <!-- desplegable -->
+                            </div>
                         </div>
+                        <!-- User -->
                     </div>
-                    <!-- User -->
                 </div>
             </div>
-        </div>
-    </nav>
-    <!-- Navbar -->
+        </nav>
+        <!-- Navbar -->
 
         <!-- formulario -->
 
-        <div>
-            <h2>Panel de Emociones</h2>
+        <div id="cajon">
+            <h1>Panel de Emociones</h1>
             <form:form method="post" action="" modelAttribute="emocion">
                 <p>
                     <c:forEach items="${emociones}" var="emocion">
@@ -94,16 +96,10 @@
                     <form:label path="notas">Nota:</form:label>
                     <form:textarea path="notas"/>
                 </p>
-                <input type="submit" value="Guardar"/>
+            <input type="submit" value="Guardar"/>
             </form:form>
         </div>
-
-        <!-- formulario -->
-
-        
-        <div class="publicidad">
-            publicidad
-        </div>
+            <!-- formulario -->    
     </div>
 </body>
 </html>
