@@ -39,7 +39,7 @@
                                                 </a>
                                                 <ul class="dropdown-menu">
                                                     <!-- Agregar pagina -->
-                                                    <li><a class="dropdown-item" href="/calendario">Mi Calendario</a>
+                                                    <li><a class="dropdown-item" href="/emociones">Mi Calendario</a>
                                                     </li>
                                                     <!-- Agregar pagina -->
 
