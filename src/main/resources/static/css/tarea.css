@@ -1,59 +1,94 @@
-body *{
+body * {
     margin: 0;
     padding: 0;
-    /* outline: 1px solid pink; */
+    box-sizing: border-box;
+    /* outline: solid 1px pink; */
 }
-#content {
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, 
-    rgba(243, 255, 255, 1) 25%, 
-    rgba(235, 250, 250, 1) 50%, 
-    rgba(234, 255, 255, 1) 75%, 
-    rgba(217, 255, 255, 1) 100%);
-    min-height: 922px;
-    padding-bottom: 50px;
+
+body {
+    /*    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 10%, rgba(243, 255, 255, 1) 24%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 80%, rgb(238, 255, 255) 100%);*/
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
+}
+
+div.row {
+    margin-right: 0px;
+}
+
+div.container-fluid {
+    padding-right: 0px;
+}
+
+
+.navbar {
+    display: inline-block;
 }
 
 nav.navbar {
-    background-color: #6a9eda;
-    width: auto;
-    height: auto;
-    box-shadow: 3px 3px 3px #888888;
+    display: block;
+    background-color: #80b4f0;
+    box-shadow: 0 1px 10px 4px #4f4d93;
 }
 
-#menu{
-    margin-right: 800px;
-    height: 50px;
-}
-
-#perfil{
-    margin-left: 690px;
+#menu {
+    width: 85px;
+    padding: 10px 0;
+    background-color: #c0dbee;
+    border-radius: 7px;
+    display: inline-block;
 }
 
 .dropdown-menu {
-    background-color: #5086c1;
+    background-color: #80b4f0;
+    padding: 10px;
+    margin-block: 0 0 0 17px;
+    border: none;
+    box-shadow: 63px -37px 5px -60px rgba(79, 77, 147, 1);
 }
 
 .dropdown-item {
     font-weight: bold;
+    background: #c0dbee;
+    border-radius: 7px;
+    margin: 5px 0;
 }
 
-#logo img{
-    max-width: 50px;
-    border-radius: 50%;
+#logo img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+#logo {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.rounded-circle {
+    border: 2px solid #4f4d93;
+}
+
+#perfil {
+    width: 5px;
 }
 
 .nav-item {
-    vertical-align: middle;
-    margin: 5px;
+    display: inline-block;
     font-weight: bold;
+    width: 32.8%;
+    text-align: center;
 }
-    .btn{
-        background-color: rgba(190, 212, 223, 0.527);
-        margin: 15px;
-        display: flex;
-        justify-content: center;
-    }
 
+.nav-item.dropdown {
+    margin-left: -35px;
+}
+
+.nav-item.dropdown.usuario {
+    width: 40px;
+}
+
+.sombra {
+    box-shadow: -35px -17px 5px -32px rgba(79, 77, 147, 1);
+}
 #nuevo{
     margin-top: 40px;
     margin-left: 50px;

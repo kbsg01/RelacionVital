@@ -4,7 +4,9 @@ body * {
     /* outline: solid 1px pink; */
     margin-left: 0;
 }
-
+body{
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
+}
 div.row{
     margin-right: 0px;
 }
@@ -12,11 +14,6 @@ div.row{
 div.container-fluid{
     padding-right: 0px;
 }
-
-#content {
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
-}
-
 .navbar {
     display: inline-block;
 }
@@ -124,6 +121,7 @@ nav.navbar {
 
 .carousel {
     margin-bottom: 15px;
+    background-color: rgb(255, 255, 255);
 }
 
 .d-block{
@@ -156,13 +154,15 @@ main {
 }
 h2{
     text-align: center;
-    margin-top: 128px;
+    margin-top: -3%;
+    height: 200px;
+    padding: 2%;
 }
 
 .publicidad {
     display: block;
     height: 100px;
-    margin-top: 90px;
+    margin-top: 2%;
     border: 1px solid black;
     box-shadow: 5px 5px 5px #888888;
     background-color:  rgb(247, 247, 247);
@@ -171,25 +171,27 @@ h2{
 }
 
 .tareas {
-    width: 47%;
-    padding-top: 15px;
-    margin-left: 3%;
+    width: 40%;
+    padding: 1%;
+    margin-left: 8%;
     border: 1px solid rgb(56, 54, 54);
     margin-top: 40px;
     box-shadow: 5px 5px 5px #a3a3a3;
-    background-color:  rgb(247, 247, 247) ;
+    background-color:  rgb(255, 255, 255) ;
     vertical-align: top;
     height: 10%;
 }  
 
 .box {
+    margin-top: 1%;
     width: 47%;
     text-align: center;
 }
 
 .numeros {
-    width: 100%;
+    width: 80%;
     display: inline-block;
+    
     height: 150px;
     margin-left: 3%;
     border-radius: 20px;
@@ -210,6 +212,7 @@ p.separacion {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 97%;
+    padding-left: 2%;
 }
 
 h3{
@@ -217,6 +220,9 @@ h3{
 }
 
 @media only screen and (max-width: 838px) {
+    #tips {
+        width: 85%;
+    }
 
     .tareas {
         width: 90%;
