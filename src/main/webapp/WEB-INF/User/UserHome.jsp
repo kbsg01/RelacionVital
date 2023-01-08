@@ -75,7 +75,8 @@
                                                 <ul class="dropdown-menu sombra">
                                                     <!-- Agregar perfil de usuario (no urgente) -->
                                                     <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
-                                                    <li><a class="btn btn-light dropdown-item" href="/logout">Cerrar Sesión</a></li>
+                                                    <li><a class="btn btn-light dropdown-item" href="/logout">Cerrar
+                                                            Sesión</a></li>
                                                 </ul>
                                                 <!-- desplegable -->
                                             </div>
@@ -87,7 +88,6 @@
                         </nav>
                         <!-- Navbar -->
                         <!------titulo-->
-                        <h1>Informacion de la cuenta</h1>
                         <!---titulo -->
                         <!-- foto perfil --> <!-- style="width: 40%; height: 40%;" -->
                         <div class="container">
@@ -102,6 +102,21 @@
                         <!-- foto perfil -->
                         <!-- informacion de la cuenta  class="informacion"-->
                         <div class="contenedor">
+                            <div class="bloque4">
+                                <div class="contorno1">
+                                    <form:form method="post" action="/account/perfil/password" modelAttribute="user">
+                                        <div class="casillacuatro">
+                                            <h2>Nombre: </h2>
+                                            <p class="info"><c:out value="${user.name}" /></p>
+                                        </div>
+                                        <div class="casillacinco">
+                                            <h2>Email: </h2>
+                                            <p class="info" ><c:out value="${user.email}" /></p>
+                                        </div>
+                                        <br>
+                                    </form:form>
+                                </div>
+                            </div>
                             <div class="bloque">
                                 <div class="casilla">
                                     <h2>Cambiar Nombre</h2>
@@ -158,12 +173,9 @@
                                     </form:form>
                                 </div>
                             </div>
-                            <div>
-                                <!-- informacion de la cuenta -->
-                                <a class="btn btn-danger borrar"
-                                    href="/account/perfil/${users.id}/delete">Delete</a>
-                            </div>
                         </div>
+                        <!-- informacion de la cuenta -->
+                        <a class="btn btn-danger borrar" href="/account/perfil/${users.id}/delete">Eliminar Cuenta</a>
                     </div>
 
                 </body>
