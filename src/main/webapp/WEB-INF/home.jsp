@@ -102,7 +102,7 @@
                             </div>
                             <div class="carousel-inner tips">
                                 <div class="carousel-item active">
-                                    <div class="d-block w-100">   <h2>Mantén una dieta saludable</h2> </div>
+                                    <div class="d-block w-100">   <h2>Mantén una dieta saludable.<br>Cuerpo sano, mente sana</h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
