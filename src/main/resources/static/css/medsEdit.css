@@ -1,7 +1,7 @@
 body * {
     margin: 0;
     padding: 0;
-    outline: solid 1px pink;
+    /*outline: solid 1px pink;*/
     margin-left: 0;
 }
 
@@ -128,31 +128,45 @@ nav.navbar {
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    margin: 15rem 15rem;
-    padding: 15%;
-    background-color:  rgb(150, 234, 255);
+    margin: 15% 15%;
+    background: linear-gradient(0deg, rgb(235, 250, 250, 1) 10%, rgb(223, 248, 248) 24%, rgb(190, 225, 253) 60%, #92c5ff 80%, #80b4f0 100%);
     box-shadow: 3px 3px 3px #888888;
 }
 
   /* Estilos para el título */
 header {
-    background-color: rgb(98, 201, 248);
-    color: antiquewhite;
+    background-color: rgb(215, 163, 246);
+    color: rgb(75, 164, 212);
     padding: 1rem 1rem;
     margin: 1rem ;
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-bottom: 20px;
+    margin-top: 10rem;
 
 }
 
 header h3 {
-    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-left: -33px;
+    -webkit-text-fill-color: rgb(198, 239, 255);
+    -webkit-text-stroke: 1px rgb(154, 198, 255);
+    background: #ccc;
     text-align: center;
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
 }
 h2 {
-    font-size: 3rem;
+    text-align: center;
     margin-bottom: 3rem;
+    -webkit-text-fill-color: rgb(198, 239, 255);
+    -webkit-text-stroke: 1px rgb(154, 198, 255);
+    background: #ccc;
+    text-align: center;
+    font-size: 2rem;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
   /* Estilos para el contenedor de medicamento */
@@ -160,13 +174,13 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-bottom: 20px;
+    margin: 1rem;
     align-items: center;
     padding: 8rem;
     
 }
 select#medicamento {
-    background-color: #7893ff;
+    background-color: rgb(215, 163, 246);
     padding: 10%;
     margin-bottom: 3rem;
 }
