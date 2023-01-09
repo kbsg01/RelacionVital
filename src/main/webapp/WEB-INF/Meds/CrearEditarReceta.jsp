@@ -14,20 +14,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
     <title>Nuevo Medicamento</title>
-    <link rel="stylesheet" href="/css/tareaCreateEdit.css">
+    <link rel="stylesheet" href="/css/medsEdit.css">
 </head>
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+        <div class="">
+            <div class="" id="navbarNavDropdown">
+                <div class="">
                     <!-- Menu -->
-                    <li class="nav-item">
-                        <li class="nav-item dropdown">
-                            <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false">
-                                Menu
-                            </a>
+                    <div class="nav-item">
+                        <div class="nav-item dropdown">
+                            <a id="menu" class="nav-link dropdown-toggle" href="#"   data-bs-toggle="dropdown"  aria-expanded="false"> Menú </a>
                             <ul class="dropdown-menu">
                                 <!-- Agregar pagina -->
                                 <li><a class="dropdown-item" href="/emociones">Mis Emociones</a></li>
@@ -38,37 +36,37 @@
                                 <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
                                 <!-- Listos (27-12-22) -->
                             
-                                <!-- Agregar pagina -->
+                                <!-- Probando funcionalidad -->
                                 <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a></li>
                                 <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
-                                <!-- Agregar pagina -->
+                                <!-- Probando funcionalidad -->
                             </ul>
-                        </li>
-                    </li>
+                        </div>
+                    </div>
                     <!-- Menu -->
-                    <li class="nav-item">
+                    <div class="nav-item">
                         <div id="logo">
                             <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
                         </div>
-                    </li>
+                    </div>
                     <!-- User -->
-                    <li class="nav-item">
-                        <li class="nav-item dropdown">
+                    <div class="nav-item">
+                        <div class="nav-item dropdown usuario">
                             <a class="nav-link dropdown-toggle" id="perfil" href="#" data-bs-toggle="dropdown"  aria-expanded="false">
-                                <img src="${user.imgRoute}" alt="mdo" width="32" height="32" class="rounded-circle">
+                                <img src="${user.imgRoute}" alt="mdo" width="55" height="55" class="rounded-circle">
                                 <c:out value="${user.name}"/>
                             </a>
                             <!-- desplegable -->
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu sombra">
                                 <!-- Agregar perfil de usuario (no urgente) -->
                                 <li><a class="dropdown-item" href="/account/perfil">Perfil</a></li>
-                                <li><a class="btn btn-light" href="/logout">Cerrar Sesion</a></li>
+                                <li><a class="dropdown-item" href="/logout">Cerrar Sesión</a></li>
                             </ul>
                             <!-- desplegable -->
-                        </li>
-                    </li>
+                        </div>
+                    </div>
                     <!-- User -->
-                </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -76,8 +74,13 @@
 
 
     <!-- Crear-->
-    <div class="crearEditar">
+    <header>
         <h3>Panel de Medicamento</h3>
+        </header>
+    <div class="crearEditar">
+        <div class="medicamento">
+            <h2>Selecciona el Medicamento</h2>
+            <div>
         <form:form action="" method="post" modelAttribute="receta">
             <p>
                 <form:select path="medicamento">
@@ -89,18 +92,25 @@
                 </form:select>
                 
             </p>
+        </div>
+        <div class="dosis">
+            <h2>Dosis</h4>
             <p>
-                <form:label path="dosis">Dosis:</form:label>
+                <form:label path="dosis" ></form:label>
                 <form:errors path="dosis"/>
                 <form:input path="dosis"/>
             </p>
+        </div>
+        <div class="vencimiento">
+            <h2>Fecha de vencimiento</h2>
             <p>
-                <form:label path="fechaReceta">Vencimiento:</form:label>
+                <form:label path="fechaReceta"></form:label>
                 <form:errors path="fechaReceta"/>
                 <form:input type="date" path="fechaReceta"/>
             </p>
-            <input type="submit" value="agregar Medicamento">
+            <input type="submit" value="Agregar Medicamento">
         </form:form>
+        </div>
     </div>
     <!-- Crear-->
 </body>
