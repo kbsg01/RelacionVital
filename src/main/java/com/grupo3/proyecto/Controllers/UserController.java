@@ -167,4 +167,8 @@ public class UserController {
         return "redirect:/";
     }
 
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
 }
