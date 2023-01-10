@@ -103,6 +103,9 @@
                                 </div>
 
                                 <form id="login" class="dgroup" method="post" action="/login">
+                <!-- <p>
+                    <c:out value="${errorSesion}"/>
+                </p> -->
                                     <p>
                                         <label class="margintop" for="email">Email:</label>
                                         <input type="text" placeholder="Email" class="field" type="text" id="email"
@@ -115,7 +118,7 @@
                                     </p>
                                     <input type="submit" class="bn" value="Login!" />
                                 </form>
-
+        
                                 <form:form id="registro" class="group" method="post" action="/register"
                                     modelAttribute="user">
                                     <p>

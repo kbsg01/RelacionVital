@@ -102,17 +102,17 @@
                             </div>
                             <div class="carousel-inner tips">
                                 <div class="carousel-item active">
-                                    <div class="d-block w-100">   <h2> Hola, ¿que tal? </h2> </div>
+                                    <div class="d-block w-100">   <h2>Mantén una dieta saludable.<br>Cuerpo sano, mente sana</h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
                                 <div class="carousel-item ">
-                                    <div class="d-block w-100">   <h2> Bien, ¿y tú? </h2> </div>
+                                    <div class="d-block w-100">   <h2>Evita el consumo excesivo de cafeína y el alcohol.<br>Estos pueden aumentar la ansiedad</h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="d-block w-100">   <h2> Bien, gracias.sdfffffffffffffsdfffffffffffffffffffff<br>fffffffffffffffffffffffffffffffffffffffffffddddddddddd </h2> </div>
+                                    <div class="d-block w-100">   <h2> Toma tiempos para respirar. Mereces tomar un respiro<br>con este mundo avanzando tan rápido</h2> </div>
                                     <div class="carousel-caption d-none d-md-block">
                                     </div>
                                 </div>

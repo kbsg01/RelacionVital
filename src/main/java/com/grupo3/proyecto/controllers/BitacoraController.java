@@ -32,6 +32,11 @@ public class BitacoraController {
     
     @GetMapping("/bitacora")
     public String bitacora(@ModelAttribute("bitacora")Bitacora bitacora, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long)session.getAttribute("userId");
         User user = uService.findById(id);
         List<Bitacora> bitacoras = user.getBitacoras();
@@ -44,6 +49,11 @@ public class BitacoraController {
     }
     @GetMapping("/bitacora/new")
     public String newBitacora(@ModelAttribute("bitacora") Bitacora bitacora, Model model,HttpSession session) {
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long uId = (Long) session.getAttribute("userId");
         User u = uService.findById(uId);
         model.addAttribute("user", u);
@@ -52,6 +62,11 @@ public class BitacoraController {
 
     @PostMapping("/bitacora/new")
     public String crearBitacora(@Valid @ModelAttribute("bitacora")Bitacora bitacora, BindingResult result, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         if(result.hasErrors()){
             return "Bitacora/CreateBitacora";
         }
@@ -63,7 +78,12 @@ public class BitacoraController {
         
     }
     @GetMapping("bitacora/{id}")
-    public String showBitacora(@PathVariable("id")Long id, Model model){
+    public String showBitacora(@PathVariable("id")Long id, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Bitacora bitacora = bitacoraServ.findById(id);
         User user = bitacora.getUser();
         model.addAttribute("bitacora", bitacora);
@@ -73,6 +93,11 @@ public class BitacoraController {
 
     @GetMapping("/bitacora/{id}/edit")
     public String BitacoraEdit(@PathVariable("id") Long id, Model model, HttpSession session) {
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long uId = (Long) session.getAttribute("userId");
         User u = uService.findById(uId);
         Bitacora bitacora = bitacoraServ.findById(id);
@@ -84,6 +109,11 @@ public class BitacoraController {
     // Editar bitacora
     @PostMapping("/bitacora/{id}/edit")
     public String editBitacora(@Valid @ModelAttribute("bitacora")Bitacora bitacora, BindingResult result, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         if (result.hasErrors()) {
             return "Bitacora/editBitacora";
         }
@@ -96,7 +126,11 @@ public class BitacoraController {
 
     // Borrar tarea
     @GetMapping("/bitacora/{id}/delete")
-    public String deleteBitacora(@PathVariable("id")Long id    ){
+    public String deleteBitacora(@PathVariable("id")Long id, HttpSession session){
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         bitacoraServ.delete(id);
         return "redirect:/bitacora";
     }

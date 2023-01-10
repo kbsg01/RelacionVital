@@ -37,6 +37,11 @@ public class UserMedicamentosController {
     // Agregar receta
     @GetMapping("/receta/add")
     public String addReceta(@ModelAttribute("receta")UserMedicamento receta, HttpSession session, Model model){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
@@ -47,6 +52,11 @@ public class UserMedicamentosController {
 
     @PostMapping("/receta/add")
     public String addReceta(@Valid @ModelAttribute("receta")UserMedicamento receta, BindingResult result, HttpSession session, Model model){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
@@ -62,7 +72,12 @@ public class UserMedicamentosController {
     }
 
     @GetMapping("/meds/{id}/delete")
-    public String delteMed(@PathVariable("id")Long id){
+    public String delteMed(@PathVariable("id")Long id, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         uMService.delete(id);
         return "redirect:/meds";
     }

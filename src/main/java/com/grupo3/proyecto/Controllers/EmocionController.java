@@ -37,6 +37,11 @@ public class EmocionController {
     // Home Emociones
     @GetMapping("/emociones")
     public String cEmocionesHome(Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long)session.getAttribute("userId");
         User user =  uService.findById(id);
         List<UserEmocion> emociones = user.getUEmociones();
@@ -48,6 +53,11 @@ public class EmocionController {
     // Agregar Emocion
     @GetMapping("/emociones/add")
     public String agregarEmocion(@ModelAttribute("emocion")UserEmocion emocion, HttpSession session, Model model){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
@@ -58,6 +68,11 @@ public class EmocionController {
 
     @PostMapping("/emociones/add")
     public String agregarEmocion(@Valid @ModelAttribute("emocion")UserEmocion emocion,BindingResult result, HttpSession session, Model model){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long) session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
@@ -75,6 +90,11 @@ public class EmocionController {
     // Editar Emocion
     @GetMapping("/emociones/{id}/edit")
     public String editEmocion(@PathVariable("id")Long id, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long uId = (Long) session.getAttribute("userId");
         User user = uService.findById(uId);
         model.addAttribute("user", user);
@@ -87,6 +107,11 @@ public class EmocionController {
 
     @PostMapping("/emociones/{id}/edit")
     public String editEmocion(@Valid @ModelAttribute("emocion")UserEmocion emocion, BindingResult result, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long uId = (Long) session.getAttribute("userId");
         User user = uService.findById(uId);
         model.addAttribute("user", user);
@@ -102,7 +127,12 @@ public class EmocionController {
 
     // Eliminar Emocion
     @GetMapping("/emociones/{id}/delete")
-    public String eliminarEmocion(@PathVariable("id")Long id){
+    public String eliminarEmocion(@PathVariable("id")Long id, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         uEService.delete(id);
         return "redirect:/emociones";
     }
