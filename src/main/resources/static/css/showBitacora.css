@@ -187,11 +187,25 @@ nav.navbar {
 .sombra {
     box-shadow: -35px -17px 5px -32px rgba(79,77,147,1);
 }
-
+p{
+    text-overflow: hidden;
+    white-space: initial;
+    word-break: break-all;
+}
 .fondo{
     background-color: rgb(247, 247, 247) ;
     border-radius: 15px;
     padding-left: 5px;
     padding-right: 5px;
     box-shadow: 3px 3px 3px #888888;
+}
+.texto{
+    background-color: rgb(247, 247, 247) ;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 3px 3px 3px #888888;
+    width: 80%;
+    height: 600px;
+    padding: 3%;
 }

@@ -93,7 +93,9 @@
             <h3 class="fondo">Fecha:<fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value = "${bitacora.dateTime}" /> </h3>
             <h6 class="fondo"> Fecha de publicación: <fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value = "${bitacora.createdAt}" /></h6>
             <!-- Entrada -->
-            <p class="fondo"> <c:out value="${bitacora.entrada}"/> </p>
+            <p class="texto"> <c:out value="${bitacora.entrada}"/> </p>
+
+        
         </div>
         <!-- bitácora -->
         
