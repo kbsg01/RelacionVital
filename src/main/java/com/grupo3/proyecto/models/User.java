@@ -52,7 +52,7 @@ public class User {
     @Transient
     private String passwordConfirmation;
 
-    private String imgRoute;
+    private String imgRoute = "/image/profile.png";
 
     @Column(updatable = false)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
