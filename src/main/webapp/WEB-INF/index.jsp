@@ -90,6 +90,9 @@
             <!-- Sobre nosotros -->
             <div id="mision">
                 <h2>Mision</h2>
+                <!-- <p>
+                    <c:out value="${errorSesion}"/>
+                </p> -->
                 <p>
                     Dolor ipsum et ipsum. No amet eos clita duis accusam veniam molestie et dolor sit lorem facilisi placerat sit. Lorem eirmod facilisis eirmod aliquam sit. Wisi lorem qui stet sadipscing aliquyam vero ea et dolores et consequat. Lorem labore et dolor duo takimata sea sea sed diam aliquyam tation. Diam nonumy gubergren sed diam nam no tempor tempor at elitr facilisis justo eos sit. Et eleifend consequat est tempor et tempor est sit accusam. Accumsan lorem amet tation nonumy sanctus sanctus. Labore est sed sed dolore sadipscing nulla kasd sadipscing diam et luptatum in magna takimata magna. Consetetur soluta luptatum tempor ipsum est vero sanctus sed ut tempor accumsan labore lorem. Quis justo amet aliquyam commodo consetetur eos stet sed kasd sit. Aliquyam iusto et vero elitr. Amet nonummy eos diam at amet dolores ipsum ut facer sea hendrerit et gubergren tempor duo. Tincidunt et eum eos. Lorem hendrerit et at sea invidunt minim sit qui facilisis sit sea labore dolor ipsum accumsan tempor amet erat.
                 </p>
@@ -102,7 +105,7 @@
             </div>
         </div>
         <!-- Sobre nosotros -->
-
+        
         <!-- User Registro/Inicio sesion -->
         <div id="user" class="alinear">
             <div id="userRegister">

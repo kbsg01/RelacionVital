@@ -34,7 +34,11 @@ public class TareaController {
     // Home de tarea
     @GetMapping("/tareas")
     public String tarea(@ModelAttribute("tarea")Tarea tarea, Model model, HttpSession session){
-        // Falta comparacion para validacion de usuario
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long)session.getAttribute("userId");
         User user = uService.findById(id);
         List<Tarea> tareas = user.getTareas();
@@ -49,6 +53,11 @@ public class TareaController {
     // Controlador de tarea completada
     @GetMapping("/tareas/{id}/complete")
     public String completeTarea(@PathVariable("id")Long id, HttpSession session, Model model){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Tarea tarea = tService.findById(id);
         tarea.setComplete(true);
         tService.save(tarea);
@@ -57,6 +66,11 @@ public class TareaController {
 
     @GetMapping("/tareas/{id}/incomplete")
     public String incompleteTarea(@PathVariable("id")Long id, HttpSession session, Model model){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Tarea tarea = tService.findById(id);
         tarea.setComplete(false);
         tService.save(tarea);
@@ -66,6 +80,11 @@ public class TareaController {
     // Get crear
     @GetMapping("/tareas/new")
     public String createTarea(@ModelAttribute("tarea")Tarea tarea, Model model, HttpSession session) {
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long)session.getAttribute("userId");
         User user = uService.findById(id);
         model.addAttribute("user", user);
@@ -75,6 +94,11 @@ public class TareaController {
     // Crear tarea
     @PostMapping("/tareas/new")
     public String createTarea(@Valid @ModelAttribute("tarea")Tarea tarea, BindingResult result, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         if(result.hasErrors()){
             return "Tarea/TareaCreateEdit";
         }
@@ -88,6 +112,11 @@ public class TareaController {
     // Get Eeditar
     @GetMapping("/tareas/{id}/edit")
     public String editTarea(@PathVariable("id")Long id, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long uId = (Long)session.getAttribute("userId");
         User user = uService.findById(uId);
         model.addAttribute("user", user);
@@ -99,6 +128,11 @@ public class TareaController {
     // Editar tarea
     @PostMapping("/tareas/{id}/edit")
     public String editTarea(@Valid @ModelAttribute("tarea")Tarea tarea, BindingResult result, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         if (result.hasErrors()) {
             return "Tarea/TareaCreateEdit";
         }
@@ -112,6 +146,11 @@ public class TareaController {
     // Borrar tarea
     @GetMapping("/tareas/{id}/delete")
     public String deleteTarea(@PathVariable("id")Long id, HttpSession session, Tarea t, Model model){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         tService.delete(id);
         return "redirect:/tareas";
     }

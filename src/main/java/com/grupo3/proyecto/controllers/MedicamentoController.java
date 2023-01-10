@@ -24,6 +24,11 @@ public class MedicamentoController {
     // Home medicamentos
     @GetMapping("/meds")
     public String medsHome(Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long)session.getAttribute("userId");
         User user =  uService.findById(id);
         List<UserMedicamento> meds = user.getUMedicamentos();

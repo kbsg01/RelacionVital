@@ -36,7 +36,12 @@ public class UserController {
     private final UserValidator userValid;
 
     @GetMapping("/")
-    public String index(@ModelAttribute("user") User user){
+    public String index(@ModelAttribute("user") User user, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) != null) {
+			System.out.println("Ya existe una sesion");
+			return "redirect:/home";
+		}
         return "index";
     }
 
@@ -53,6 +58,7 @@ public class UserController {
         }
         User u = userServ.registerUser(user);
         session.setAttribute("userId", u.getId());
+        // Decicidir si redireccionar al home o al index
         return "redirect:/home";
     }
 
@@ -78,6 +84,12 @@ public class UserController {
 
     @GetMapping("/home")
     public String homePage(Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+            // model.addAttribute("errorSesion", "El tiempo de la sesión a expirado");
+			return "redirect:/";
+		}
         Long uid = (Long) session.getAttribute("userId");
         User u = userServ.findById(uid);
         List<Tarea> tareas = tService.findTop5();
@@ -88,6 +100,11 @@ public class UserController {
 
     @GetMapping("/account/perfil")
     public String perfil(@ModelAttribute("user")User user, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long)session.getAttribute("userId");
         User users = userServ.findById(id);
         model.addAttribute("user", users);
@@ -132,6 +149,11 @@ public class UserController {
 
     @PostMapping("/account/perfil/name")
     public String editName(@ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long) session.getAttribute("userId");
         User u = userServ.findById(id);
         u.setName(user.getName());
@@ -141,6 +163,11 @@ public class UserController {
 
     @PostMapping("/account/perfil/email")
     public String editEmail( @ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long) session.getAttribute("userId");
         User u = userServ.findById(id);
         boolean duplicated = userServ.duplicatedUser(user.getEmail());
@@ -154,6 +181,11 @@ public class UserController {
     }
     @PostMapping("/account/perfil/password")
     public String editPassword(@ModelAttribute("user")User user, BindingResult result, Model model, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         Long id = (Long) session.getAttribute("userId");
         User u = userServ.findById(id);
         u.setPassword(user.getPassword());
@@ -162,13 +194,18 @@ public class UserController {
     }
 
     @GetMapping("/account/perfil/{id}/delete")
-    public String deleteUser(@PathVariable("id")Long id){
+    public String deleteUser(@PathVariable("id")Long id, HttpSession session){
+        // condicion para retornar index en caso de cierre de sesion
+        if ((Long) (session.getAttribute("userId")) == null) {
+			System.out.println("fallo la sesion");
+			return "redirect:/";
+		}
         userServ.delete(id);
         return "redirect:/";
     }
 
     @GetMapping("/about")
-    public String about(){
+    public String about(HttpSession session){
         return "about";
     }
 }
