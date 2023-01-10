@@ -1,4 +1,4 @@
-# Proyecto Salud Mental
+# Proyecto Salud Mental - RelaciónVital
 
 **Descripción**:
   El proyecto RelaciónVital, es una iniciativa impulsada por estudiantes Forge, del programa "Programa tu Futuro + Start", 
