@@ -4,16 +4,30 @@ body * {
     /* outline: solid 1px pink; */
     margin-left: 0;
 }
-body{
+
+body {
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
 }
-div.row{
+
+div.row {
     margin-right: 0px;
 }
 
-div.container-fluid{
+div.container-fluid {
     padding-right: 0px;
 }
+
+.navbar-brand2 {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(211, 224, 240);
+    background: radial-gradient(rgb(198, 221, 255)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 15%;
+    font-size: 2rem;
+    margin-left: 60%;
+}
+
 .navbar {
     display: inline-block;
 }
@@ -27,7 +41,7 @@ nav.navbar {
 #menu {
     width: 85px;
     padding: 10px 0;
-    background-color: #c0dbee;  
+    background-color: #c0dbee;
     border-radius: 7px;
     display: inline-block;
 }
@@ -37,7 +51,8 @@ nav.navbar {
     padding: 10px;
     margin-block: 0 0 0 17px;
     border: none;
-    box-shadow: 63px -37px 5px -60px rgba(79,77,147,1);}
+    box-shadow: 63px -37px 5px -60px rgba(79, 77, 147, 1);
+}
 
 .dropdown-item {
     font-weight: bold;
@@ -46,7 +61,7 @@ nav.navbar {
     margin: 5px 0;
 }
 
-#logo img{
+#logo img {
     width: 70px;
     height: 70px;
     margin-right: 10px;
@@ -67,9 +82,12 @@ nav.navbar {
 
 .nav-item {
     display: inline-block;
-    font-weight: bold;
-    width: 32.8%;
+    width: 30.8%;
+    margin-left: 2%;
     text-align: center;
+    font-family: 'East Sea Dokdo', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .nav-item.dropdown {
@@ -81,15 +99,15 @@ nav.navbar {
 }
 
 .sombra {
-    box-shadow: -35px -17px 5px -32px rgba(79,77,147,1);
+    box-shadow: -35px -17px 5px -32px rgba(79, 77, 147, 1);
 }
 
 @media only screen and (max-width: 991px) {
 
     .container-fluid {
-    width: 33%;
-    text-align: center;
-    }    
+        width: 33%;
+        text-align: center;
+    }
 
     #logo {
         width: 42%;
@@ -101,16 +119,16 @@ nav.navbar {
 
     .dropdown-menu.show {
         margin-left: -10px;
-        box-shadow: 63px -55px 5px -60px rgba(79,77,147,1);
+        box-shadow: 63px -55px 5px -60px rgba(79, 77, 147, 1);
         margin-top: 20px;
-    }   
+    }
 
     .dropdown-menu.sombra.show {
         margin-top: -1px;
         margin-left: -40px;
-        box-shadow: -36px -14px 5px -32px rgba(79,77,147,1);
+        box-shadow: -36px -14px 5px -32px rgba(79, 77, 147, 1);
     }
-    
+
 }
 
 .btn {
@@ -121,10 +139,11 @@ nav.navbar {
 
 .carousel {
     margin-bottom: 15px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.8);
+
 }
 
-.d-block{
+.d-block {
     text-align: center;
     margin-top: 120px;
 }
@@ -137,7 +156,7 @@ main {
 }
 
 #tips {
-    width: 70%;
+    width: 55%;
 }
 
 .tips {
@@ -149,10 +168,11 @@ main {
     border-top: 1px solid rgb(129, 125, 125);
 }
 
-.sig{
+.sig {
     background-color: #6a9eda
 }
-h2{
+
+h2 {
     text-align: center;
     margin-top: -3%;
     height: 200px;
@@ -165,7 +185,7 @@ h2{
     margin-top: 2%;
     border: 1px solid black;
     box-shadow: 5px 5px 5px #888888;
-    background-color:  rgb(247, 247, 247);
+    background-color: rgb(247, 247, 247);
     font-size: large;
     margin-left: 10px;
 }
@@ -177,10 +197,10 @@ h2{
     border: 1px solid rgb(56, 54, 54);
     margin-top: 40px;
     box-shadow: 5px 5px 5px #a3a3a3;
-    background-color:  rgb(255, 255, 255) ;
+    background-color: rgb(255, 255, 255);
     vertical-align: top;
     height: 10%;
-}  
+}
 
 .box {
     margin-top: 1%;
@@ -191,17 +211,18 @@ h2{
 .numeros {
     width: 80%;
     display: inline-block;
-    
+
     height: 150px;
     margin-left: 3%;
     border-radius: 20px;
     margin-bottom: 20px;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
-.separacion{
+
+.separacion {
     margin: 10px;
     border: 1px solid rgb(224, 224, 224);
     border-radius: 10px;
@@ -215,7 +236,7 @@ p.separacion {
     padding-left: 2%;
 }
 
-h3{
+h3 {
     text-align: center;
 }
 

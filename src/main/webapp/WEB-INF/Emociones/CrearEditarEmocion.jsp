@@ -27,7 +27,13 @@
                         <title>Crear o editar emoción</title>
                         <link rel="stylesheet" href="/css/createEmocion.css">
                         <!-- <link rel="stylesheet" href="/css/createBitacora.css"> -->
-
+                        <!----------->
+                        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+                        <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
+                        <link
+                            href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
+                            rel="stylesheet">
+                        <!------------>
                     </head>
 
                     <body>
@@ -62,6 +68,9 @@
                                                     </li>
                                                     <!-- Probando funcionalidad -->
                                                 </ul>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="navbar-brand navbar-brand2" href="#">Relacion Vital</a>
                                             </div>
                                         </div>
                                         <!-- Menu -->
@@ -106,9 +115,10 @@
                                     <form:form method="post" action="" modelAttribute="emocion">
                                         <div class="emoji">
                                             <c:forEach items="${emociones}" var="emocion">
-                                                <p>&#x<c:out value="${emocion.emoji} ${emocion.emotionName}" />
+                                                <p>&#x
+                                                    <c:out value="${emocion.emoji} ${emocion.emotionName}" />
                                                     <form:radiobutton path="emocion" value="${emocion.id}" />
-                                                </p> 
+                                                </p>
                                             </c:forEach>
                                         </div>
                                         <div class="casilla">
@@ -125,7 +135,7 @@
                                 <!-- formulario -->
                             </div>
                             <div class="derecha"></div>
-                            
+
                         </section>
                     </body>
 

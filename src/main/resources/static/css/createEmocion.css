@@ -17,7 +17,16 @@ div.container-fluid {
     padding-right: 0px;
 }
 
-
+.navbar-brand2 {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(211, 224, 240);
+    background: radial-gradient(rgb(198, 221, 255)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 15%;
+    font-size: 2rem;
+    margin-left: 60%;
+}
 .navbar {
     display: inline-block;
 }
@@ -73,8 +82,13 @@ nav.navbar {
 .nav-item {
     display: inline-block;
     font-weight: bold;
-    width: 32.8%;
+    width: 30.8%;
+    margin-left: 2%;
     text-align: center;
+    font-family: 'East Sea Dokdo', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
 }
 
 .nav-item.dropdown {

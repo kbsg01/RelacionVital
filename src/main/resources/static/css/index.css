@@ -8,25 +8,17 @@ div.row {
     margin-right: 0px;
 }
 
-div.container-fluid {
-    padding-right: 0px;
-}
 
-.navbar {
-    display: inline-block;
-}
-
-h1 {
-    font-family: 'East Sea Dokdo', cursive;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+.navbar-brand2 {
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 1px rgb(211, 224, 240);
-    text-align: center;
-    font-size: 3rem;
     background: radial-gradient(rgb(198, 221, 255)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    padding: 10%;
+    font-size: 2rem;
+    margin-left: 3%;
+    
 }
 
 nav.navbar {
@@ -48,7 +40,7 @@ nav.navbar {
     padding: 10px;
     margin-block: 0 0 0 17px;
     border: none;
-    box-shadow: 63px -37px 5px -60px rgba(79, 77, 147, 1);
+    box-shadow: 63px -37px 5px -60px rgb(201, 199, 250);
 }
 
 .dropdown-item {
@@ -77,13 +69,17 @@ nav.navbar {
     width: 5px;
 }
 
-.nav-link {}
+#navbarNavDropdown {}
 
 .nav-item {
     display: inline-block;
     font-weight: bold;
-    width: 32.8%;
+    width: 30.8%;
+    margin-left: 2%;
     text-align: center;
+    font-family: 'East Sea Dokdo', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 
 }
 
@@ -100,7 +96,7 @@ nav.navbar {
 }
 
 .sombra {
-    box-shadow: -35px -17px 5px -32px rgba(79, 77, 147, 1);
+    box-shadow: -35px -17px 5px -32px rgb(184, 182, 224);
 }
 
 @media only screen and (max-width: 991px) {
@@ -142,6 +138,9 @@ nav.navbar {
 body {
     width: 100%;
     background-image: url("/img/xd.png");
+    background-color: #80b4f0, 0.3;
+    background-size: 100%;
+    background-repeat: no-repeat;
     /*background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);*/
 }
 
@@ -180,7 +179,7 @@ body {
 /*************xdd registrologin************/
 .contaner {
     width: 30%;
-    margin-top: 5%;
+    margin-top: 6%;
     display: inline-block;
     vertical-align: top;
 }
@@ -189,28 +188,28 @@ body {
     overflow: hidden;
     width: 25%;
     min-width: 400px;
-    height: 600px;
+    height: 550px;
     margin: 6% auto;
-    background: #f7f7f7;
+    background: rgba(255, 255, 255, 0.3);
     position: relative;
     padding: 5px;
     border-radius: 5%;
-    box-shadow: 1px 0px 1px 1px rgb(211, 211, 211);
     display: inline-block;
     vertical-align: top;
     margin-left: 25%;
-    border: 1px solid #e7f2ff;
+    border: 1px solid #d7d7d8;
 }
 
 .button-box {
     width: 240px;
     margin: 30px auto;
     position: relative;
-    box-shadow: 1px 0px 1px 1px rgb(235, 235, 235);
+    box-shadow: 1px 0px 1px 1px rgb(211, 211, 211);
     border-radius: 30px;
 }
 
 .toggle-bn {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px 22px;
     cursor: pointer;
     background: transparent;
@@ -219,21 +218,21 @@ body {
 }
 
 .tggle-bn {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: transparent;
     border: 0px;
     position: relative;
-
 }
 
 #elegir {
     top: 0;
     left: 0;
     position: absolute;
-    width: 120px;
+    width: 125px;
     height: 100%;
     border-radius: 30px;
     transition: 0.8s;
-    background: linear-gradient(90deg, rgb(127, 178, 255), #b9d7ff);
+    background: linear-gradient(90deg, #80b4f0, #add1ff);
 
 }
 
@@ -260,17 +259,18 @@ body {
 .field {
     width: 100%;
     padding: 10px 0;
-    margin: 5px 0;
     padding-left: 10px;
     border-left: 0;
     border-top: 0;
     border-right: 0;
     background-color: transparent;
-    border-bottom: 2px solid rgb(209, 209, 209);
+    border-bottom: 2px solid rgb(180, 180, 180);
 }
 
 .margintop {
     margin-top: 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 .bn {
@@ -286,6 +286,11 @@ body {
     border-radius: 30px;
 }
 
+.checkbox {
+    margin-top: 10%;
+    margin-bottom: 4%;
+}
+
 .bnt {
     width: 85%;
     padding: 10px 30px;
@@ -293,10 +298,11 @@ body {
     display: block;
     margin: auto;
     margin-left: 5%;
-    background: linear-gradient(90deg, rgb(36, 9, 9), rgb(252, 143, 143));
+    background: linear-gradient(90deg, rgb(127, 178, 255), #b9d7ff);
     border: 0px;
     outline: none;
     border-radius: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .check-box {
@@ -307,6 +313,7 @@ body {
 span {
     font-size: 12px;
     bottom: 64px;
+    margin-left: 10px;
     color: rgb(139, 139, 139);
 }
 
@@ -316,6 +323,17 @@ span {
 
 #registro {
     left: 480px;
+}
+
+.fuente {
+    margin-bottom: 4%;
+    font-family: 'East Sea Dokdo', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.link {
+    color: black;
 }
 
 /*****************DDDDDDDDDDDDD profe perdon por los absolute DDDDDDDDDDDDDDDD**************/
