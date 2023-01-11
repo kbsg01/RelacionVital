@@ -24,8 +24,8 @@
 
     <link rel="stylesheet" type="text/css" href="/css/bitacora.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    </head>
-    <body>
+</head>
+<body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="">
@@ -80,35 +80,38 @@
         </div>
     </nav>
     <!-- Navbar -->
-
-            <div class="title"><h1>Mis Bitácoras</h1></div>
-
-                <div class="fondo">
-                    <table class="table" data-toggle="table" data-pagination="true" data-search="true" >
-                        <thead>
+    <div id="nuevo">
+        <a href="/bitacora/new">+ Nueva entrada</a>
+    </div>
+    <div id="title" class=" shadow">
+        <h1>Mis Bitácoras</h1></div>
+        <div class="fondo shadow">
+            <table class="table" data-toggle="table" data-pagination="true" data-search="true" >
+                <thead>
+                    <tr>
+                        <th data-width="300" data-field="fecha" data-sortable="true" data-sort-name="fecha" data-sort-order="desc"> Fecha </th>
+                        <th > Mis Antecedentes </th>
+                        <th data-width="150" > Ver más </th>
+                    </tr>
+                </thead>
+                <!-- codigo OG -->
+                <tbody>
+                    <c:forEach items="${bitacoras}" var="bitacora">
                         <tr>
-                            <th data-width="200"> Mis Antecedentes </th>
-                            <th data-width="200"> Fecha </th>
-                            <th data-width="30"> Ver más </th>
-                        </tr>
-                        </thead>
-                        <!-- codigo OG -->
-                        <tbody>
-                            <c:forEach items="${bitacoras}" var="bitacora">
-                        <tr>
-                            <td data-width="200"><c:out value="${bitacora.title}"/></td>
-                            <td data-width="200"> <fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value = "${bitacora.dateTime}" /> </td>
-                            <td data-width="30"><span class="material-symbols-outlined"><a href="/bitacora/${bitacora.id}"> <i class="fa-sharp fa-solid fa-magnifying-glass link-primary"></i> </a></span></td>
+                            <td data-width="300"> <fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value = "${bitacora.dateTime}" /> </td>
+                            <td ><c:out value="${bitacora.title}"/></td>
+                            <td data-width="150" ><a href="/bitacora/${bitacora.id}"> <i class="fa-sharp fa-solid fa-magnifying-glass link-primary"></i> </a></td>
                         </tr>
                     </c:forEach>
-                        </tbody>
-                    </table>
-                    <a href="/bitacora/new">+ Nueva entrada</a>
-                </div>
-            <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-            <script src="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.js"></script>
-        </body>
 
-        
-        </html>
+                </tbody>
+            </table>
+        </div>
+        <div class="publicidad shadow">
+            publicidad
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.js"></script>
+</body>
+</html>

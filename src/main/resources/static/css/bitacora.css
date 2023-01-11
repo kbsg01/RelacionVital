@@ -128,47 +128,67 @@ nav.navbar {
     color: black;
 }
 
+#nuevo{
+    margin-top: 40px;
+    margin-left: 5%;
+}
 
-
-.title {
-    width: 300px;
-    margin: 70px auto;
+#nuevo a{
+    background-image: linear-gradient(#6a9eda,#8ab3e2,#6a9eda);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
     padding: 10px;
-    background-color: rgb(247, 247, 247) ;
     box-shadow: 5px 5px 5px #888888;
+
+}
+
+#nuevo a:hover{
+    background-image: linear-gradient(#8ab3e2,#8ab3e2, #8ab3e2);
+}
+
+
+#title {
+    width: 300px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: white;
     border-radius: 10px;
 }
 
-.title h1 {
+#title h1 {
     text-align: center;
     font-size: 40px;
 }
 
 .fondo {
     width: 90%;
-    margin: 70px auto;
-    padding: 10px;
-    background-color: rgb(247, 247, 247) ;
-    box-shadow: 5px 5px 5px #888888;
+    margin-left: 5%;
+    padding: 15px;
+    background-color: white;
     border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .table {
     width: 100%;
-}
-
-th {
-    width: 10%;
-}
-
-td {
-    width: 100%;
+    text-align: center;
 }
 
 td a {
-    width: 28px;
     text-decoration: none;
     color: black;
     /* background: #5086c1; */
     border-radius: 100%;
+}
+.publicidad{
+    height: 100px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 90%;
+
+    background-color: white;
 }

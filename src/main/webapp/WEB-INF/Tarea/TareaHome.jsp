@@ -12,8 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
+
+    <!-- CSS Bootstrap Table -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
+    <!-- CSS Bootstrap Table -->
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
 
@@ -78,26 +82,30 @@
     </div>
     </nav>
     <!-- Navbar -->
+    
+    <!-- Crear/Editar -->
+    <div id="nuevo">
+        <a href="/tareas/new">+ Añadir Tarea</a>
+    </div>
+    <!-- Crear/Editar -->
 
-        <!-- Crear/Editar -->
-        <div id="nuevo">
-            <a href="/tareas/new">+ Añadir Tarea</a>
-        </div>
-        <!-- Crear/Editar -->
+    <div id="title" class="shadow">
+        <h1>Mis Tareas</h1>
+    </div>
 
+    <div id="mainContent">
         <!-- Tablas -->
-        <div id="mainContent">
-            <div id="tareas">
-                <h2>Tareas</h2>
-                <table>
+            <div id="tareas" class="shadow">
+                <h2>En progreso</h2>
+                <table class="table" data-toggle="table" data-pagination="true" data-search="true">
                     <thead>
                         <tr>
-                            <th>Completar</th>
-                            <th>Fecha Limite</th>
+                            <th data-width="200">Completar</th>
+                            <th data-width="200" data-field="deadline" data-sortable="true" data-sort-name="deadline" data-sort-order="desc" >Fecha Limite</th>
                             <th>Tarea</th>
-                            <th>Fecha Creacion</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
+                            <th data-width="200" data-field="fecha" data-sortable="true" data-sort-name="fecha" data-sort-order="desc" >Fecha Creación</th>
+                            <th data-width="150">Editar</th>
+                            <th data-width="150">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -110,13 +118,13 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.deadline}"/>
+                                        <fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value = "${tarea.deadline}"/>
                                     </td>
                                     <td>
                                         <c:out value="${tarea.task}"/>
                                     </td>
                                     <td>
-                                        <fmt:formatDate pattern = "dd-MMMM-yyyy" value = "${tarea.createdAt}"/>
+                                        <fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value = "${tarea.createdAt}"/>
                                     </td>
                                     <td>
                                         <a href="/tareas/${tarea.id}/edit"> <i class="link-info fa-solid fa-pen-to-square"></i> </a>
@@ -130,16 +138,16 @@
                     </tbody>
                 </table>
             </div>
-            <div id="completadas">
+            <div id="completadas" class="shadow">
                 <h2>Completadas</h2>
-                <table>
+                <table class="table" data-toggle="table" data-pagination="true" data-search="true">
                     <thead>
                         <tr>
-                            <th>Quitar</th>
-                            <th>Fecha Limite</th>
+                            <th data-width="200">Quitar</th>
+                            <th data-width="200" data-field="deadline" data-sortable="true" data-sort-name="deadline" data-sort-order="desc" >Fecha Limite</th>
                             <th>Tarea</th>
-                            <th>Fecha Creacion</th>
-                            <th>Eliminar</th>
+                            <th data-width="200" data-field="fecha" data-sortable="true" data-sort-name="fecha" data-sort-order="desc" >Fecha Creación</th>
+                            <th data-width="150" >Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -152,13 +160,13 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.updatedAt}"/>
+                                        <fmt:formatDate pattern="dd 'de' MMMM 'del' yyyy" value="${tarea.deadline}"/>
                                     </td>
                                     <td>
                                         <c:out value="${tarea.task}"/>
                                     </td>
                                     <td>
-                                        <fmt:formatDate pattern="dd-MMMM-yyyy" value="${tarea.createdAt}"/>
+                                        <fmt:formatDate pattern="dd 'de' MMMM 'del' yyyy" value="${tarea.createdAt}"/>
                                     </td>
                                     <td>
                                         <a href="/tareas/${tarea.id}/delete"> <i class="link-danger fa-solid fa-trash"></i> </a>
@@ -170,13 +178,17 @@
                 </table>
             </div>
             <!-- Tablas -->
-        
-        </div>
 
         
-        <div class="publicidad">
+        <div class="publicidad shadow">
             publicidad
         </div>
     </div>
+
+    <!-- Bootstrap Table -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.js"></script>
+    <!-- Bootstrap Table -->
 </body>
 </html>

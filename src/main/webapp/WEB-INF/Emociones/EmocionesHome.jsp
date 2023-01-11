@@ -83,67 +83,69 @@
     </nav>
     <!-- Navbar -->
 
-        <!-- Crear/Editar -->
-        <div id="nuevo">
-            <a href="/emociones/add">+ Añadir emocion</a>
-        </div>
-        <!-- Crear/Editar -->
-        <div id="title">
-            <h1>Mis Emociones</h1>
-        </div>
+    <!-- Crear/Editar -->
+    <div id="nuevo">
+        <a href="/emociones/add">+ Añadir emocion</a>
+    </div>
+    <!-- Crear/Editar -->
+    <div id="title" class="shadow">
+        <h1>Mis Emociones</h1>
+    </div>
 
-        <!-- Tablas -->
-        <div id="mainContent">
-            <div id="emocion">
-                    <table class="table" data-toggle="table" data-pagination="true" data-search="true" >
+    <!-- Tablas -->
+    <div id="mainContent">
+        <div id="emocion" class="shadow">
+                <table class="table" data-toggle="table" data-pagination="true" data-search="true" >
                     <thead>
                         <tr>
-                            <th data-width="200" data-field="fecha" data-sortable="true" data-sort-name="fecha" data-sort-order="desc">Fecha Creacion</th>
-                            <th data-width="200">Emocion</th>
+                            <th data-width="200" data-field="fecha" data-sortable="true" data-sort-name="fecha" data-sort-order="desc">Fecha Creación</th>
+                            <th data-width="200">Emoción</th>
                             <th>Nota</th>
                             <th data-width="150">Opciones</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <c:forEach items="${emociones}" var="emocion">
-                            <tr>
-                                <td data-width="200" >
-                                    <fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value="${emocion.createdAt}"/>
-                                </td>
-                                <td data-width="200">
-                                    <div title="${emocion.emocion.emotionName} "> 
-                                        <p>&#x<c:out value="${emocion.emocion.emoji}"/></p>
-                                    </div>
-                                    <!-- <c:out value="${emocion.emocion.emotionName}"/> -->
-                                </td>
-                                <td>
-                                    <c:out value="${emocion.notas}"/>
-                                </td>
-                                <td data-width="150">
-                                    <div title="Eliminar emoción" class="alinear">
-                                        <a href="/emociones/${emocion.id}/delete" onclick="return confirm('¿Está seguro de que quiere eliminar esta nota?')" > <i class="link-danger fa-solid fa-trash"></i> </a>
-                                    </div>
-                                    <div title="Editar emocón" class="alinear">
-                                        <a href="/emociones/${emocion.id}/edit"> <i class="link-info fa-solid fa-pen-to-square"></i> </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Tablas -->
-        
+                <tbody>
+                    <c:forEach items="${emociones}" var="emocion">
+                        <tr>
+                            <td data-width="200" >
+                                <fmt:formatDate pattern = "dd 'de' MMMM 'del' yyyy" value="${emocion.createdAt}"/>
+                            </td>
+                            <td data-width="200">
+                                <div title="${emocion.emocion.emotionName} "> 
+                                    <p>&#x<c:out value="${emocion.emocion.emoji}"/></p>
+                                </div>
+                                <!-- <c:out value="${emocion.emocion.emotionName}"/> -->
+                            </td>
+                            <td>
+                                <c:out value="${emocion.notas}"/>
+                            </td>
+                            <td data-width="150">
+                                <div title="Eliminar emoción" class="alinear">
+                                    <a href="/emociones/${emocion.id}/delete" onclick="return confirm('¿Está seguro de que quiere eliminar esta nota?')" > <i class="link-danger fa-solid fa-trash"></i> </a>
+                                </div>
+                                <div title="Editar emocón" class="alinear">
+                                    <a href="/emociones/${emocion.id}/edit"> <i class="link-info fa-solid fa-pen-to-square"></i> </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
         </div>
+        <!-- Tablas -->
+    
+    </div>
 
         
-        <div class="publicidad">
+        <div class="publicidad shadow">
             publicidad
         </div>
     </div>
-
+    <!-- Bootstrap Table -->
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.js"></script>
+    <!-- Bootstrap Table -->
+
 </body>
 </html>
