@@ -13,8 +13,8 @@ div.container-fluid{
     padding-right: 0px;
 }
 
-#content {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 23%, rgba(125,241,255,1) 100%);
+body {
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(243,255,255,1) 25%, rgba(235,250,250,1) 50%, rgba(234,255,255,1) 75%, rgba(217,255,255,1) 100%);
 }
 
 .navbar {
@@ -24,6 +24,7 @@ div.container-fluid{
 nav.navbar {
     display: block;
     background-color: #80b4f0;
+    box-shadow: 0 1px 10px 4px #4f4d93;
 }
 
 #menu {
