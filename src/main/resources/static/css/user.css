@@ -16,7 +16,16 @@ div.container-fluid {
 body {
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
 }
-
+.navbar-brand2 {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(211, 224, 240);
+    background: radial-gradient(rgb(198, 221, 255)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 15%;
+    font-size: 2rem;
+    margin-left: 60%;
+}
 #content {
     width: 100%;
     display: inline-block;
@@ -78,12 +87,16 @@ nav.navbar {
 #perfil {
     width: 5px;
 }
-
 .nav-item {
     display: inline-block;
     font-weight: bold;
-    width: 32.8%;
+    width: 30.8%;
+    margin-left: 2%;
     text-align: center;
+    font-family: 'East Sea Dokdo', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+
 }
 
 .nav-item.dropdown {

@@ -17,37 +17,61 @@
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
                         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
                         crossorigin="anonymous"></script>
-                        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
-                        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+                    <!-- Bootstrap -->
+                    <!--font-->
+                    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+                    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+                    <!--font-->
+                    <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
                     <!-- Bootstrap -->
                     <title>Proyecto Salud Mental</title>
                     <link rel="stylesheet" href="/css/index.css">
                 </head>
 
                 <body>
-                    <!-- navbar -->
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="">
+
+                    <!-- navbar<nav class="navbar navbar-expand-lg">
                             <div class="" id="navbarNavDropdown">
-                                <!-- Menu -->
-                                <div class="nav-item">
-                                    <h1>Relacion Vital</h1>
-                                </div>
-                                <!-- Menu -->
+                                    <a class="navbar-brand fuente">Relacion Vital</a>
+                                
+                                
                                 <div class="nav-item">
                                     <div id="logo">
                                         <a href="/index"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
                                     </div>
                                 </div>
+                                <div class="nav-item">
+                                    <i class="fa-sharp fa-solid fa-people-group"></i>
+                                    <a class="link" href="/about">Sobre Nosotros</a>
+                                </div>
+                            </div>
+                    </nav>-->
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="" id="navbarNavDropdown">
+                            <div class="nav-item">
+                                <a class="navbar-brand navbar-brand2" href="#">Relacion Vital</a>
+                            </div>
+                            <!-- Menu -->
+                            <div class="nav-item">
+                                <div id="logo">
+                                    <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
+                                </div>
+                            </div>
+                            <!-- User -->
+                            <div class="nav-item">
+                                <i class="fa-sharp fa-solid fa-people-group d-inline"></i>
+                                <a class="nav-link d-inline" href="/about">Acerca nosotros</a>
                             </div>
                         </div>
                     </nav>
                     <!-- Navbar -->
-                    <div class="cont">
+
+                    <!-- Navbar -->
+                    <div>
                         <!-- Carrousel -->
                         <div id="aboutUs" class="alinear">
-                            <div id="carouselExampleCaptions" class="carousel slide">
+                            <div id="carouselExampleCaptions" class="carousel slide shadow">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -94,18 +118,14 @@
                         <!-- Carrousel -->
                         <!-- User Registro/Inicio sesion -->
                         <div class="contaner">
-                            <div class="form-box">
+                            <div class="form-box shadow">
                                 <div class="button-box">
                                     <div id="elegir"></div>
-                                    <button type="button" class="toggle-bn" onclick="login()">Inicio
+                                    <button type="button" class="toggle-bn " onclick="login()">Inicio
                                         Sesion</button>
-                                    <button type="button" class="tggle-bn" onclick="registro()">Registrar</button>
+                                    <button type="button" class="tggle-bn " onclick="registro()">Registrar</button>
                                 </div>
-
                                 <form id="login" class="dgroup" method="post" action="/login">
-                <!-- <p>
-                    <c:out value="${errorSesion}"/>
-                </p> -->
                                     <p>
                                         <label class="margintop" for="email">Email:</label>
                                         <input type="text" placeholder="Email" class="field" type="text" id="email"
@@ -116,34 +136,37 @@
                                         <input placeholder="Password" class="field" type="password" id="password"
                                             name="password" />
                                     </p>
-                                    <input type="submit" class="bn" value="Login!" />
+                                    <div class="checkbox">
+                                        <input type="checkbox"><span>Recordar Contraseña</span><br>
+                                    </div>
+                                    <a href="#" class="fuente">Restablecer contraseña</a>
+                                    <input type="submit" class="bn" value="Ingresar" />
                                 </form>
-        
                                 <form:form id="registro" class="group" method="post" action="/register"
                                     modelAttribute="user">
-                                    <p>
-                                        <form:label class="espacios" path="name">Nombre:</form:label>
+                                    <p class="fuente">
+                                        <form:label path="name">Nombre:</form:label>
                                         <form:errors class="text-danger" path="name" />
                                         <form:input placeholder="" class="field" path="name" />
                                     </p>
-                                    <p>
+                                    <p class="fuente">
                                         <form:label class="espacios" path="email">Email:</form:label>
                                         <form:errors class="text-danger" path="email" />
                                         <form:input placeholder="" class="field" type="email" path="email" />
                                     </p>
-                                    <p>
+                                    <p class="fuente">
                                         <form:label class="espacios" path="password">Contraseña:</form:label>
                                         <form:errors class="text-danger" path="password" />
                                         <form:password placeholder="" class="field" path="password" />
                                     </p>
-                                    <p>
+                                    <p class="fuente">
                                         <form:label class="espacios" path="passwordConfirmation">Confirmación de
                                             Contraseña:
-                                    </form:label>
+                                        </form:label>
                                         <form:password placeholder="" class="field" path="passwordConfirmation" />
                                         <form:errors class="text-danger" path="passwordConfirmation" />
                                     </p>
-                                    <input type="submit" class="bn" value="Register!" />
+                                    <input type="submit" class="bn" value="Registrar" />
                                 </form:form>
                             </div>
                         </div>

@@ -19,6 +19,13 @@
                         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
                         crossorigin="anonymous"></script>
                     <!-- Bootstrap -->
+                    <!----------->
+                    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+                    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
+                        rel="stylesheet">
+                    <!------------>
                     <link rel="stylesheet" href="/css/user.css">
                     <title>Document</title>
                 </head>
@@ -53,6 +60,9 @@
                                                     <li><a class="dropdown-item" href="/about">Sobre Nosotros</a></li>
                                                     <!-- Probando funcionalidad -->
                                                 </ul>
+                                            </div>
+                                            <div class="nav-item">
+                                                <a class="navbar-brand navbar-brand2" href="#">Relacion Vital</a>
                                             </div>
                                         </div>
                                         <!-- Menu -->
@@ -107,11 +117,15 @@
                                     <form:form method="post" action="/account/perfil/password" modelAttribute="user">
                                         <div class="casillacuatro">
                                             <h2>Nombre: </h2>
-                                            <p class="info"><c:out value="${user.name}" /></p>
+                                            <p class="info">
+                                                <c:out value="${user.name}" />
+                                            </p>
                                         </div>
                                         <div class="casillacinco">
                                             <h2>Email: </h2>
-                                            <p class="info" ><c:out value="${user.email}" /></p>
+                                            <p class="info">
+                                                <c:out value="${user.email}" />
+                                            </p>
                                         </div>
                                         <br>
                                     </form:form>
