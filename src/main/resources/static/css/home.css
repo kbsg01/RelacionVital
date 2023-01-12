@@ -16,7 +16,6 @@ div.row {
 div.container-fluid {
     padding-right: 0px;
 }
-
 .navbar-brand2 {
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 1px rgb(211, 224, 240);
@@ -139,7 +138,12 @@ nav.navbar {
 
 .carousel {
     margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
+    background-position: top;
+    background-image: url("/img/sucu.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    opacity: 0.8;
 
 }
 
@@ -177,6 +181,11 @@ h2 {
     margin-top: -3%;
     height: 200px;
     padding: 2%;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px rgb(154, 169, 255);
+    background: radial-gradient(rgb(114, 185, 252)60%, rgb(144, 185, 247) 40%, rgb(158, 188, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .publicidad {
@@ -262,8 +271,10 @@ h3 {
     }
 
     .numeros.dos {
-        margin-top: -20px;
+        margin-top: -17px;
         margin-bottom: 50px;
     }
-
+    /* footer*/
+    .color{
+    }
 }

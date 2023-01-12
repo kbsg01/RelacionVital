@@ -18,7 +18,7 @@ div.row {
     padding: 10%;
     font-size: 2rem;
     margin-left: 3%;
-    
+
 }
 
 nav.navbar {
@@ -169,7 +169,7 @@ body {
 
 .carousel {
     width: 100%;
-    margin-top: 15%;
+    margin-top: 7%;
     margin-bottom: 15px;
     box-shadow: 3px 3px 3px #888888;
     border-radius: 10px;
@@ -179,7 +179,7 @@ body {
 /*************xdd registrologin************/
 .contaner {
     width: 30%;
-    margin-top: 6%;
+    margin-top: 2%;
     display: inline-block;
     vertical-align: top;
 }
@@ -234,6 +234,28 @@ body {
     transition: 0.8s;
     background: linear-gradient(90deg, #80b4f0, #add1ff);
 
+}
+
+h1 {
+    padding-top: 2%;
+    text-align: center;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    background: radial-gradient(rgb(198, 221, 255)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 4rem;
+    margin-left: 3%;
+    font-family: 'Bakbak One', cursive;
+    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Courgette', cursive;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Paytone One', sans-serif;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Righteous', cursive;
+    font-family: 'Rowdies', cursive;
 }
 
 .dgroup {
@@ -334,6 +356,10 @@ span {
 
 .link {
     color: black;
+}
+
+.mb {
+    margin-bottom: 4%;
 }
 
 /*****************DDDDDDDDDDDDD profe perdon por los absolute DDDDDDDDDDDDDDDD**************/
