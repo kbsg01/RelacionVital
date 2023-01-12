@@ -23,6 +23,7 @@
                 href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
                 rel="stylesheet">
             <!------------>
+            <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
             <title>Proyecto Salud Mental Home</title>
             <link rel="stylesheet" href="/css/home.css">
         </head>
@@ -195,6 +196,45 @@
                     </div>
                     <!-- Numero de emergencia -->
                 </div>
+                <footer class="text-center text-white color" style="background-color: #80b4f0;">
+                    <!-- Grid container -->
+                    <div class="container pt-1 mt-1">
+                        <!-- Section: Social media -->
+                        <section class="mb-1">
+                            <!-- Facebook -->
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                            <!-- Twitter -->
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                            <!-- Google -->
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                            <!-- Instagram -->
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                            <!-- Linkedin -->
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                            <!-- Github -->
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/kbsg01/ProyectoSaludMental" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                        </section>
+                        <!-- Section: Social media -->
+                    </div>
+                    <!-- Grid container -->
+
+                    <!-- Copyright -->
+                    <div class="text-centerext-dark p-1 fo" style="background: linear-gradient(90deg, rgb(127, 178, 255), #b9d7ff); font-weight: bold;">
+                        © 2022 Copyright:
+                        <a class="text-dark" style="color: #000000; font-weight: bold;" href="http://localhost:8080/">RelacionVital.cl</a>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
         </body>
 
         </html>

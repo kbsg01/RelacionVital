@@ -6,7 +6,6 @@
 
                     <!DOCTYPE html>
                     <html lang="en">
-
                     <head>
                         <meta charset="UTF-8">
                         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,11 +33,9 @@
                             rel="stylesheet">
                         <!------------>
                         <link rel="stylesheet" href="/css/emocion.css">
-
                         <link rel="stylesheet"
                             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
                     </head>
-
                     <body>
                         <div id="content">
                             <!-- navbar -->
@@ -56,13 +53,11 @@
                                                         <li><a class="dropdown-item" href="/emociones">Mis Emociones</a>
                                                         </li>
                                                         <!-- Agregar pagina -->
-
                                                         <!-- Listos (27-12-22) -->
                                                         <li><a class="dropdown-item" href="/bitacora">Mi Bitácora</a>
                                                         </li>
                                                         <li><a class="dropdown-item" href="/tareas">Mis Tareas</a></li>
                                                         <!-- Listos (27-12-22) -->
-
                                                         <!-- Probando funcionalidad -->
                                                         <li><a class="dropdown-item" href="/meds">Mis Medicamentos</a>
                                                         </li>
@@ -137,8 +132,8 @@
                                                     </td>
                                                     <td data-width="200">
                                                         <div title="${emocion.emocion.emotionName} ">
-                                                            <p>&#x
-                                                                <c:out value="${emocion.emocion.emoji}" />
+                                                            <p>&#x<c:out value="${emocion.emocion.emoji}" />
+
                                                             </p>
                                                         </div>
                                                         <!-- <c:out value="${emocion.emocion.emotionName}"/> -->

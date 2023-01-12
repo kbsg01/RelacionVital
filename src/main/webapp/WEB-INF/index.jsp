@@ -19,9 +19,16 @@
                         crossorigin="anonymous"></script>
                     <!-- Bootstrap -->
                     <!--font-->
-                    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+                    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
                     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-                    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
+                        rel="stylesheet">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Coda+Caption&family=Courgette&family=Fredoka+One&family=Lobster&family=Merriweather+Sans&family=Paytone+One&family=Permanent+Marker&family=Righteous&family=Rowdies&display=swap"
+                        rel="stylesheet">
                     <!--font-->
                     <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
                     <!-- Bootstrap -->
@@ -68,10 +75,11 @@
                     <!-- Navbar -->
 
                     <!-- Navbar -->
-                    <div>
+                    <div class="mb">
                         <!-- Carrousel -->
+                        <h1>Relacion Vital</h1>
                         <div id="aboutUs" class="alinear">
-                            <div id="carouselExampleCaptions" class="carousel slide shadow">
+                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
                                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -192,7 +200,35 @@
                         <!-- funcion para correr login y registro -->
                     </div>
                     </div>
+                    <section class="">
+                        <!-- Footer -->
+                        <footer class="text-center text-white" style="background-color: #80b4f0;;">
+                            <!-- Grid container -->
+                            <div class="container p-0 pb-0">
+                                <!-- Section: CTA -->
+                                <section class="">
+                                    <p class="d-flex justify-content-center align-items-center">
+                                        <span class="me-3" style="font-weight: bold; color: black;">Para acceder a las
+                                            funciones puedes registrarte! </span>
+                                        <button type="button" class="btn btn-outline-light btn-rounded">
+                                            Sign up!
+                                        </button>
+                                    </p>
+                                </section>
+                                <!-- Section: CTA -->
+                            </div>
+                            <!-- Grid container -->
 
+                            <!-- Copyright -->
+                            <div class="text-center p-1"
+                                style="background-color: #add3fd; font-weight: bold; color: black; ">
+                                © 2022 Copyright:
+                                <a class="text-white" href="http://localhost:8080/">RelacionVital.cl</a>
+                            </div>
+                            <!-- Copyright -->
+                        </footer>
+                        <!-- Footer -->
+                    </section>
                 </body>
 
                 </html>
