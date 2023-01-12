@@ -18,15 +18,21 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <!-- font awesome -->
-    <title>Mis Emociones</title>
     <!-- CSS Bootstrap Table -->
     <link rel="stylesheet"
-        href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
+    href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
     <!-- CSS Bootstrap Table -->
     <link rel="stylesheet" href="/css/emocion.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    
+    <!----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
+    rel="stylesheet">
+    <!------------>
     <link rel="website icon" type="png" href="/img/logo.png">
+    <title>Mis Emociones</title>
 </head>
 <body>
     <div id="content">
@@ -166,26 +172,26 @@
             <!-- Section: Social media -->
             <section class="mb-2">
                 <!-- Facebook -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
                     data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
 
                 <!-- Twitter -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
                     data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
 
                 <!-- Google -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
                     data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
 
                 <!-- Instagram -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
                     data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
 
                 <!-- Linkedin -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
                     data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
                 <!-- Github -->
-                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/kbsg01/ProyectoSaludMental" role="button"
                     data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
             </section>
             <!-- Section: Social media -->
@@ -194,7 +200,7 @@
 
         <!-- Copyright -->
         <div class="text-centerext-dark p-1 fo" style="background-color: #add3fd; font-weight: bold;">
-            Â© 2022 Copyright:
+            © 2022 Copyright:
             <a class="text-dark" href="http://localhost:8080/">RelacionVital.cl</a>
         </div>
         <!-- Copyright -->

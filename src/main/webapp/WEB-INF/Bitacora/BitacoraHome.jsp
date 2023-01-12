@@ -18,15 +18,22 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <!-- font awesome -->
-    <title>Bitacora</title>
     <!-- CSS Bootstrap Table -->
     <link rel="stylesheet"
-        href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
+    href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
     <!-- CSS Bootstrap Table -->
     <link rel="stylesheet" type="text/css" href="/css/bitacora.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <link rel="website icon" type="png" href="/img/logo.png">
+    <!----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
+        rel="stylesheet">
+    <!------------>
+    <title>Bitacora</title>
 </head>
 <body>
     <!-- navbar -->
@@ -127,6 +134,46 @@
     <div class="publicidad shadow">
         publicidad
     </div>
+    <footer class="text-center text-white color" style="background-color: #80b4f0;">
+        <!-- Grid container -->
+        <div class="container pt-2 mt-5">
+            <!-- Section: Social media -->
+            <section class="mb-2">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href=https://github.com/kbsg01/ProyectoSaludMental role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-centerext-dark p-1 fo" style="background-color: #add3fd; font-weight: bold;">
+            © 2022 Copyright:
+            <a class="text-dark" href="http://localhost:8080/">RelacionVital.cl</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
