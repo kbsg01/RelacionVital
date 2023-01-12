@@ -89,7 +89,7 @@
     </nav>
     <!-- Navbar -->
     <!-- Crear-->
-    <div class="crearEditar">
+    <div class="cajon">
         <div class="medicamento">
             <div class="taitel"><h3>Panel de Medicamento</h3>
             </div>
