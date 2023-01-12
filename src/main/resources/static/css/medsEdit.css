@@ -1,3 +1,8 @@
+html {
+    font-family: 'East Sea Dokdo', cursive;
+font-family: 'Montserrat', sans-serif;
+}
+
 body * {
     margin: 0;
     padding: 0;
@@ -144,6 +149,8 @@ nav.navbar {
     margin: 10% 15%;
     background: linear-gradient(0deg, rgb(235, 250, 250, 1) 10%, rgb(223, 248, 248) 24%, rgb(190, 225, 253) 60%, #92c5ff 80%, #80b4f0 100%);
     box-shadow: 3px 3px 3px #888888;
+    width: 50%;
+    margin-left: 25%;
 }
 
   /* Estilos para el título */
@@ -174,7 +181,7 @@ h2 {
     margin-bottom: 3rem;
     -webkit-text-fill-color: rgb(198, 239, 255);
     -webkit-text-stroke: 1px rgb(154, 198, 255);
-    background: rgb(0, 0, 0);
+    background: rgba(204, 204, 204, 0.485);
     text-align: center;
     font-size: 2rem;
     -webkit-text-fill-color: transparent;
@@ -223,13 +230,14 @@ select#medicamento {
 
     /* Estilos para el botón de agregar medicamento */
 input[type="submit"] {
-    margin-top: 10px;
-    background-color: #00b5ad;
+    margin-top: 10%;
+    background-color: #2d72f1;
     color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
     cursor: pointer;
+
 }
 
 select {
@@ -238,6 +246,7 @@ select {
     border: none;
     border-radius: 4px;
     background-color: #f1f1f1;
+    margin-bottom: 10%;
 }
 
 /* burbujas */
