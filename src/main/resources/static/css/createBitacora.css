@@ -103,12 +103,13 @@ body{
 /*----------------------------------------------------------------*/
 
 #content {
-    background-position: left 100%;
-background-image: url("/img/montaña.png");
-background-repeat: no-repeat;
     width: 100%;
     display: flex;
     justify-content: center;
+    background-image: url("/img/montaña.png");
+    background-repeat: repeat-x;
+    background-position: left 100%;
+    opacity: 0.7;
 }
 .cajon {
     margin-left: 20px;

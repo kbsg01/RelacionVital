@@ -94,7 +94,6 @@
                     </div>
                     
                     <div id="content">
-                        <div class="xd"></div>
                         <div class="cajon">
                             <div class="titulofondo">
                             <h1>Bitacora</h1>
@@ -122,7 +121,6 @@
                                     </div>
                                 </form:form>
                             </div>
-                            <div class="fondo2"></div>
                         </div>
 
                     </div>
