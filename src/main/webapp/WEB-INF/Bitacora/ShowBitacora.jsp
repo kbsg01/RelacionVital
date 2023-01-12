@@ -45,8 +45,7 @@
                     <!-- Menu -->
                     <div class="nav-item">
                         <div class="nav-item dropdown">
-                            <a id="menu" class="nav-link dropdown-toggle" href="#"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a id="menu" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                                 Menú
                             </a>
                             <ul class="dropdown-menu">
@@ -99,27 +98,28 @@
         </div>
     </nav>
     <!-- Navbar -->
-    <div id="content">
-        <div id=regresar>
+    <div id = "content">
+        <div id = regresar>
             <a href="/bitacora"> <- Regresar </a>
         </div>
         <!-- bitácora -->
         <div id="bitacora">
             <!-- Título -->
-            <h1 class="fondo">
-                <c:out value="${bitacora.title}" />
-            </h1>
+            <div id="title" class="shadow">
+                <h1><c:out value="${bitacora.title}" /></h1>
+            </div>
             <!-- Fechas -->
-            <h3 class="fondo">Fecha:
-                <fmt:formatDate pattern="dd 'de' MMMM 'del' yyyy" value="${bitacora.dateTime}" />
+            <h3 class="fondo shadow"
+            >Fecha: <fmt:formatDate pattern="dd 'de' MMMM 'del' yyyy" value="${bitacora.dateTime}" />
             </h3>
-            <h6 class="fondo"> Fecha de publicación:
+            <h6 class="fondo shadow"> Fecha de publicación:
                 <fmt:formatDate pattern="dd 'de' MMMM 'del' yyyy" value="${bitacora.createdAt}" />
             </h6>
             <!-- Entrada -->
-            <p class="texto">
-                <c:out value="${bitacora.entrada}" />
-            </p>
+            <div id="entrada" class="shadow">
+                <p class="texto"> <c:out value="${bitacora.entrada}" /> </p>
+                
+            </div>
         </div>
         <!-- bitácora -->
         <!-- editar -->
@@ -135,5 +135,44 @@
         </div>
         <!-- borrar -->
     </div>
+    <footer class="text-center text-white color" style="background-color: #80b4f0;">
+        <!-- Grid container -->
+        <div class="container pt-2 mt-5">
+            <!-- Section: Social media -->
+            <section class="mb-2">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href= role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href=https://github.com/kbsg01/ProyectoSaludMental role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-centerext-dark p-1 fo" style="background-color: #add3fd; font-weight: bold;">
+            © 2022 Copyright:
+            <a class="text-dark" href="http://localhost:8080/">RelacionVital.cl</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
 </html>

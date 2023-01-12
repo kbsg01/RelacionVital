@@ -4,6 +4,11 @@ body * {
     /* outline: solid 1px pink; */
 }
 
+body{
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
+
+}
+
 div.row{
     margin-right: 0px;
 }
@@ -20,15 +25,6 @@ div.container-fluid{
     padding: 15%;
     font-size: 2rem;
     margin-left: 60%;
-}
-#content {
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%,
-    rgba(243, 255, 255, 1) 25%, 
-    rgb(242, 252, 252) 50%, 
-    rgb(240, 255, 255) 75%, 
-    rgba(217, 255, 255, 1) 100%);
-    min-height: 835px;
-    padding-bottom: 30px;
 }
 
 .navbar {
@@ -136,13 +132,9 @@ nav.navbar {
     font-weight: bold;
 }
 
-#content {
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
-}
-
 #regresar{
     padding-top: 50px;
-    margin-left: 200px;
+    margin-left: 5%;
 }
 
     #regresar a{
@@ -158,38 +150,53 @@ nav.navbar {
     }
 
 #bitacora{
-    width: 1500px;
-    margin-left: 200px;
+    margin-left: 5%;
 }
 
-    h1{
+#title {
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+    #title h1 {
         text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background-color: rgb(247, 247, 247) ;
-        border-radius: 20px;
-        width: 1500px;
-        box-shadow: 3px 3px 3px #888888;
-
+        font-size: 40px;
     }
 
-    h3{
-        margin-bottom: 10px;
-        width: fit-content;
-    }
+h3{
+    margin-bottom: 20px;
+    width: fit-content;
+}
 
-    h6{
-        margin-bottom: 30px;
-        width: fit-content;
-    }
+h6{
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+#entrada{
+    width: 95%;
+}
+
+#entrada p{
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    height: 600px;
+    padding: 3%;
+}
 
 #editar{
-    margin-left: 200px;
+    margin-left: 5%;
 }
 
 
 #borrar{
-    margin-left: 1345px
+    margin-left: 82%;
 }
 
 .alinear{
@@ -201,25 +208,11 @@ nav.navbar {
 .sombra {
     box-shadow: -35px -17px 5px -32px rgba(79,77,147,1);
 }
-p{
-    text-overflow: hidden;
-    white-space: initial;
-    word-break: break-all;
-}
+
 .fondo{
-    background-color: rgb(247, 247, 247) ;
+    background-color: white;
     border-radius: 15px;
     padding-left: 5px;
     padding-right: 5px;
-    box-shadow: 3px 3px 3px #888888;
-}
-.texto{
-    background-color: rgb(247, 247, 247) ;
-    border-radius: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-    box-shadow: 3px 3px 3px #888888;
-    width: 80%;
-    height: 600px;
-    padding: 3%;
+    width: fit-content;
 }

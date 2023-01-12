@@ -26,9 +26,6 @@ div.container-fluid{
     font-size: 2rem;
     margin-left: 60%;
 }
-#content {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 23%, rgba(125,241,255,1) 100%);
-}
 
 .navbar {
     display: inline-block;
@@ -134,15 +131,15 @@ nav.navbar {
     font-weight: bold;
 }
 
-.title {
-    width: 300px;
-    margin: 70px auto;
+#title {
+    width: 400px;
+    margin: 30px auto;
     padding: 10px;
-    background: #6ba7e7;
+    background-color: white;
     border-radius: 10px;
 }
 
-.title h1 {
+#title h1 {
     text-align: center;
     font-size: 40px;
 }
@@ -168,27 +165,17 @@ nav.navbar {
     margin-bottom: 15px;
 }
 
-#mainContent {
-    width: 1775px;
-    margin-left: 50px;
-}
-
-#mainContent table{
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 1650px;
-
-}
     .fondo {
         width: 90%;
-        margin: 70px auto;
+        margin: 5%;
         padding: 10px;
-        background: #84afdd;
+        background: white;
         border-radius: 10px;
     }
 
     .table {
         width: 100%;
+        text-align: center;
     }
     
     th {
@@ -196,16 +183,6 @@ nav.navbar {
     }
 
     @media only screen and (max-width: 991px) {
-
-        #nuevo {
-            text-align: center;
-        }
-
-        #nuevo a{
-            display: inline-block;
-            margin: 10px;
-        }
-
         th {
             font-size: 13px;
         }
@@ -214,37 +191,12 @@ nav.navbar {
     #nuevo a{
         margin-left: 5%;
     }
-
-    th a {
-        width: 50%;
-    }
-    
-    td {
-        width: auto;
-        vertical-align: middle;
-    }
-
-    .achicar {
-        width: 5%;
-    }
-    
-    td a {
-        margin-left: 12%;
-        padding: 12px 10px 7px 10px;
-        text-decoration: none;
-        color: black;
-        background: #5086c1;
-        border-radius: 100%;
-    }
     
     .publicidad {
-        display: block;
-        height: 100px;
-        margin-top: 20px;
-        border: 1px solid black;
-        box-shadow: 5px 5px 5px #888888;
-        background-color:  rgb(247, 247, 247);
-        font-size: large;
-        margin-left: 10px;
-        margin-bottom: 20px;
+    height: 100px;
+    margin: 5%;
+    text-align: center;
+    margin-top: 30px;
+    background-color:  white;
+    border-radius: 10px;
     }

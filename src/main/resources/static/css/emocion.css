@@ -130,15 +130,15 @@ nav.navbar {
     
 }
     .btn{
-        background-color: rgba(190, 212, 223, 0.527);
+        background-color: #c0dbee;
         margin: 15px;
-        display: flex;
-        justify-content: center;
+        font-weight: bold;
     }
 
 #nuevo{
     margin-top: 40px;
     margin-left: 5%;
+    margin-bottom: 30px;
 }
 
 #nuevo a{
@@ -183,7 +183,6 @@ nav.navbar {
 
     #emocion{
         width: 100%;
-        /* margin: 70px auto; */
         padding: 10px;
         background-color: white ;
         border-radius: 10px;

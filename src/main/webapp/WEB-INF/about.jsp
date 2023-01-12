@@ -22,8 +22,9 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <!-- font awesome -->
-    <title>Sobre nosotros *Inserte nombre del proyecto*</title>
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="website icon" type="png" href="/img/logo.png">
+    <title>Sobre nosotros</title>
 </head>
 <body>
     <!-- navbar Hay que quitar el botón de usuario -->
@@ -131,5 +132,44 @@
         </p>
         <a href="">patreon</a>
     </div>
+    <footer class="text-center text-white color" style="background-color: #80b4f0;">
+        <!-- Grid container -->
+        <div class="container pt-2 mt-5">
+            <!-- Section: Social media -->
+            <section class="mb-2">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-centerext-dark p-1 fo" style="background-color: #add3fd; font-weight: bold;">
+            Â© 2022 Copyright:
+            <a class="text-dark" href="http://localhost:8080/">RelacionVital.cl</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
 </body>
 </html>

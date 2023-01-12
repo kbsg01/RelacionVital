@@ -20,8 +20,6 @@
     <link rel="stylesheet"
         href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
     <!-- CSS Bootstrap Table -->
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <!----------->
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -29,8 +27,11 @@
         href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
         rel="stylesheet">
     <!------------>
-    <title>Tareas</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/tarea.css">
+    <link rel="website icon" type="png" href="/img/logo.png">
+    <title>Mis Tareas</title>
 </head>
 <body>
     <div id="content">
@@ -101,14 +102,14 @@
             </div>
         </nav>
         <!-- Navbar -->
+        <div id="title" class="shadow">
+            <h1>Mis Tareas</h1>
+        </div>
         <!-- Crear/Editar -->
         <div id="nuevo">
             <a href="/tareas/new">+ Añadir Tarea</a>
         </div>
         <!-- Crear/Editar -->
-        <div id="title" class="shadow">
-            <h1>Mis Tareas</h1>
-        </div>
         <div id="mainContent">
             <!-- Tablas -->
             <div id="tareas" class="shadow">
@@ -148,7 +149,7 @@
                                     </td>
                                     <td>
                                         <a href="/tareas/${tarea.id}/edit"> <i
-                                                class="link-info fa-solid fa-pen-to-square"></i>
+                                            class="link-info fa-solid fa-pen-to-square"></i>
                                         </a>
                                     </td>
                                     <td>
@@ -197,8 +198,7 @@
                                             value="${tarea.createdAt}" />
                                     </td>
                                     <td>
-                                        <a href="/tareas/${tarea.id}/delete"> <i
-                                                class="link-danger fa-solid fa-trash"></i> </a>
+                                        <a href="/tareas/${tarea.id}/delete" onclick="return confirm('¿Está seguro de que quiere eliminar esta tarea completada?')"> <i class="link-danger fa-solid fa-trash"></i> </a>
                                     </td>
                                 </tr>
                             </c:if>
@@ -211,6 +211,45 @@
                 publicidad
             </div>
         </div>
+        <footer class="text-center text-white color" style="background-color: #80b4f0;">
+            <!-- Grid container -->
+            <div class="container pt-2 mt-5">
+                <!-- Section: Social media -->
+                <section class="mb-2">
+                    <!-- Facebook -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/kbsg01/ProyectoSaludMental" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-centerext-dark p-1 fo" style="background-color: #add3fd; font-weight: bold;">
+                © 2022 Copyright:
+                <a class="text-dark" href="http://localhost:8080/">RelacionVital.cl</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
         <!-- Bootstrap Table -->
         <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

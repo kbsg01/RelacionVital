@@ -25,6 +25,7 @@
         href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
         rel="stylesheet">
     <!------------>
+    <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
     <title>Nuevo Medicamento</title>
     <link rel="stylesheet" href="/css/medsEdit.css">
 </head>
@@ -88,11 +89,10 @@
     </nav>
     <!-- Navbar -->
     <!-- Crear-->
-    <header>
-        <h3>Panel de Medicamento</h3>
-    </header>
     <div class="crearEditar">
         <div class="medicamento">
+            <div class="taitel"><h3>Panel de Medicamento</h3>
+            </div>
             <h2>Selecciona el Medicamento</h2>
             <div>
                 <form:form action="" method="post" modelAttribute="receta">
@@ -125,6 +125,7 @@
                 </form:form>
             </div>
         </div>
+    </div>
         <div class="burbujas">
             <div class="burbuja"></div>
             <div class="burbuja"></div>
@@ -137,5 +138,40 @@
             <div class="burbuja"></div>
         </div>
         <!-- Crear-->
+        <footer class="text-center text-white color" style="background-color: #80b4f0;">
+            <!-- Grid container -->
+            <div class="container pt-1 mt-1">
+                <!-- Section: Social media -->
+                <section class="mb-1">
+                    <!-- Facebook -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Twitter -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+                    <!-- Google -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/kbsg01/ProyectoSaludMental" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-centerext-dark p-1 fo" style="background: linear-gradient(90deg, rgb(127, 178, 255), #b9d7ff); font-weight: bold;">
+                © 2022 Copyright:
+                <a class="text-dark" style="color: #000000; font-weight: bold;" href="http://localhost:8080/">RelacionVital.cl</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
 </body>
 </html>

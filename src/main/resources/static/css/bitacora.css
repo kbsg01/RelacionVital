@@ -132,19 +132,14 @@ nav.navbar {
 
 .btn {
     background-color: #c0dbee;
-    color: black;
     margin: 15px;
     font-weight: bold;
-}
-
-.btn:hover{
-    background-color: #c0dbee;
-    color: black;
 }
 
 #nuevo{
     margin-top: 40px;
     margin-left: 5%;
+    margin-bottom: 30px;
 }
 
 #nuevo a{
@@ -192,7 +187,6 @@ nav.navbar {
 td a {
     text-decoration: none;
     color: black;
-    /* background: #5086c1; */
     border-radius: 100%;
 }
 .publicidad{
