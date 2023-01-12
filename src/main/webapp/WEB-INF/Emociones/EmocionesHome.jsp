@@ -128,8 +128,8 @@
                                 </td>
                                 <td data-width="200">
                                     <div title="${emocion.emocion.emotionName} ">
-                                        <p>&#x
-                                            <c:out value="${emocion.emocion.emoji}" />
+                                        <p>
+                                            &#x<c:out value="${emocion.emocion.emoji}" />
                                         </p>
                                     </div>
                                     <!-- <c:out value="${emocion.emocion.emotionName}"/> -->
