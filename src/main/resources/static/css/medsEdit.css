@@ -1,6 +1,6 @@
 html {
     font-family: 'East Sea Dokdo', cursive;
-font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body * {
@@ -10,17 +10,18 @@ body * {
     margin-left: 0;
 }
 
-body{
+body {
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgb(242, 252, 252) 50%, rgb(240, 255, 255) 75%, rgba(217, 255, 255, 1) 100%);
 }
 
-div.row{
+div.row {
     margin-right: 0px;
 }
 
-div.container-fluid{
+div.container-fluid {
     padding-right: 0px;
 }
+
 .navbar-brand2 {
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 1px rgb(211, 224, 240);
@@ -31,8 +32,9 @@ div.container-fluid{
     font-size: 2rem;
     margin-left: 60%;
 }
+
 content {
-    background: linear-gradient(0deg, rgba(255,255,255,1) 23%, rgba(125,241,255,1) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 23%, rgba(125, 241, 255, 1) 100%);
 }
 
 .navbar {
@@ -48,7 +50,7 @@ nav.navbar {
 #menu {
     width: 85px;
     padding: 10px 0;
-    background-color: #c0dbee;  
+    background-color: #c0dbee;
     border-radius: 7px;
     display: inline-block;
 }
@@ -58,7 +60,8 @@ nav.navbar {
     padding: 10px;
     margin-block: 0 0 0 17px;
     border: none;
-    box-shadow: 63px -37px 5px -60px rgba(79,77,147,1);}
+    box-shadow: 63px -37px 5px -60px rgba(79, 77, 147, 1);
+}
 
 .dropdown-item {
     font-weight: bold;
@@ -67,7 +70,7 @@ nav.navbar {
     margin: 5px 0;
 }
 
-#logo img{
+#logo img {
     width: 70px;
     height: 70px;
     margin-right: 10px;
@@ -97,6 +100,7 @@ nav.navbar {
     font-weight: bold;
 
 }
+
 .nav-item.dropdown {
     margin-left: -35px;
 }
@@ -106,15 +110,21 @@ nav.navbar {
 }
 
 .sombra {
-    box-shadow: -35px -17px 5px -32px rgba(79,77,147,1);
+    box-shadow: -35px -17px 5px -32px rgba(79, 77, 147, 1);
+}
+
+.btn {
+    background-color: #c0dbee;
+    margin: 15px;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 991px) {
 
     .container-fluid {
-    width: 33%;
-    text-align: center;
-    }    
+        width: 33%;
+        text-align: center;
+    }
 
     #logo {
         width: 42%;
@@ -126,46 +136,53 @@ nav.navbar {
 
     .dropdown-menu.show {
         margin-left: -10px;
-        box-shadow: 63px -55px 5px -60px rgba(79,77,147,1);
+        box-shadow: 63px -55px 5px -60px rgba(79, 77, 147, 1);
         margin-top: 20px;
-    }   
+    }
 
     .dropdown-menu.sombra.show {
         margin-top: -1px;
         margin-left: -40px;
-        box-shadow: -36px -14px 5px -32px rgba(79,77,147,1);
+        box-shadow: -36px -14px 5px -32px rgba(79, 77, 147, 1);
     }
-    
+
 }
 
 /*  cositas uwu*/
 
 /* Estilos para el contenedor principal */
-.crearEditar {
+.cajon {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: linear-gradient(0deg, rgb(235, 250, 250, 1) 10%, rgb(223, 248, 248) 24%, rgb(190, 225, 253) 60%, #92c5ff 80%, #80b4f0 100%);
-    width: 50%;
     margin-left: 25%;
-    margin-bottom: 10%;
+    width: 50%;
+    background: linear-gradient(0deg, rgb(235, 250, 250, 1) 10%, rgb(223, 248, 248) 24%, rgb(190, 225, 253) 60%, #92c5ff 80%, #80b4f0 100%);
 }
 
-  /* Estilos para el título */
-.taitel {
-    padding: 20%;
-    border-radius: 200%;
+
+/* Estilos para el título */
+.titulofondo {
+    margin-top: 7%;
+    margin-bottom: 60px;
+    width: 90%;
+    height: 100px;
+    padding: 20px;
+    border-radius: 200px;
     background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(243, 255, 255, 1) 25%, rgba(235, 250, 250, 1) 50%, rgba(234, 255, 255, 1) 75%, rgba(217, 255, 255, 1) 100%);
-    background-color: rgb(144, 205, 255);
-    color: rgb(75, 164, 212);
-    padding: 1rem 1rem;
-    margin-left: 45rem;
-    margin-right: 45rem;
-    margin-top: 3rem;
-    border-radius: 1rem;
-
 }
-
+h1 {
+    margin-top: -3%;
+    padding: 4%;
+    -webkit-text-fill-color: rgb(249, 253, 255);
+    -webkit-text-stroke: 2px rgb(143, 191, 255);
+    background: rgb(205, 218, 255);
+    text-align: center;
+    font-size: 24;
+    background: radial-gradient(rgb(185, 210, 247)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
 .taitel h3 {
     margin-bottom: 10px;
     -webkit-text-fill-color: rgb(249, 253, 255);
@@ -178,16 +195,18 @@ nav.navbar {
 }
 
 h2 {
+    margin-top: -3%;
+    padding: 4%;
+    -webkit-text-fill-color: rgb(249, 253, 255);
+    -webkit-text-stroke: 2px rgb(143, 191, 255);
+    background: rgb(205, 218, 255);
     text-align: center;
-    margin-bottom: 3rem;
-    -webkit-text-fill-color: rgb(198, 239, 255);
-    -webkit-text-stroke: 1px rgb(154, 198, 255);
-    background: #2d72f1;
-    text-align: center;
-    font-size: 2rem;
+    font-size: 24;
+    background: radial-gradient(rgb(185, 210, 247)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
 /*margin-top: 2%;
     -webkit-text-fill-color: rgb(249, 253, 255);
     -webkit-text-stroke: 2px rgb(75, 151, 250);
@@ -197,36 +216,37 @@ h2 {
     background: radial-gradient(rgb(185, 210, 247)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; */
-  /* Estilos para el contenedor de medicamento */
+/* Estilos para el contenedor de medicamento */
 .medicamento {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 1rem;
     align-items: center;
-    padding: 8rem;
-    
+    padding: 4rem;
+
 }
+
 select#medicamento {
     width: 100%;
     padding: 16px 20px;
     border: none;
     border-radius: 8px;
-    background-color: rgb(154, 198, 255);
+    background-color: rgb(251, 253, 255);
     margin-left: 5%;
 }
 
-  /* Estilos para el contenedor de dosis */
+/* Estilos para el contenedor de dosis */
 .dosis {
     display: flex;
     flex-direction: column;
     width: 45%;
-    margin-left: 1rem; 
+    margin-left: 1rem;
     margin-bottom: 2rem;
     align-items: center;
 }
 
-  /* Estilos para el contenedor de vencimiento */
+/* Estilos para el contenedor de vencimiento */
 .vencimiento {
     display: flex;
     flex-direction: column;
@@ -237,7 +257,7 @@ select#medicamento {
     margin-bottom: 2rem;
 }
 
-    /* Estilos para el botón de agregar medicamento */
+/* Estilos para el botón de agregar medicamento */
 input[type="submit"] {
     margin-top: 10%;
     background-color: #2d72f1;
@@ -246,7 +266,6 @@ input[type="submit"] {
     padding: 0.75rem 1.5rem;
     font-size: 1.1rem;
     cursor: pointer;
-
 }
 
 select {
@@ -260,113 +279,118 @@ select {
 
 /* burbujas */
 
-.burbuja{
+.burbuja {
     border-radius: 50%;
     background: rgb(165, 217, 238);
     opacity: .3;
 
     position: absolute;
     bottom: -150;
-    
-    animation: burbujas 3s linear infinite ;
+
+    animation: burbujas 3s linear infinite;
 }
 
-.burbuja:nth-child(1){
+.burbuja:nth-child(1) {
     width: 80px;
     height: 80px;
     left: 80%;
     animation-duration: 7s
 }
 
-.burbuja:nth-child(2){
+.burbuja:nth-child(2) {
     width: 100px;
     height: 100px;
     left: 14%;
     animation-duration: 9s
 }
 
-.burbuja:nth-child(3){
+.burbuja:nth-child(3) {
     width: 20px;
     height: 20px;
     left: 1%;
     animation-duration: 6s;
 }
-.burbuja:nth-child(4){
+
+.burbuja:nth-child(4) {
     width: 50px;
     height: 50px;
     left: 20%;
     animation-duration: 6s
 }
 
-.burbuja:nth-child(5){
+.burbuja:nth-child(5) {
     width: 70px;
     height: 70px;
     left: 5%;
     animation-duration: 5s
 }
 
-.burbuja:nth-child(6){
+.burbuja:nth-child(6) {
     width: 20px;
     height: 20px;
     left: 86%;
     animation-duration: 4s
 }
 
-.burbuja:nth-child(7){
+.burbuja:nth-child(7) {
     width: 20px;
     height: 20px;
     left: 75%;
     animation-duration: 8s
 }
 
-.burbuja:nth-child(8){
+.burbuja:nth-child(8) {
     width: 100px;
     height: 100px;
     left: 90%;
     animation-duration: 9s
 }
 
-.burbuja:nth-child(9){
+.burbuja:nth-child(9) {
     width: 65px;
     height: 65px;
     left: 6%;
     animation-duration: 11s
 }
 
-.burbuja:nth-child(10){
+.burbuja:nth-child(10) {
     width: 40px;
     height: 40px;
     left: 70%;
     animation-duration: 5s
-    
 }
 
 
-@keyframes burbujas{
-    0%{
+@keyframes burbujas {
+    0% {
         bottom: 0;
         opacity: 0;
     }
-    30%{
+
+    30% {
         transform: translateX(30px);
     }
-    50%{
+
+    50% {
         opacity: .4;
     }
-    100%{
+
+    100% {
         bottom: 100vh;
         opacity: 0;
     }
 }
 
-@keyframes movimiento{
-    0%{
+@keyframes movimiento {
+    0% {
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateY(30px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }

@@ -157,7 +157,7 @@ nav.navbar {
 
 .izquierda{
     width: 25%;
-    height: 90.9vh;
+    height: 105vh;
     background-image: url("/img/flores2.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -165,7 +165,7 @@ nav.navbar {
 }
 .derecha{
     width: 25%;
-    height: 90.9vh;
+    height: 105vh;
     background-image: url("/img/flores1.png");
     background-repeat: no-repeat;
     background-size:100% 100%;

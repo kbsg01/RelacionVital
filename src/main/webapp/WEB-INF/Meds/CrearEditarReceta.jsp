@@ -89,10 +89,11 @@
     </nav>
     <!-- Navbar -->
     <!-- Crear-->
-    <div class="crearEditar">
+    <div class="cajon">
         <div class="medicamento">
-            <div class="taitel"><h3>Panel de Medicamento</h3>
-            </div>
+            <div class="titulofondo">
+                <h1>Panel de Medicamentos</h1>
+                </div>
             <h2>Selecciona el Medicamento</h2>
             <div>
                 <form:form action="" method="post" modelAttribute="receta">

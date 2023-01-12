@@ -32,28 +32,12 @@
                     <!--font-->
                     <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
                     <!-- Bootstrap -->
+                    <link rel="website icon" type="png" href="/img/logo.png">
                     <title>Proyecto Salud Mental</title>
                     <link rel="stylesheet" href="/css/index.css">
                 </head>
 
                 <body>
-
-                    <!-- navbar<nav class="navbar navbar-expand-lg">
-                            <div class="" id="navbarNavDropdown">
-                                    <a class="navbar-brand fuente">Relacion Vital</a>
-                                
-                                
-                                <div class="nav-item">
-                                    <div id="logo">
-                                        <a href="/index"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
-                                    </div>
-                                </div>
-                                <div class="nav-item">
-                                    <i class="fa-sharp fa-solid fa-people-group"></i>
-                                    <a class="link" href="/about">Sobre Nosotros</a>
-                                </div>
-                            </div>
-                    </nav>-->
                     <nav class="navbar navbar-expand-lg">
                         <div class="" id="navbarNavDropdown">
                             <div class="nav-item">
@@ -77,7 +61,7 @@
                     <!-- Navbar -->
                     <div class="mb">
                         <!-- Carrousel -->
-                        <h1>Relacion Vital</h1>
+
                         <div id="aboutUs" class="alinear">
                             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-indicators">
@@ -90,24 +74,18 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="https://picsum.photos/id/52/600/300" class="d-block w-100" alt="...">
+                                        <img src="/img/emociones.png" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
-                                            <h5>First slide label</h5>
-                                            <p>Some representative placeholder content for the first slide.</p>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://picsum.photos/id/38/600/300" class="d-block w-100" alt="...">
+                                        <img src="/img/home.png" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
-                                            <h5>Second slide label</h5>
-                                            <p>Some representative placeholder content for the second slide.</p>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="https://picsum.photos/id/44/600/300" class="d-block w-100" alt="...">
+                                        <img src="/img/bitacora.png" class="d-block w-100" alt="...">
                                         <div class="carousel-caption d-none d-md-block">
-                                            <h5>Third slide label</h5>
-                                            <p>Some representative placeholder content for the third slide.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -208,11 +186,8 @@
                                 <!-- Section: CTA -->
                                 <section class="">
                                     <p class="d-flex justify-content-center align-items-center">
-                                        <span class="me-3" style="font-weight: bold; color: black;">Para acceder a las
+                                        <span class="me-3" style="font-weight: bold; color: black;">¡Para acceder a las
                                             funciones puedes registrarte! </span>
-                                        <button type="button" class="btn btn-outline-light btn-rounded">
-                                            Sign up!
-                                        </button>
                                     </p>
                                 </section>
                                 <!-- Section: CTA -->
