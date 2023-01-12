@@ -23,16 +23,17 @@
                         <!-- Bootstrap -->
                         <!-- font awesome -->
                         <script src="https://kit.fontawesome.com/e387add1aa.js" crossorigin="anonymous"></script>
-                        <title>Crear o editar emoción</title>
                         <link rel="stylesheet" href="/css/createEmocion.css">
                         <!-- <link rel="stylesheet" href="/css/createBitacora.css"> -->
                         <!----------->
                         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
                         <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
                         <link
-                            href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
-                            rel="stylesheet">
+                        href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
+                        rel="stylesheet">
                         <!------------>
+                        <link rel="website icon" type="png" href="/img/logo.png">
+                        <title>Crear o editar emoción</title>
                     </head>
 
                     <body>

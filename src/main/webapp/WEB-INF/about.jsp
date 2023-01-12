@@ -33,12 +33,12 @@
             <div class="" id="navbarNavDropdown">
                 <div class="">
                     <div class="nav-item">
-                        <a class="navbar-brand navbar-brand2" href="#">Relacion Vital</a>
+                        <a class="navbar-brand navbar-brand2" href="/">Relacion Vital</a>
                     </div>
                     <!-- Menu -->
                     <div class="nav-item">
                         <div class="nav-item dropdown">
-                            <a href="/" class="btn">Registrarse</a>
+                            <!-- <a href="/" class="btn">Registrarse</a> -->
                         </div>
                     </div>
                     <!-- Menu -->

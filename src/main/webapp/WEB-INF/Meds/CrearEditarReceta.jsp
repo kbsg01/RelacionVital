@@ -26,8 +26,9 @@
         rel="stylesheet">
     <!------------>
     <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
-    <title>Nuevo Medicamento</title>
     <link rel="stylesheet" href="/css/medsEdit.css">
+    <link rel="website icon" type="png" href="/img/logo.png">
+    <title>Nuevo Medicamento</title>
 </head>
 <body>
     <!-- navbar -->

@@ -196,9 +196,8 @@ h2 {
     display: block;
     height: 100px;
     margin-top: 2%;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px #888888;
-    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    background-color: white;
     font-size: large;
     margin-left: 10px;
 }
@@ -207,9 +206,8 @@ h2 {
     width: 40%;
     padding: 1%;
     margin-left: 8%;
-    border: 1px solid rgb(56, 54, 54);
+    border-radius: 10px;
     margin-top: 40px;
-    box-shadow: 5px 5px 5px #a3a3a3;
     background-color: rgb(255, 255, 255);
     vertical-align: top;
     height: 10%;

@@ -29,8 +29,9 @@
                             rel="stylesheet">
                         <!------------>
                         <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
-                        <title>Nueva Tarea</title>
                         <link rel="stylesheet" href="/css/tareaCreateEdit.css">
+                        <link rel="website icon" type="png" href="/img/logo.png">
+                        <title>Nueva Tarea</title>
                     </head>
 
                     <body>

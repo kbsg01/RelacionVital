@@ -27,6 +27,8 @@
                     <!------------>
                     <script src="https://kit.fontawesome.com/6dbc209601.js" crossorigin="anonymous"></script>
                     <link rel="stylesheet" href="/css/createBitacora.css">
+                    <link rel="website icon" type="png" href="/img/logo.png">
+
                     <title>Creacion de Bitacora</title>
                 </head>
 
@@ -64,7 +66,7 @@
                                     <!-- Menu -->
                                     <div class="nav-item">
                                         <div id="logo">
-                                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport"> </a>
+                                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Relación Vital"> </a>
                                         </div>
                                     </div>
                                     <!-- User -->

@@ -32,6 +32,8 @@
         href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
         rel="stylesheet">
     <!------------>
+    <link rel="website icon" type="png" href="/img/logo.png">
+
     <title>
         <c:out value="${bitacora.title}" />
     </title>
@@ -70,7 +72,7 @@
                     <!-- Menu -->
                     <div class="nav-item">
                         <div id="logo">
-                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Simple Rapport">
+                            <a href="/home"> <img src="/img/logo.png" alt="Logo de Relación Vital">
                             </a>
                         </div>
                     </div>
@@ -102,12 +104,12 @@
         <div id = regresar>
             <a href="/bitacora"> <- Regresar </a>
         </div>
-        <!-- bitácora -->
-        <div id="bitacora">
             <!-- Título -->
             <div id="title" class="shadow">
-                <h1><c:out value="${bitacora.title}" /></h1>
+                <h1 class="cout"><c:out value="${bitacora.title}" /></h1>
             </div>
+        <!-- bitácora -->
+        <div id="bitacora">
             <!-- Fechas -->
             <h3 class="fondo shadow"
             >Fecha: <fmt:formatDate pattern="dd 'de' MMMM 'del' yyyy" value="${bitacora.dateTime}" />
@@ -130,7 +132,7 @@
         <!-- editar -->
         <!-- borrar -->
         <div id="borrar" class="alinear">
-            <a href="/bitacora/${bitacora.id}/delete"> <i
+            <a href="/bitacora/${bitacora.id}/delete" href="/tareas/${tarea.id}/delete" onclick="return confirm('¿Está seguro de que quiere eliminar esta bitácora?')"> <i
                     class="link-danger fa-solid fa-trash fa-5x"></i> </a>
         </div>
         <!-- borrar -->

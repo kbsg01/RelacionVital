@@ -51,8 +51,7 @@
                             </div>
                             <!-- User -->
                             <div class="nav-item">
-                                <i class="fa-sharp fa-solid fa-people-group d-inline"></i>
-                                <a class="nav-link d-inline" href="/about">Acerca nosotros</a>
+                                <a class="nav-link d-inline" href="/about"> <i class="fa-sharp fa-solid fa-people-group d-inline"></i> Acerca nosotros</a>
                             </div>
                         </div>
                     </nav>
@@ -114,12 +113,12 @@
                                 <form id="login" class="dgroup" method="post" action="/login">
                                     <p>
                                         <label class="margintop" for="email">Email:</label>
-                                        <input type="text" placeholder="Email" class="field" type="text" id="email"
+                                        <input type="text" class="field" type="text" id="email"
                                             name="email" />
                                     </p>
                                     <p>
                                         <label class="margintop" for="password">Contraseña:</label>
-                                        <input placeholder="Password" class="field" type="password" id="password"
+                                        <input class="field" type="password" id="password"
                                             name="password" />
                                     </p>
                                     <div class="checkbox">

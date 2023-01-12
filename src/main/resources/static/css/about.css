@@ -16,6 +16,16 @@ div.row{
 div.container-fluid{
     padding-right: 0px;
 }
+.navbar-brand2 {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(211, 224, 240);
+    background: radial-gradient(rgb(198, 221, 255)60%, rgb(151, 191, 252) 40%, rgb(255, 255, 255)60%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 15%;
+    font-size: 2rem;
+    margin-left: 30%;
+}
 .navbar {
     display: inline-block;
 }
@@ -158,8 +168,11 @@ nav.navbar {
     display: flex;
     justify-content: space-around;
     height: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 
+}
+#vision{
+    padding-bottom: 87px;
 }
 
     .tarjetas{
@@ -177,6 +190,7 @@ nav.navbar {
     width: 80%;
     background-color: white ;
     padding: 15px;
+    margin-top: 30px;
     text-align: justify;
     margin: auto;
     border-radius: 10px;

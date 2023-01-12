@@ -26,7 +26,8 @@
         rel="stylesheet">
     <!------------>
     <link rel="stylesheet" href="/css/user.css">
-    <title>Document</title>
+    <link rel="website icon" type="png" href="/img/logo.png">
+    <title>Perfil de <c:out value="${user.name}" /></title>
 </head>
 <body>
     <!-- navbar -->
