@@ -5,6 +5,10 @@ body * {
     margin-left: 0;
 }
 
+body{
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(243,255,255,1) 25%, rgba(235,250,250,1) 50%, rgba(234,255,255,1) 75%, rgba(217,255,255,1) 100%);
+}
+
 div.row{
     margin-right: 0px;
 }
