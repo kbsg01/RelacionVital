@@ -23,16 +23,10 @@
     <link rel="stylesheet"
         href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
     <!-- CSS Bootstrap Table -->
-    <!----------->
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
-    <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Montserrat:ital,wght@1,400;1,700&display=swap"
-        rel="stylesheet">
-    <!------------>
     <link rel="stylesheet" type="text/css" href="/css/bitacora.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="website icon" type="png" href="/img/logo.png">
 </head>
 <body>
     <!-- navbar -->
@@ -95,11 +89,11 @@
         </div>
     </nav>
     <!-- Navbar -->
-    <div id="nuevo">
-        <a href="/bitacora/new">+ Nueva entrada</a>
-    </div>
     <div id="title" class=" shadow">
         <h1>Mis Bitácoras</h1>
+    </div>
+    <div id="nuevo">
+        <a href="/bitacora/new">+ Nueva entrada</a>
     </div>
     <div class="fondo shadow">
         <table class="table" data-toggle="table" data-pagination="true" data-search="true">
