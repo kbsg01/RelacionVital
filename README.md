@@ -7,12 +7,12 @@
   - The RelaciónVital project is an initiative promoted by young Forge students, from the "Programa tu Futuro + Start" program, with the aim of providing a tool for the effective treatment of anxiety disorder and support in therapeutic sessions.
 
 ##  **Integrantes** / **Members**
-  - **Equipo FrontEnd**
+  - **FrontEnd**
     -  Diego Fernández
     -  Maria Jose Maldonado
     -  Zacarias Quiroz
     -  Carla Pacheco
-  - **Equipo BackEnd**
+  - **BackEnd**
     -  Alvaro Navarrete
     -  Karla Santibáñez
 
