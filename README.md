@@ -1,10 +1,8 @@
 # Proyecto Salud Mental - RelaciónVital 
 
 - [Proyecto Salud Mental - RelaciónVital](#proyecto-salud-mental---relaciónvital)
-  - [**Funciones** / **Functions**](#funciones--functions)
   - [**Descripción** / **Description**](#descripción--description)
   - [**Equipo** / **Team**](#equipo--team)
-
 
 
 ## **Descripción** / **Description**
