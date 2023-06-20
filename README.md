@@ -1,10 +1,5 @@
 # Proyecto Salud Mental - RelaciónVital 
 
-- [Proyecto Salud Mental - RelaciónVital](#proyecto-salud-mental---relaciónvital)
-  - [**Descripción** / **Description**](#descripción--description)
-  - [**Equipo** / **Team**](#equipo--team)
-
-
 ## **Descripción** / **Description**
   - El proyecto RelaciónVital, es una iniciativa impulsada por estudiantes Forge, del programa "Programa tu Futuro + Start", con la finalidad de aportar una herramienta para el tratamiento efectivo del trastorno de la ansiedad y acompañamiento en sesiones terapeuticas.
 
